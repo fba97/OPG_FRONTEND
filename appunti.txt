@@ -1,0 +1,3 @@
+modificare la schermata eroi in modao tale da mostrare ogni eroe in grande con magari qualche info, una 
+frecca grande sulla detra che oermette di scorrere
+ tra gli eroi (implemnetare qulche effetto di transizione alla powerpoint con il css (CSS ANIMATE))

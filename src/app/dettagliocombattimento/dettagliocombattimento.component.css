@@ -1,0 +1,86 @@
+.carte {
+    height: 180px;
+    width: 180px;
+    margin-top: 10px;
+
+}
+
+.btn {
+    background-color: goldenrod;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px;
+    width: 220px;
+    font-weight: bold;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 3px 0 rgba(0, 0, 0, 0.3);
+    border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)) 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px 12px;
+
+}
+
+.dropbtn {
+    background-color: goldenrod;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 158px;
+    height: 100%;
+    font-weight: bold;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+
+    /* Per far scendere la tendina da destra */
+    position: relative;
+    left: auto;
+    right: 0;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+
+    /* Per far scendere la tendina da destra */
+    right: 0;
+    left: 12px;
+    top: 60px;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(2px);
+
+}

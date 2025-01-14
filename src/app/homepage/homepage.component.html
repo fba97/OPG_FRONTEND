@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body background="/assets/images/homepagebackground.jpg" style="
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+height: 100vh;">
+
+    <div class="container-fluid">
+
+        <button (click)="toggleSidebar()" style="margin-left: -25px;">
+            <img src="/assets/images/sidebar.png" style="height: 50%; width: 40%;" />
+        </button>
+
+        <div class="row flex-nowrap" style="width: 700px; margin-left: -25px; margin-top: 0%;">
+
+            <aside *ngIf="isSidebarVisible">
+                <!-- il tuo contenuto della sidebar qui -->
+
+                <!--BARRA LATERALE-->
+                <div class="col-auto col-md-3 col-xs-2 px-sm-1 px-0 bg-dark" style="height: 689px; width: 200px;">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white">
+
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                            id="menu">
+                            <li class="nav-item" style="margin-top: 20px;">
+                                <a href="http://localhost:4200/mainpage" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Mainpage</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://localhost:4200/login" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Login</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://localhost:4200/register" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Register</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="http://localhost:4200/personaggi" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Eroi</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+            </aside>
+
+            <aside *ngIf="!isSidebarVisible">
+
+                <!--BARRA LATERALE-->
+                <div>
+
+                </div>
+            </aside>
+
+            <div>
+                <div class="container" style="background-color:beige;width: 800px; height: 500px;"
+                    [ngStyle]="isSidebarVisible || !isSidebarVisible ? {'margin-left': '-50%', 'margin-top': '10%' } : {}">
+
+                    <br>
+                    <br>
+                    <!-- Prima sezione -->
+                    <div class="row border">
+                        <div class="col-md-3">
+                            <div class="bg-primary text-white rounded p-2" style="width: 150px;">Stat del giocatore
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <p>Numero partite giocate: {{numPartite}}</p>
+                            <p>Numero vittorie: {{numVittorie}}</p>
+                            <p>Numero sconfitte: {{numSconfitte}}</p>
+                        </div>
+                    </div>
+
+                    <!-- Seconda sezione -->
+                    <div class="row mt-3 border">
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-primary" style="width: 150px; text-align: left;">Crea
+                                partita</button>
+                        </div>
+                        <div class="col-md-4">
+                            <form>
+                                <label style="font-weight: 500;">Seleziona gli eroi:</label>
+                                <div class="hero-select-container">
+                                    <div *ngFor="let hero of personaggiList">
+                                        <input type="checkbox" [(ngModel)]="hero.selected" name="{{ hero.nome }}">
+                                        {{ hero.nome }}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <label style="font-weight: 500;">Saga:</label>
+                            <div *ngFor=" let s of listaSaga">
+                                <input type="radio" name="{{ s }}">
+                                {{ s }}
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Terza sezione -->
+                    <div class="row mt-3 border">
+                        <div class="col-md-3">
+                            <button class="btn btn-primary" (click)="caricaPartita()">Carica partite</button>
+                        </div>
+                        <div class="col-md-8">
+                            <form>
+                                <label style="font-weight: 500;">Seleziona la partita:</label>
+                                <div class="hero-select-container" style="width: 500px;">
+                                    <div *ngFor="let p of listaPartite">
+                                        <input type="radio" name="partita" value="{{p}}">
+                                        {{ p }}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
