@@ -1,82 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Map</title>
-<style>
-body {
-  margin: 0;
-}
-
-.map-container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.svg-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  touch-action: none; /* Impedisce il comportamento predefinito del tocco */
-  transform-origin: 0 0;
-  pointer-events: all;
-}
-</style>
-</head>
-<body>
-
-
 <div class="game-container">
-        <!-- Mappa di sfondo con controlli -->
-        <div class="map-background">
-                <div class="map-container" #mapContainer>
-                        <div *ngIf="svgContent" [innerHTML]="svgContent" class="svg-content"></div>
-                        <div *ngIf="!svgContent" class="loading">
-                          <mat-spinner diameter="40"></mat-spinner>
-                          <span>Caricamento mappa...</span>
-                        </div>
-                      </div>
-          
-          <div class="map-controls">
-            <button mat-mini-fab (click)="zoomIn()" class="map-control-btn">
-              <mat-icon>add</mat-icon>
-            </button>
-            <button mat-mini-fab (click)="zoomOut()" class="map-control-btn">
-              <mat-icon>remove</mat-icon>
-            </button>
-            <button mat-mini-fab (click)="resetZoom()" class="map-control-btn">
-              <mat-icon>refresh</mat-icon>
-            </button>
-          </div>
-        </div>
-      
-        <!-- Menu laterale migliorato -->
-        <div class="game-sidebar" [class.collapsed]="!isSidebarVisible">
-          <button mat-icon-button (click)="toggleSidebar()" class="sidebar-toggle">
-            <mat-icon>menu</mat-icon>
-          </button>
-          
-          <div class="sidebar-content">
-            <h3 class="sidebar-title">Menu</h3>
-            <mat-nav-list class="sidebar-nav">
-              <a mat-list-item *ngFor="let item of menuItems" 
-                 [href]="item.url" 
-                 class="nav-item">
-                <mat-icon matListItemIcon>navigate_next</mat-icon>
-                <span>{{item.name}}</span>
-              </a>
-            </mat-nav-list>
-          </div>
-        </div>
+  <div class="map-background">
+
+    <app-mappa></app-mappa>
+
+    <div class="game-sidebar" [class.collapsed]="!isSidebarVisible">
+      <button mat-icon-button (click)="toggleSidebar()" class="sidebar-toggle">
+        <mat-icon>menu</mat-icon>
+      </button>
+  
+    <div class="sidebar-content">
+      <h3 class="sidebar-title">Menu</h3>
+      <mat-nav-list class="sidebar-nav">
+        <a mat-list-item *ngFor="let item of menuItems" [href]="item.url" class="nav-item">
+          <mat-icon matListItemIcon>navigate_next</mat-icon>
+          <span>{{item.name}}</span>
+        </a>
+      </mat-nav-list>
+    </div>
+
+  </div>
 </div>
-      <script>
-        // JavaScript to handle map interactions and updates will go here.  For example:
-        const svg = document.querySelector('.svg-content');
-        svg.addEventListener('click', (event) => {
-          console.log('Clicked on SVG:', event.clientX, event.clientY);
-        });
-      
-      </script>
-      </body>
-      </html>

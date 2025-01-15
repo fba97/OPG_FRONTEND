@@ -22,7 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { MappaComponent } from './partita/mappa/mappa.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +39,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     PersonaggiComponent,
     ProbabilitaComponent,
     ImprevistiComponent,
-    DettagliocombattimentoComponent
-
+    DettagliocombattimentoComponent,
+    MappaComponent
   ],
   imports: [
     BrowserModule,
