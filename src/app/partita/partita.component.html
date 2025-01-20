@@ -1,22 +1,27 @@
+<!-- src/app/partita/partita.component.html -->
 <div class="game-container">
-  <div class="map-background">
-
-    <app-mappa></app-mappa>
-
-    <div class="game-sidebar" [class.collapsed]="!isSidebarVisible">
+    <!-- Sidebar sinistra esistente -->
+    <div class="left-sidebar" [class.collapsed]="!isSidebarVisible">
       <button mat-icon-button (click)="toggleSidebar()" class="sidebar-toggle">
         <mat-icon>menu</mat-icon>
       </button>
   
-    <div class="sidebar-content">
-      <h3 class="sidebar-title">Menu</h3>
-      <mat-nav-list class="sidebar-nav">
-        <a mat-list-item *ngFor="let item of menuItems" [href]="item.url" class="nav-item">
-          <mat-icon matListItemIcon>navigate_next</mat-icon>
-          <span>{{item.name}}</span>
-        </a>
-      </mat-nav-list>
+      <div class="sidebar-content">
+        <h3 class="sidebar-title">Menu</h3>
+        <mat-nav-list class="sidebar-nav">
+          <a mat-list-item *ngFor="let item of menuItems" [href]="item.url" class="nav-item">
+            <mat-icon matListItemIcon>navigate_next</mat-icon>
+            <span>{{item.name}}</span>
+          </a>
+        </mat-nav-list>
+      </div>
     </div>
-
+  
+    <!-- Area centrale con la mappa -->
+    <div class="main-content">
+      <app-mappa></app-mappa>
+    </div>
+  
+    <!-- Nuova sidebar destra -->
+    <app-right-sidebar></app-right-sidebar>
   </div>
-</div>

@@ -1,0 +1,80 @@
+/* src/app/partita/components/turn-info/turn-info.component.css */
+.turn-info-container {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(212, 32, 38, 0.3);
+  }
+  
+  .turn-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .turn-title {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .turn-title span {
+    color: #D42026;
+  }
+  
+  .turn-phase {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(0, 58, 112, 0.8);
+    font-size: 0.9rem;
+    color: white;
+  }
+  
+  .turn-phase.player-turn {
+    background: rgba(212, 32, 38, 0.8);
+  }
+  
+  .turn-details {
+    margin: 15px 0;
+  }
+  
+  .current-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  .end-turn-btn {
+    width: 100%;
+    padding: 12px;
+    background: #D42026;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+  }
+  
+  .end-turn-btn:hover {
+    background: #f43a40;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 32, 38, 0.4);
+  }
+  
+  .end-turn-btn:active {
+    transform: translateY(0);
+  }
+  
+  .end-turn-btn mat-icon {
+    font-size: 20px;
+  }

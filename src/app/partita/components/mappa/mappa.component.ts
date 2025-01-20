@@ -1,7 +1,5 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { UserService } from '../../user.service';
-import { Combattimento } from '../../dto/combattimento';
-import { Personaggio } from '../../dto/personaggio';
+import { UserService } from '../../../user.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -21,17 +19,6 @@ export class MappaComponent implements OnInit, AfterViewInit {
   private start = { x: 0, y: 0 };
 
   svgContent: SafeHtml | null = null;
-
-  cartaCasuale: string = '';
-  currentTurn: string = '';
-  heroesList: Array<Personaggio> = [];
-  bossList: Array<Personaggio> = [];
-  personaggiList: Array<Personaggio> = [];
-  combattimentiList: Array<Combattimento> = [];
-
-  eroiInCombattimento: Array<number> = [];
-  bossInCombattimento: Array<number> = [];
-
 
   constructor(private service: UserService, private modalService: NgbModal, private http: HttpClient, private sanitizer: DomSanitizer) {}
 

@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CombattimentoComponent } from './combattimento/combattimento.component';
 import { DettagliocombattimentoComponent } from './dettagliocombattimento/dettagliocombattimento.component';
-import { PartitaComponent } from './partita/partita.component';
 import { OggettiComponent } from './oggetti/oggetti.component';
 import { BossComponent } from './boss/boss.component';
 import { FruttiComponent } from './frutti/frutti.component';
@@ -22,7 +21,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MappaComponent } from './partita/mappa/mappa.component';
+import { RightSidebarComponent } from './partita/components/right-sidebar/right-sidebar.component';
+import { TurnInfoComponent } from './partita/components/turn-info/turn-info.component';
+import { GameStatusComponent } from './partita/components/game-status/game-status.component';
+import { PartitaComponent } from './partita/partita.component';
+import { LeftSidebarComponent } from './partita/components/left-sidebar/left-sidebar.component';
+import { CharacterInfoComponent } from './partita/components/character-info/character-info.component'; 
+import { MappaComponent } from './partita/components/mappa/mappa.component'; 
+
+
 
 @NgModule({
   declarations: [
@@ -31,7 +38,6 @@ import { MappaComponent } from './partita/mappa/mappa.component';
     LoginComponent,
     RegisterComponent,
     HomepageComponent,
-    PartitaComponent,
     CombattimentoComponent,
     OggettiComponent,
     BossComponent,
@@ -40,7 +46,14 @@ import { MappaComponent } from './partita/mappa/mappa.component';
     ProbabilitaComponent,
     ImprevistiComponent,
     DettagliocombattimentoComponent,
+    RightSidebarComponent,
+    TurnInfoComponent,
+    GameStatusComponent,
+    PartitaComponent,
+    LeftSidebarComponent,
+    CharacterInfoComponent,
     MappaComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
-import { Component, OnInit} from '@angular/core';
-import { UserService } from '../user.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+// src/app/partita/partita.component.ts
+import { Component, OnInit } from '@angular/core';
+import { GameStateService } from './services/game-state.service';
 
 @Component({
   selector: 'app-partita',
@@ -8,7 +8,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./partita.component.css']
 })
 export class PartitaComponent implements OnInit {
-
   isSidebarVisible = true;
 
   menuItems = [
@@ -19,13 +18,11 @@ export class PartitaComponent implements OnInit {
     { name: 'Combattimento', url: 'http://localhost:4200/combattimento' }
   ];
 
-  constructor(private service: UserService, private modalService: NgbModal) {}
+  constructor(private gameState: GameStateService) {}
 
   ngOnInit(): void {}
 
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
-
-
 }

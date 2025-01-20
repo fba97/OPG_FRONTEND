@@ -1,0 +1,94 @@
+/* src/app/partita/components/game-status/game-status.component.css */
+.game-status-container {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #D42026;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .status-card {
+    background: rgba(0, 58, 112, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .battle-count {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #D42026;
+  }
+  
+  .battle-label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .card-display {
+    font-size: 1.2rem;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+  
+  .game-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .save-btn {
+    background: #003A70;
+    color: white;
+  }
+  
+  .save-btn:hover {
+    background: #004d94;
+    transform: translateY(-2px);
+  }
+  
+  .end-btn {
+    background: #D42026;
+    color: white;
+  }
+  
+  .end-btn:hover {
+    background: #f43a40;
+    transform: translateY(-2px);
+  }

@@ -1,0 +1,36 @@
+<!-- src/app/partita/components/game-status/game-status.component.html -->
+<div class="game-status-container">
+    <h3 class="section-title">Stato Partita</h3>
+  
+    <div class="status-card active-battles">
+      <div class="card-header">
+        <mat-icon>sports_kabaddi</mat-icon>
+        <span>Combattimenti in Corso</span>
+      </div>
+      <div class="card-content">
+        <span class="battle-count">{{combattimentiInCorso$ | async}}</span>
+        <span class="battle-label">combattimenti attivi</span>
+      </div>
+    </div>
+  
+    <div class="status-card current-card">
+      <div class="card-header">
+        <mat-icon>playing_cards</mat-icon>
+        <span>Carta Attuale</span>
+      </div>
+      <div class="card-content">
+        <div class="card-display">{{cartaCasuale$ | async}}</div>
+      </div>
+    </div>
+  
+    <div class="game-controls" *ngIf="isGameActive$ | async">
+      <button class="control-btn save-btn" (click)="saveGame()">
+        <mat-icon>save</mat-icon>
+        Salva Partita
+      </button>
+      <button class="control-btn end-btn" (click)="endGame()">
+        <mat-icon>exit_to_app</mat-icon>
+        Termina Partita
+      </button>
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+<!-- src/app/partita/components/left-sidebar/left-sidebar.component.html -->
+<div class="left-sidebar" [class.collapsed]="!isOpen">
+  <button class="sidebar-toggle" (click)="toggleSidebar()">
+    <mat-icon>{{ isOpen ? 'chevron_left' : 'chevron_right' }}</mat-icon>
+  </button>
+
+  <div class="sidebar-content" *ngIf="isOpen">
+    <div class="sidebar-header">
+      <img src="assets/one-piece-logo.png" alt="One Piece Logo" class="logo">
+    </div>
+
+    <mat-nav-list class="navigation-list">
+      <a mat-list-item *ngFor="let item of menuItems" 
+         [href]="item.url" 
+         class="nav-item">
+        <mat-icon matListItemIcon>
+          {{ getIconForMenuItem(item.name) }}
+        </mat-icon>
+        <span class="nav-label">{{ item.name }}</span>
+      </a>
+    </mat-nav-list>
+  </div>
+</div>

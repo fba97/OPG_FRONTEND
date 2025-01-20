@@ -1,0 +1,23 @@
+/* src/app/partita/partita.component.css */
+.game-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: #1a1a1a;
+  }
+  
+  .main-content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Stili esistenti per la left-sidebar ... */
+  
+  .right-sidebar {
+    width: 300px;
+    height: 100%;
+  }

@@ -1,0 +1,100 @@
+/* src/app/partita/components/left-sidebar/left-sidebar.component.css */
+.left-sidebar {
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 58, 112, 0.95) 0%, rgba(0, 29, 56, 0.95) 100%);
+  position: relative;
+  transition: all 0.3s ease;
+  border-right: 2px solid #D42026;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.left-sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background: #D42026;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.sidebar-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.navigation-list {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+  background: rgba(212, 32, 38, 0.2);
+  border-left: 4px solid #D42026;
+}
+
+.nav-item.active {
+  background: rgba(212, 32, 38, 0.3);
+  border-left: 4px solid #D42026;
+}
+
+.nav-label {
+  margin-left: 12px;
+  font-size: 1rem;
+}
+
+mat-icon {
+  color: white;
+}
+
+/* Effetto hover piratesco */
+.nav-item:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 32, 38, 0.5), transparent);
+}
