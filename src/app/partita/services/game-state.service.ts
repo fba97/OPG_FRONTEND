@@ -2,18 +2,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, timer } from 'rxjs';
-import { switchMap, catchError, tap, shareReplay } from 'rxjs/operators';
-import { Game, ActualPartita, Personaggio, Combattimento, Missione } from '../../dto/game';
+import { switchMap, catchError, tap, shareReplay, map } from 'rxjs/operators';
+import { Game, ActualPartita, Personaggio, Combattimento, PartitaSoft } from '../../dto/game';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameStateService {
-  private readonly UPDATE_URL = 'https://localhost:7087/api/Update/GetUpdateTotale';
+  private readonly UPDATE_URL = 'https://localhost:7087/api/Update/GetUpdatePartitaSoft';
   private readonly POLLING_INTERVAL = 5000; // 5 secondi
 
   // Main game state
-  private gameStateSubject = new BehaviorSubject<Game | null>(null);
+  private gameStateSubject = new BehaviorSubject<PartitaSoft | null>(null);
   gameState$ = this.gameStateSubject.asObservable().pipe(shareReplay(1));
 
   // Subjects specifici per componenti che necessitano di aggiornamenti
@@ -23,8 +23,28 @@ export class GameStateService {
   private currentCombatSubject = new BehaviorSubject<Combattimento | null>(null);
   currentCombat$ = this.currentCombatSubject.asObservable();
 
-  private activeMissionsSubject = new BehaviorSubject<Missione[]>([]);
-  activeMissions$ = this.activeMissionsSubject.asObservable();
+  // Add the missing subjects
+  private cartaCasualeSubject = new BehaviorSubject<string>('');
+  cartaCasuale$ = this.cartaCasualeSubject.asObservable();
+
+  private isGameActiveSubject = new BehaviorSubject<boolean>(false);
+  isGameActive$ = this.isGameActiveSubject.asObservable();
+
+  private currentTurnSubject = new BehaviorSubject<string>('Giocatore');
+  currentTurn$ = this.currentTurnSubject.asObservable();
+
+  private turnNumberSubject = new BehaviorSubject<number>(1);
+  turnNumber$ = this.turnNumberSubject.asObservable();
+
+  private isPlayerTurnSubject = new BehaviorSubject<boolean>(true);
+  isPlayerTurn$ = this.isPlayerTurnSubject.asObservable();
+
+
+  // Derive combattimentiInCorso$ from gameState
+  combattimentiInCorso$ = this.gameState$.pipe(
+    map(state => state?.combattimenti?.length ?? 0)
+  );
+  
 
   private updatePolling: any;
 
@@ -40,8 +60,8 @@ export class GameStateService {
     });
   }
 
-  private fetchGameUpdate(): Observable<Game> {
-    return this.http.get<Game>(this.UPDATE_URL).pipe(
+  private fetchGameUpdate(): Observable<PartitaSoft> {
+    return this.http.get<PartitaSoft>(this.UPDATE_URL).pipe(
       tap(gameState => {
         this.gameStateSubject.next(gameState);
         this.updateDerivedStates(gameState);
@@ -53,19 +73,29 @@ export class GameStateService {
     );
   }
 
-  private updateDerivedStates(gameState: Game) {
-    // Aggiorna le missioni attive
-    if (gameState.partitaAttuale?.missioni) {
-      const activeMissions = gameState.partitaAttuale.missioni.filter(m => 
-        m.stato === 1 || m.stato === 2 // Nuova o InCorso
-      );
-      this.activeMissionsSubject.next(activeMissions);
-    }
+  nextTurn() {
+    // Incrementa il numero del turno
+    const currentTurnNumber = this.turnNumberSubject.value;
+    this.turnNumberSubject.next(currentTurnNumber + 1);
+
+    // Alterna tra turno giocatore e NPC
+    const isCurrentlyPlayerTurn = this.isPlayerTurnSubject.value;
+    this.isPlayerTurnSubject.next(!isCurrentlyPlayerTurn);
+    
+    // Aggiorna il nome del turno corrente
+    const nextTurn = isCurrentlyPlayerTurn ? 'NPC' : 'Giocatore';
+    this.currentTurnSubject.next(nextTurn);
+
+    // Qui puoi aggiungere logica aggiuntiva per il cambio turno
+    // Per esempio, aggiornare lo stato del gioco o eseguire azioni specifiche
+  }
+
+  private updateDerivedStates(gameState: PartitaSoft) {
 
     // Mantieni la selezione del personaggio corrente
     if (this.selectedCharacterSubject.value) {
       const currentSelectedId = this.selectedCharacterSubject.value.id;
-      const updatedCharacter = gameState.allPersonaggi.find(p => p.id === currentSelectedId);
+      const updatedCharacter = gameState.personaggi.find(p => p.id === currentSelectedId);
       if (updatedCharacter) {
         this.selectedCharacterSubject.next(updatedCharacter);
       }
@@ -81,24 +111,21 @@ export class GameStateService {
     return this.selectedCharacterSubject.value;
   }
 
-  getCurrentPartita(): ActualPartita | undefined {
-    return this.gameStateSubject.value?.partitaAttuale;
-  }
 
   getAllPersonaggi(): Personaggio[] {
-    return this.gameStateSubject.value?.allPersonaggi || [];
+    return this.gameStateSubject.value?.personaggi || [];
   }
 
   getPersonaggiInPartita(): Personaggio[] {
-    return this.gameStateSubject.value?.partitaAttuale?.personaggi || [];
+    return this.gameStateSubject.value?.personaggi || [];
   }
 
   getCombattimentiAttivi(): Combattimento[] {
-    return this.gameStateSubject.value?.partitaAttuale?.combattimenti || [];
+    return this.gameStateSubject.value?.combattimenti || [];
   }
 
   // Metodo per forzare un aggiornamento immediato
-  forceUpdate(): Observable<Game> {
+  forceUpdate(): Observable<PartitaSoft> {
     return this.fetchGameUpdate();
   }
 
@@ -108,4 +135,16 @@ export class GameStateService {
       this.updatePolling.unsubscribe();
     }
   }
+  
+    // Add the missing methods
+    saveGame() {
+      // Implement save game logic
+      console.log('Saving game...');
+    }
+  
+    endGame() {
+      // Implement end game logic
+      console.log('Ending game...');
+      this.isGameActiveSubject.next(false);
+    }
 }

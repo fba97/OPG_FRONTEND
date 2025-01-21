@@ -13,6 +13,7 @@ export class TurnInfoComponent implements OnInit {
   isPlayerTurn$: Observable<boolean>;
 
   constructor(private gameState: GameStateService) {
+    
     this.currentTurn$ = this.gameState.currentTurn$;
     this.turnNumber$ = this.gameState.turnNumber$;
     this.isPlayerTurn$ = this.gameState.isPlayerTurn$;

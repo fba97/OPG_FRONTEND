@@ -18,5 +18,16 @@
         <mat-icon>refresh</mat-icon>
       </button>
     </div>
+
+     <!-- Overlay SVG per i personaggi -->
+  <svg *ngIf="svgContent" class="characters-overlay">
+    <circle *ngFor="let char of characters"
+            [attr.cx]="getCharacterPosition(char)?.x"
+            [attr.cy]="getCharacterPosition(char)?.y"
+            r="10"
+            [attr.fill]="char.tipoPersonaggio === 1 ? 'blue' : 'red'"
+            class="character-token">
+    </circle>
+  </svg>
   </div>
   

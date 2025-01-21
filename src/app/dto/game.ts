@@ -161,3 +161,21 @@ export interface Game {
     allPersonaggi: Personaggio[];
     allOggetti: Oggetto[];
 }
+
+export interface PartitaSoft {
+    id: number;
+    difficolta: number;
+    dataInizioPartita?: Date;
+    dataFinePartita?: Date;
+    dataUltimoSalvataggio?: Date;
+    idObiettivo: number;
+    inventari: Inventario[];
+    idGiocatore: number;
+    nome: string;
+    oggetti: Oggetto[];
+    personaggi: Personaggio[];
+    statoPartita: number;
+    combattimenti: Combattimento[];
+    missioni: Missione[];
+    Punti: Punto[];
+}

@@ -1,8 +1,8 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { UserService } from '../../../user.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { MapManagerService } from '../../services/map-manager.service';
+import { GameStateService } from '../../services/game-state.service';
 
 @Component({
   selector: 'app-mappa',
@@ -17,54 +17,120 @@ export class MappaComponent implements OnInit, AfterViewInit {
   private pointX = 0;
   private pointY = 0;
   private start = { x: 0, y: 0 };
-
+  characters: any[] = [];
   svgContent: SafeHtml | null = null;
 
-  constructor(private service: UserService, private modalService: NgbModal, private http: HttpClient, private sanitizer: DomSanitizer) {}
+  constructor(
+    private http: HttpClient, 
+    private sanitizer: DomSanitizer, 
+    private mapManager: MapManagerService, 
+    private gameState: GameStateService
+  ) {}
 
   ngOnInit(): void {
     this.loadSvg();
+    this.subscribeToGameState();
   }
 
   ngAfterViewInit() {
-    console.log(this.mapContainer);  // Verifica se il riferimento è corretto
-    setTimeout(() => {
-      if (this.mapContainer) {
-        this.observeSvgContent();
-      } else {
-        console.error('mapContainer non è ancora disponibile');
-      }
-    }, 200);
+    // Rimuoviamo il setTimeout qui perché gestiremo l'osservazione 
+    // dopo il caricamento effettivo dell'SVG
+    this.observeSvgContent();
   }
 
-private loadSvg() {
-  this.http.get('assets/images/map.svg', { responseType: 'text' }).subscribe({
-    next: (svg) => {
-      console.log('SVG caricato correttamente', svg); // Log il contenuto SVG
-      this.svgContent = this.sanitizer.bypassSecurityTrustHtml(svg);
-    },
-    error: (error) => {
-      console.error('Errore nel caricamento dell\'SVG:', error);
-    },
-    complete: () => {
-      console.log('Caricamento dell\'SVG completato');
+  private loadSvg() {
+    this.http.get('assets/images/map.svg', { responseType: 'text' }).subscribe({
+      next: (svg) => {
+        this.svgContent = this.sanitizer.bypassSecurityTrustHtml(svg);
+        // Aspettiamo che l'SVG sia nel DOM
+        setTimeout(() => {
+          this.initializeSvgPoints();
+          this.centerMap();
+        }, 100);
+      },
+      error: (error) => {
+        console.error('Errore nel caricamento dell\'SVG:', error);
+      }
+    });
+  }
+
+  private initializeSvgPoints() {
+    const mapContainerEl = this.mapContainer.nativeElement;
+    const svgElement = mapContainerEl.querySelector('.svg-content svg') as SVGElement;
+    
+    if (svgElement) {
+      console.log('SVG Element trovato, registro i punti');
+      this.mapManager.registerSvgPoints(svgElement);
+    } else {
+      console.error('SVG Element non trovato nel DOM');
     }
-  });
-}
+  }
+
+  private subscribeToGameState() {
+    this.gameState.gameState$.subscribe(state => {
+      if (state) {
+        console.log('Personaggi ricevuti:', state.personaggi);
+        console.log('Punti ricevuti:', state.Punti);
+        
+        // Verifichiamo che i punti siano stati registrati
+        const firstCharacter = state.personaggi[0];
+        if (firstCharacter) {
+          const coords = this.mapManager.getPointCoordinates(firstCharacter.posizione);
+          console.log(`Coordinate per personaggio in posizione ${firstCharacter.posizione}:`, coords);
+        }
+        
+        this.mapManager.updateState(
+          state.personaggi,
+          state.Punti
+        );
+      }
+    });
+
+    this.mapManager.characters$.subscribe(characters => {
+      this.characters = characters;
+      console.log('Characters aggiornati:', characters);
+    });
+  }
+
+  getCharacterPosition(char: any) {
+    const coords = this.mapManager.getPointCoordinates(char.posizione);
+    if (!coords) {
+      console.warn(`Coordinate non trovate per il personaggio in posizione ${char.posizione}`);
+    }
+    return coords;
+  }
+  
+  private centerMap() {
+    const mapContainer = this.mapContainer.nativeElement;
+    const svgContent = mapContainer.querySelector('.svg-content') as HTMLElement;
+
+    if (svgContent) {
+      // Ottieni le dimensioni del container e dell'SVG
+      const containerRect = mapContainer.getBoundingClientRect();
+      const svgRect = svgContent.getBoundingClientRect();
+
+      // Calcola le coordinate per centrare
+      this.pointX = (containerRect.width - svgRect.width) / 2;
+      this.pointY = (containerRect.height - svgRect.height) / 2;
+
+      this.updateMapTransform();
+    }
+  }
+
 
   private observeSvgContent() {
     if (!this.mapContainer) {
       console.error('mapContainer non è definito!');
       return;
     }
-      const mapContainerEl = this.mapContainer.nativeElement;
-      const svgContent = mapContainerEl.querySelector('.svg-content') as HTMLElement;
-      console.log(svgContent); // Log l'elemento svg-content trovato
-      if (svgContent) {
-        this.setupDragEvents(svgContent);
-      } else {
-        console.error('Non è stato trovato un elemento .svg-content');
-      }
+    const mapContainerEl = this.mapContainer.nativeElement;
+    const svgContent = mapContainerEl.querySelector('.svg-content') as HTMLElement;
+    console.log(svgContent); // Log l'elemento svg-content trovato
+    if (svgContent) {
+      this.setupDragEvents(svgContent);
+    } else {
+      console.error('Non è stato trovato un elemento .svg-content');
+    }
 
 
   }
@@ -105,11 +171,26 @@ private loadSvg() {
     } else {
       return;
     }
+    // Calcola le nuove coordinate
+    const newPointX = clientX - this.start.x;
+    const newPointY = clientY - this.start.y;
 
-    this.pointX = clientX - this.start.x;
-    this.pointY = clientY - this.start.y;
+    // Opzionale: Aggiungi limiti al pan
+    const mapContainer = this.mapContainer.nativeElement;
+    const svgContent = mapContainer.querySelector('.svg-content') as HTMLElement;
+    if (svgContent) {
+      const containerRect = mapContainer.getBoundingClientRect();
+      const svgRect = svgContent.getBoundingClientRect();
 
-    this.updateMapTransform();
+      // Imposta dei limiti al pan (puoi modificare questi valori)
+      const maxX = containerRect.width;
+      const maxY = containerRect.height;
+
+      this.pointX = Math.min(Math.max(newPointX, -maxX), maxX);
+      this.pointY = Math.min(Math.max(newPointY, -maxY), maxY);
+
+      this.updateMapTransform();
+    }
   }
 
   private endPan() {
@@ -119,7 +200,8 @@ private loadSvg() {
   private updateMapTransform() {
     const mapContainer = this.mapContainer.nativeElement.querySelector('.svg-content') as HTMLElement;
     if (mapContainer) {
-      mapContainer.style.transform = `translate(${this.pointX}px, ${this.pointY}px) scale(${this.scale})`;
+      // Usa translate3d per migliorare le performance
+      mapContainer.style.transform = `translate3d(${this.pointX}px, ${this.pointY}px, 0) scale(${this.scale})`;
     }
   }
 
@@ -129,14 +211,30 @@ private loadSvg() {
   }
 
   zoomOut() {
+    const oldScale = this.scale;
     this.scale /= 1.2;
+    this.adjustZoomPoint(oldScale);
     this.updateMapTransform();
+  }
+  private adjustZoomPoint(oldScale: number) {
+    const mapContainer = this.mapContainer.nativeElement;
+    const containerRect = mapContainer.getBoundingClientRect();
+
+    // Calcola il punto centrale del container
+    const centerX = containerRect.width / 2;
+    const centerY = containerRect.height / 2;
+
+    // Aggiusta i punti di traslazione per mantenere il centro durante lo zoom
+    const scaleFactor = this.scale / oldScale;
+    const dx = (centerX - this.pointX) * (scaleFactor - 1);
+    const dy = (centerY - this.pointY) * (scaleFactor - 1);
+
+    this.pointX -= dx;
+    this.pointY -= dy;
   }
 
   resetZoom() {
     this.scale = 1;
-    this.pointX = 0;
-    this.pointY = 0;
-    this.updateMapTransform();
+    this.centerMap(); // Invece di resettare a 0,0, torna al centro
   }
 }
