@@ -7,7 +7,7 @@ import { Personaggio, Punto } from '../../dto/game';
   providedIn: 'root'
 })
 export class MapManagerService {
-  private svgPointsMap = new Map<number, SVGElement>();
+  svgPointsMap = new Map<number, SVGElement>();
   
   private charactersSubject = new BehaviorSubject<Personaggio[]>([]);
   private pointsSubject = new BehaviorSubject<Punto[]>([]);

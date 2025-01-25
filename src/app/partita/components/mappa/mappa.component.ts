@@ -35,22 +35,20 @@ export class MappaComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     // Rimuoviamo il setTimeout qui perché gestiremo l'osservazione 
     // dopo il caricamento effettivo dell'SVG
-    this.observeSvgContent();
+
   }
 
   private loadSvg() {
     this.http.get('assets/images/map.svg', { responseType: 'text' }).subscribe({
       next: (svg) => {
         this.svgContent = this.sanitizer.bypassSecurityTrustHtml(svg);
-        // Aspettiamo che l'SVG sia nel DOM
         setTimeout(() => {
           this.initializeSvgPoints();
+          this.observeSvgContent();  // Qui
           this.centerMap();
-        }, 100);
+        }, 300); // Aumentato il timeout
       },
-      error: (error) => {
-        console.error('Errore nel caricamento dell\'SVG:', error);
-      }
+      error: (error) => console.error('Errore nel caricamento dell\'SVG:', error)
     });
   }
 
@@ -66,29 +64,33 @@ export class MappaComponent implements OnInit, AfterViewInit {
     }
   }
 
+  // Aggiorna subscription
   private subscribeToGameState() {
     this.gameState.gameState$.subscribe(state => {
       if (state) {
-        console.log('Personaggi ricevuti:', state.personaggi);
-        console.log('Punti ricevuti:', state.Punti);
-        
-        // Verifichiamo che i punti siano stati registrati
-        const firstCharacter = state.personaggi[0];
-        if (firstCharacter) {
-          const coords = this.mapManager.getPointCoordinates(firstCharacter.posizione);
-          console.log(`Coordinate per personaggio in posizione ${firstCharacter.posizione}:`, coords);
-        }
-        
-        this.mapManager.updateState(
-          state.personaggi,
-          state.Punti
-        );
+        this.mapManager.updateState(state.personaggi, state.Punti);
       }
     });
 
     this.mapManager.characters$.subscribe(characters => {
       this.characters = characters;
-      console.log('Characters aggiornati:', characters);
+      this.drawCharacters();
+    });
+  }
+
+  private drawCharacters() {
+    document.querySelectorAll('.character-piece').forEach(el => el.remove());
+
+    this.characters.forEach(char => {
+      const pointElement = this.mapManager.svgPointsMap.get(char.posizione);
+      if (!pointElement) return;
+
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute('r', '10');
+      circle.setAttribute('fill', char.tipoPersonaggio === 1 ? 'blue' : 'red');
+      circle.classList.add('character-piece');
+      
+      pointElement.appendChild(circle);
     });
   }
 
@@ -100,6 +102,23 @@ export class MappaComponent implements OnInit, AfterViewInit {
     return coords;
   }
   
+
+  private observeSvgContent() {
+    if (!this.mapContainer) {
+      console.error('mapContainer non è definito!');
+      return;
+    }
+    const mapContainerEl = this.mapContainer.nativeElement;
+    const svgContent = mapContainerEl.querySelector('.svg-content') as HTMLElement;
+    console.log(svgContent); // Log l'elemento svg-content trovato
+    if (svgContent) {
+      this.setupDragEvents(svgContent);
+    } else {
+      console.error('Non è stato trovato un elemento .svg-content');
+    }
+  }
+
+
   private centerMap() {
     const mapContainer = this.mapContainer.nativeElement;
     const svgContent = mapContainer.querySelector('.svg-content') as HTMLElement;
@@ -117,85 +136,43 @@ export class MappaComponent implements OnInit, AfterViewInit {
     }
   }
 
-
-  private observeSvgContent() {
-    if (!this.mapContainer) {
-      console.error('mapContainer non è definito!');
-      return;
-    }
-    const mapContainerEl = this.mapContainer.nativeElement;
-    const svgContent = mapContainerEl.querySelector('.svg-content') as HTMLElement;
-    console.log(svgContent); // Log l'elemento svg-content trovato
-    if (svgContent) {
-      this.setupDragEvents(svgContent);
-    } else {
-      console.error('Non è stato trovato un elemento .svg-content');
-    }
-
-
-  }
-
   private setupDragEvents(svgContent: HTMLElement) {
-    svgContent.addEventListener('mousedown', this.startPan.bind(this));
-    svgContent.addEventListener('mousemove', this.movePan.bind(this));
-    document.addEventListener('mouseup', this.endPan.bind(this));
-
-    svgContent.addEventListener('touchstart', this.startPan.bind(this), { passive: false });
-    svgContent.addEventListener('touchmove', this.movePan.bind(this), { passive: false });
-    svgContent.addEventListener('touchend', this.endPan.bind(this));
-  }
-
-  private startPan(event: MouseEvent | TouchEvent) {
-    event.preventDefault();
-    this.panning = true;
-
-    if (event instanceof MouseEvent) {
-      this.start = { x: event.clientX - this.pointX, y: event.clientY - this.pointY };
-    } else if (event instanceof TouchEvent && event.touches.length === 1) {
-      const touch = event.touches[0];
-      this.start = { x: touch.clientX - this.pointX, y: touch.clientY - this.pointY };
-    }
-  }
-
-  private movePan(event: MouseEvent | TouchEvent) {
-    if (!this.panning) return;
-
-    let clientX: number, clientY: number;
-    if (event instanceof MouseEvent) {
-      clientX = event.clientX;
-      clientY = event.clientY;
-    } else if (event instanceof TouchEvent && event.touches.length === 1) {
-      const touch = event.touches[0];
-      clientX = touch.clientX;
-      clientY = touch.clientY;
-    } else {
-      return;
-    }
-    // Calcola le nuove coordinate
-    const newPointX = clientX - this.start.x;
-    const newPointY = clientY - this.start.y;
-
-    // Opzionale: Aggiungi limiti al pan
     const mapContainer = this.mapContainer.nativeElement;
-    const svgContent = mapContainer.querySelector('.svg-content') as HTMLElement;
-    if (svgContent) {
-      const containerRect = mapContainer.getBoundingClientRect();
-      const svgRect = svgContent.getBoundingClientRect();
-
-      // Imposta dei limiti al pan (puoi modificare questi valori)
-      const maxX = containerRect.width;
-      const maxY = containerRect.height;
-
-      this.pointX = Math.min(Math.max(newPointX, -maxX), maxX);
-      this.pointY = Math.min(Math.max(newPointY, -maxY), maxY);
-
+    
+    mapContainer.addEventListener('mousedown', (e: MouseEvent) => {
+      console.log('Mouse down', { x: e.clientX, y: e.clientY });
+      this.panning = true;
+      e.preventDefault();
+      this.start = { x: e.clientX - this.pointX, y: e.clientY - this.pointY };
+      console.log('Start point', this.start);
+    });
+   
+    document.addEventListener('mousemove', (e: MouseEvent) => {
+      if (!this.panning) return;
+      console.log('Mouse move', { x: e.clientX, y: e.clientY });
+      this.pointX = e.clientX - this.start.x;
+      this.pointY = e.clientY - this.start.y;
+      console.log('New points', { x: this.pointX, y: this.pointY });
       this.updateMapTransform();
-    }
-  }
+    });
+   
+    document.addEventListener('mouseup', () => {
+      console.log('Mouse up, panning stopped');
+      this.panning = false;
+    });
 
-  private endPan() {
-    this.panning = false;
-  }
+
+    mapContainer.addEventListener('wheel', (e: WheelEvent) => {
+      e.preventDefault();
+      const delta = e.deltaY;
+      
+      if (delta > 0) {
+        this.zoomOut();
+      } else {
+        this.zoomIn();
+      }
+     }, { passive: false });
+   }
 
   private updateMapTransform() {
     const mapContainer = this.mapContainer.nativeElement.querySelector('.svg-content') as HTMLElement;
