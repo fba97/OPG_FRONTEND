@@ -21,13 +21,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { RightSidebarComponent } from './partita/components/right-sidebar/right-sidebar.component';
-import { TurnInfoComponent } from './partita/components/turn-info/turn-info.component';
 import { GameStatusComponent } from './partita/components/game-status/game-status.component';
 import { PartitaComponent } from './partita/partita.component';
 import { LeftSidebarComponent } from './partita/components/left-sidebar/left-sidebar.component';
 import { CharacterInfoComponent } from './partita/components/character-info/character-info.component'; 
 import { MappaComponent } from './partita/components/mappa/mappa.component'; 
+import { TurnComponent } from './partita/components/turn/turn.component'; 
 
 
 
@@ -46,13 +45,12 @@ import { MappaComponent } from './partita/components/mappa/mappa.component';
     ProbabilitaComponent,
     ImprevistiComponent,
     DettagliocombattimentoComponent,
-    RightSidebarComponent,
-    TurnInfoComponent,
     GameStatusComponent,
     PartitaComponent,
     LeftSidebarComponent,
     CharacterInfoComponent,
-    MappaComponent
+    MappaComponent,
+    TurnComponent
 
   ],
   imports: [

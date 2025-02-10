@@ -10,8 +10,8 @@ import { Game, ActualPartita, Personaggio, Combattimento, PartitaSoft } from '..
 })
 export class GameStateService {
   private readonly UPDATE_URL = 'https://localhost:7087/api/Update/GetUpdatePartitaSoft';
-  private readonly POLLING_INTERVAL = 5000; // 5 secondi
-
+  private readonly POLLING_INTERVAL = 1000; 
+  
   // Main game state
   private gameStateSubject = new BehaviorSubject<PartitaSoft | null>(null);
   gameState$ = this.gameStateSubject.asObservable().pipe(shareReplay(1));

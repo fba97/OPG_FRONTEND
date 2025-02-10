@@ -21,7 +21,28 @@
   overflow: hidden;
 }
 
-.right-sidebar {
-  width: 250px;
-  height: 100%;
+/* Assicurati che il turn-component sia sempre visibile sopra gli altri elementi */
+
+app-turn {
+  position: fixed;  /* per posizionarlo rispetto alla viewport */
+  bottom: 20px;       /* attaccato al bordo inferiore */
+  right: 20px;        /* attaccato al bordo destro */
+  width: 25%;      /* occupa 1/4 della larghezza dello schermo */
+  aspect-ratio: 1; /* opzionale: mantiene il componente quadrato */
+  z-index: 1000;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

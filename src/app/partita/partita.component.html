@@ -5,7 +5,7 @@
       <button mat-icon-button (click)="toggleSidebar()" class="sidebar-toggle">
         <mat-icon>menu</mat-icon>
       </button>
-  
+      
       <div class="sidebar-content">
         <h3 class="sidebar-title">Menu</h3>
         <mat-nav-list class="sidebar-nav">
@@ -16,12 +16,13 @@
         </mat-nav-list>
       </div>
     </div>
-  
+    
     <!-- Area centrale con la mappa -->
     <div class="main-content">
       <app-mappa></app-mappa>
     </div>
-  
-    <!-- Nuova sidebar destra -->
-    <app-right-sidebar></app-right-sidebar>
+    
+    <!-- Nuovo turn-component destra -->
+    <app-turn></app-turn> 
+
   </div>

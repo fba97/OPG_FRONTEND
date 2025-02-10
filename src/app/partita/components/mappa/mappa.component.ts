@@ -38,6 +38,8 @@ export class MappaComponent implements OnInit, AfterViewInit {
 
   }
 
+
+
   private loadSvg() {
     this.http.get('assets/images/map.svg', { responseType: 'text' }).subscribe({
       next: (svg) => {
@@ -45,6 +47,7 @@ export class MappaComponent implements OnInit, AfterViewInit {
         setTimeout(() => {
           this.initializeSvgPoints();
           this.observeSvgContent();  // Qui
+          //this.animateZoomPan();
           this.centerMap();
         }, 300); // Aumentato il timeout
       },
@@ -77,22 +80,53 @@ export class MappaComponent implements OnInit, AfterViewInit {
       this.drawCharacters();
     });
   }
-
   private drawCharacters() {
     document.querySelectorAll('.character-piece').forEach(el => el.remove());
-
+   
     this.characters.forEach(char => {
-      const pointElement = this.mapManager.svgPointsMap.get(char.posizione);
+      const pointElement = this.mapManager.svgPointsMap.get(char.posizione) as SVGEllipseElement;
       if (!pointElement) return;
-
+   
       const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      circle.setAttribute('r', '10');
-      circle.setAttribute('fill', char.tipoPersonaggio === 1 ? 'blue' : 'red');
-      circle.classList.add('character-piece');
       
-      pointElement.appendChild(circle);
+      // Get position from ellipse element
+      const cx = pointElement.getAttribute('cx');
+      const cy = pointElement.getAttribute('cy'); 
+      const r = pointElement.getAttribute('ry'); 
+      
+      if(!cx || !cy || !r) {
+        console.error('Pedina non disegnata perché svg del punto non ha cx e cy');
+        return;
+      }
+   
+      circle.setAttribute('cx', cx);
+      circle.setAttribute('cy', cy);
+      circle.setAttribute('r', r);
+      circle.setAttribute('fill', this.getColorById(char.id));
+      circle.setAttribute('style', "pointer-events: all;");
+      circle.classList.add('character-piece');
+   
+      pointElement.parentElement?.appendChild(circle);
     });
-  }
+    
+   }
+
+
+   getColorById(id: number): string {
+    switch (id) {
+      case 1: return '#FF0000';  // Red
+      case 2: return '#00FF00';  // Green
+      case 3: return '#0000FF';  // Blue
+      case 4: return '#FFFF00';  // Yellow
+      case 5: return '#FF00FF';  // Magenta
+      case 6: return '#00FFFF';  // Cyan
+      case 7: return '#FFA500';  // Orange
+      case 8: return '#800080';  // Purple
+      case 9: return '#008000';  // Dark Green
+      case 10: return '#000080'; // Navy
+      default: return '#000000'; // Black
+    }
+   }
 
   getCharacterPosition(char: any) {
     const coords = this.mapManager.getPointCoordinates(char.posizione);
@@ -129,9 +163,11 @@ export class MappaComponent implements OnInit, AfterViewInit {
       const svgRect = svgContent.getBoundingClientRect();
 
       // Calcola le coordinate per centrare
-      this.pointX = (containerRect.width - svgRect.width) / 2;
-      this.pointY = (containerRect.height - svgRect.height) / 2;
-
+      console.log('dimensioni X', { ContainerRectWidth: containerRect.width , svgRectWidth: svgRect.width });
+      console.log('dimensioni Y', { containerRectHeight: containerRect.width , svgRectHeight: svgRect.height });
+      this.pointX =- 500;
+      this.pointY =- 400;
+      this.scale = this.scale * 0.14;
       this.updateMapTransform();
     }
   }
@@ -214,4 +250,38 @@ export class MappaComponent implements OnInit, AfterViewInit {
     this.scale = 1;
     this.centerMap(); // Invece di resettare a 0,0, torna al centro
   }
+
+
+  //non la utilizzo ma nel caso un cui si volessero fare delle animazioni puo tornare utile
+  async animateZoomPan() {
+    const duration = 3000;
+    const targetX = -1000; // spostamento a destra
+    const targetY = -800; // spostamento a destra
+    const targetScale = 0.2;
+    const startScale = this.scale;
+    const startX = this.pointX;
+    const startY = this.pointY;
+    
+    const startTime = Date.now();
+   
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function
+      const eased = progress * (2 - progress);
+      
+      this.scale = startScale + (targetScale - startScale) * eased;
+      this.pointX = startX + (targetX - startX) * eased;
+      this.pointY = startY + (targetY - startY) * eased;
+      
+      this.updateMapTransform();
+   
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+   
+    animate();
+   }
 }
