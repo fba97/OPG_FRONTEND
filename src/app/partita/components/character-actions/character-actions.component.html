@@ -1,0 +1,138 @@
+
+<div class="character-panel">
+    <div class="nav-buttons">
+      <button 
+        *ngFor="let section of sections" 
+        (click)="currentSection = section.id"
+        class="nav-button"
+        [class.active]="currentSection === section.id"
+      >
+        <div class="button-icon">{{ section.icon }}</div>
+        <div class="button-label">{{ section.label }}</div>
+      </button>
+    </div>
+
+    <div class="main-content">
+      <div class="content-section" [ngSwitch]="currentSection">
+        <div *ngSwitchCase="'stats'" class="stats-panel">
+          <div class="stat-row">
+            <span class="stat-label">HEALTH</span>
+            <div class="stat-bar">
+              <div class="bar">
+                <div class="fill" [style.width.%]="(character.health / character.maxHealth) * 100"></div>
+              </div>
+              <span class="stat-value">{{ character.health }}/{{ character.maxHealth }}</span>
+            </div>
+          </div>
+          
+          <div class="stat-row">
+            <span class="stat-label">DEFENSE</span>
+            <div class="stat-bar">
+              <div class="bar">
+                <div class="fill" [style.width.%]="(character.defense / 15) * 100"></div>
+              </div>
+              <span class="stat-value">{{ character.defense }}</span>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">ATTACK</span>
+            <div class="stat-bar">
+              <div class="bar">
+                <div class="fill" [style.width.%]="(character.attack / 20) * 100"></div>
+              </div>
+              <span class="stat-value">{{ character.attack }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'inventory'" class="inventory-panel">
+          <h2 class="inventory-title">Inventory</h2>
+          
+          <div class="inventory-filters">
+            <button 
+              *ngFor="let filter of inventoryFilters" 
+              (click)="currentFilter = filter.id"
+              class="filter-button"
+              [class.active]="currentFilter === filter.id"
+            >
+              <div class="filter-icon">{{ filter.icon }}</div>
+            </button>
+          </div>
+          
+          <div class="inventory-carousel">
+            <button class="carousel-nav prev" (click)="prevItem()">&lt;</button>
+            <div class="carousel-container">
+              <div class="carousel-track" [style.transform]="'translateX(' + (-currentItemIndex * 120) + 'px)'">
+                <div *ngFor="let item of filteredItems; let i = index" 
+                     class="carousel-item" 
+                     [class.active]="i === currentItemIndex">
+                  <div class="item-card">
+                    <div class="item-icon">{{ item.icon }}</div>
+                    <div class="item-name">{{ item.name }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-nav next" (click)="nextItem()">&gt;</button>
+          </div>
+          
+          <div class="inventory-actions">
+            <button class="action-button trade" (click)="performItemAction('trade')">
+              <span class="action-icon">🔄</span>
+              <span>Trade</span>
+            </button>
+            <button class="action-button sell" (click)="performItemAction('sell')">
+              <span class="action-icon">💰</span>
+              <span>Sell</span>
+            </button>
+            <button class="action-button use" (click)="performItemAction('use')">
+              <span class="action-icon">✨</span>
+              <span>Use</span>
+            </button>
+            <button class="action-button equip" (click)="performItemAction('equip')">
+              <span class="action-icon">👤</span>
+              <span>Equip</span>
+            </button>
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'skills'" class="skills-panel">
+          <h2 class="skills-title">Skills</h2>
+          
+          <div class="skills-container">
+            <div class="skill-column" *ngFor="let tier of skillTiers">
+              <h3 class="tier-title">{{ tier.name }}</h3>
+              
+              <div class="skill-slots">
+                <div *ngFor="let skill of tier.skills" class="skill-slot" [class.unlocked]="skill.unlocked">
+                  <div class="skill-card" [class.locked]="!skill.unlocked">
+                    <div *ngIf="!skill.unlocked" class="lock-overlay">
+                      <div class="lock-icon">🔒</div>
+                      <div class="skill-cost">{{ skill.cost }} 🪙</div>
+                      <button class="unlock-button" (click)="unlockSkill(skill)">Unlock</button>
+                    </div>
+                    <div *ngIf="skill.unlocked" class="skill-content">
+                      <div class="skill-icon">{{ skill.icon }}</div>
+                      <div class="skill-name">{{ skill.name }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="character-cards-container">
+        <div class="card-stack">
+          <div class="character-card back-card-3"></div>
+          <div class="character-card back-card-2"></div>
+          <div class="character-card back-card-1"></div>
+          <div class="character-card main-card">
+            <img [src]="character.imageUrl" [alt]="character.name" class="character-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

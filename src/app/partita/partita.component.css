@@ -21,22 +21,19 @@
   overflow: hidden;
 }
 
-/* Assicurati che il turn-component sia sempre visibile sopra gli altri elementi */
 
-app-turn {
-  position: fixed;  /* per posizionarlo rispetto alla viewport */
-  bottom: 20px;       /* attaccato al bordo inferiore */
-  right: 20px;        /* attaccato al bordo destro */
-  width: 25%;      /* occupa 1/4 della larghezza dello schermo */
-  aspect-ratio: 1; /* opzionale: mantiene il componente quadrato */
-  z-index: 1000;
+app-character-actions {
+  position: fixed;  /* Fissato rispetto alla viewport */
+  bottom: 20px;       /* Distanza dal bordo inferiore */
+  right: 20px;        /* Distanza dal bordo destro */
+  width: 1000px;       /* Larghezza fissa per evitare schiacciamenti */
+  max-height: 2000px;  /* Altezza massima per mantenere proporzioni */
+  background: rgba(26, 26, 26, 0.9); /* Leggera trasparenza per separarlo dallo sfondo */
+  border-radius: 12px; /* Angoli arrotondati per un design moderno */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombra per risaltare sopra gli altri elementi */
+  overflow: hidden; /* Evita overflow del contenuto */
+  z-index: 1000; /* Assicura che sia sopra gli altri elementi */
 }
-
-
-
-
-
-
 
 
 

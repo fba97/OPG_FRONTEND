@@ -27,6 +27,8 @@ import { LeftSidebarComponent } from './partita/components/left-sidebar/left-sid
 import { CharacterInfoComponent } from './partita/components/character-info/character-info.component'; 
 import { MappaComponent } from './partita/components/mappa/mappa.component'; 
 import { TurnComponent } from './partita/components/turn/turn.component'; 
+import { CharacterActionsComponent } from './partita/components/character-actions/character-actions.component';
+
 
 
 
@@ -50,7 +52,8 @@ import { TurnComponent } from './partita/components/turn/turn.component';
     LeftSidebarComponent,
     CharacterInfoComponent,
     MappaComponent,
-    TurnComponent
+    TurnComponent,
+    CharacterActionsComponent
 
   ],
   imports: [

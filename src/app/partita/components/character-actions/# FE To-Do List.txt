@@ -1,0 +1,66 @@
+# FE To-Do List
+
+## **Turn System**
+- [ ] Display the **turn order panel** with:  
+  - [ ] A square showing the **current player's information**  
+  - [ ] A stack of circles representing upcoming turns  
+  - [ ] Animated movement of circles as turns progress  
+- [ ] Ensure the **active player’s turn is highlighted**  
+- [ ] Add an option to **end the turn**  
+
+## **Player Actions**
+### **Attack System**
+- [ ] Implement **enemy selection** when clicking on a unit  
+- [ ] Zoom in on the **battle area** when an attack is initiated  
+- [ ] Display a **popup menu** with available attack actions  
+- [ ] Implement the **combat resolution panel**, including:  
+  - [ ] Dice roll mechanics  
+  - [ ] Damage calculation and health bar reduction  
+  - [ ] Defense mechanics and status effects  
+
+### **Movement System**
+- [ ] Allow **clicking on points on the map** to select movement locations  
+- [ ] Enlarge and highlight available **movement points**  
+- [ ] Show an **action menu** when clicking a point (e.g., "Move Here")  
+- [ ] Animate **character movement** to the selected point  
+
+## **General UI & Interaction**
+- [ ] Improve **zoom and visibility** for attacks and movement  
+- [ ] Ensure **smooth UI animations** for turn progression and actions  
+- [ ] Maintain **a consistent and intuitive user experience**  
+
+
+
+
+
+
+# To-Do List
+
+sviluppare un componente modale rettangolare con piu schede azionate da bottoni. Al suo interno deve avere queste informazioni:
+  - foto del personaggio
+  - Nome del personaggio
+  - livello del personaggio
+  - Azioni residue (2 azioni per turno)
+  - Mostrare graficamente i prossimi giocatori concatenati
+
+## Player Info Panel
+  - Barra della vita con numero e possibilità di comprare 
+  - Barra della difesa con numero e possibilità di comprare 
+  - Barra della attacco con numero e possibilità di comprare 
+  - Stato del giocatore con icone (es. rallentato, avvelenato)
+
+
+## Inventario Component
+- [ ] Strutturare l'inventario con 10 caselle per oggetti raccolti
+- [ ] Aggiungere una sezione per gli equipaggiamenti indossati
+- [ ] deve esserci l'informazione su quanti soldi ha il personaggio
+- [ ] Fornire pulsanti per vendere, donare ad un altro personaggio, usare .. l'oggetto selezionato
+
+## meccanica delle azioni
+- [ ] aggiungere animazioni di zoom (+1 zoom in) quando si clicca su una tezzera esagonale.
+- [ ] una volta che siamo in zoom (+1 zoom in) deve esserci la possibilità di cliccare su personaggi e punti
+
+## componente azioni
+- questo componente è un modale e deve poter gestire piu tipologie di azioni (spostamento / attacco)
+- [ ] se si clicca su un punto si suppone che il personaggio si voglia spostare in quel punto. esce un pop up che chiede la conferma di movimento.
+- [ ] se si clicca su un personaggio esce un pop up che fa vedere lo scontro con le info principali di 
