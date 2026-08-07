@@ -12,6 +12,9 @@
     </div>
 
     <div class="main-content">
+      <div class="azioni-residue-info">
+        Azioni residue: {{ azioniRimanenti }}/{{ azioniMassimePerTurno }}
+      </div>
       <div class="content-section" [ngSwitch]="currentSection">
         <div *ngSwitchCase="'stats'" class="stats-panel">
           <h2 class="skills-title">Stats</h2>

@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy  } from '@angular/core';
 import { Inventario, Personaggio } from '../../../dto/personaggio';
 import { GameStateService } from '../../services/game-state.service';
 import { Subscription } from 'rxjs';
+import { Turno } from '../../../dto/game';
 
 
 interface Section {
@@ -26,8 +27,13 @@ interface Skill {
 export class CharacterActionsComponent implements OnInit, OnDestroy {
 
   private characterSubscription!: Subscription;
+  private turnoSubscription!: Subscription;
   constructor(private gameState: GameStateService) {}
-  
+
+  // Azioni residue nel turno corrente (default 2, coerente con Turno.cs lato backend)
+  azioniRimanenti: number = 2;
+  azioniMassimePerTurno: number = 2;
+
   characterInTurn: Personaggio = {    id: 1, nome: 'prova', puntiVita:30, attacco: 5, difesa:10, descrizione:'Descrizione', tipoPersonaggio: 1, posizione: 1, taglia: 1, livello: 1, gittataAttacco: 1, gittataOggetti: 1,inventario:     
     {
       id: 1,
@@ -68,6 +74,14 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
       // Puoi aggiungere qui ulteriori logiche per aggiornare il componente in base al personaggio selezionato
     });
     this.inventory = this.characterInTurn?.inventario;
+
+    // Sottoscrizione al turno corrente, per mostrare le azioni residue
+    this.turnoSubscription = this.gameState.actualTurno$.subscribe((turno: Turno | null) => {
+      if (turno) {
+        this.azioniRimanenti = turno.azioniRimanenti;
+        this.azioniMassimePerTurno = turno.azioniMassimePerTurno;
+      }
+    });
   }
 
   // Oggetti dell'inventario filtrati in base alla categoria selezionata (inventoryFilters)
@@ -84,6 +98,9 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
     // Pulizia della sottoscrizione per evitare memory leak
     if (this.characterSubscription) {
       this.characterSubscription.unsubscribe();
+    }
+    if (this.turnoSubscription) {
+      this.turnoSubscription.unsubscribe();
     }
   }
 

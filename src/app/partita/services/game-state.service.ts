@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, timer } from 'rxjs';
 import { switchMap, catchError, tap, shareReplay, map } from 'rxjs/operators';
-import { Combattimento, PartitaSoft } from '../../dto/game';
+import { Combattimento, PartitaSoft, Turno } from '../../dto/game';
 import { Personaggio } from '../../dto/personaggio';
 
 @Injectable({
@@ -45,7 +45,12 @@ export class GameStateService {
   combattimentiInCorso$ = this.gameState$.pipe(
     map(state => state?.combattimenti?.length ?? 0)
   );
-  
+
+  // Turno corrente (azioni residue / massime), aggiornato ad ogni polling dal backend
+  actualTurno$: Observable<Turno | null> = this.gameState$.pipe(
+    map(state => state?.actualTurno ?? null)
+  );
+
 
   private updatePolling: any;
 
