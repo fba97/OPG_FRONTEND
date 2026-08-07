@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameStateService } from '../../services/game-state.service';
 import { Observable } from 'rxjs';
-import { Personaggio } from '../../../dto/game';  // Changed import to use the one from game.ts
+import { Personaggio } from '../../../dto/personaggio';
 
 @Component({
   selector: 'app-character-info',

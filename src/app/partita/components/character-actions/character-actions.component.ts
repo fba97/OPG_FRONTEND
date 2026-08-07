@@ -25,7 +25,7 @@ interface Skill {
 })
 export class CharacterActionsComponent implements OnInit, OnDestroy {
 
-  private characterSubscription: Subscription;
+  private characterSubscription!: Subscription;
   constructor(private gameState: GameStateService) {}
   
   characterInTurn: Personaggio = {    id: 1, nome: 'prova', puntiVita:30, attacco: 5, difesa:10, descrizione:'Descrizione', tipoPersonaggio: 1, posizione: 1, taglia: 1, livello: 1, gittataAttacco: 1, gittataOggetti: 1,inventario:     
@@ -62,7 +62,9 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
       
     }
     this.characterSubscription = this.gameState.selectedCharacter$.subscribe(c => {
-      this.characterInTurn = c;
+      if (c) {
+        this.characterInTurn = c;
+      }
       // Puoi aggiungere qui ulteriori logiche per aggiornare il componente in base al personaggio selezionato
     });
     this.inventory = this.characterInTurn?.inventario;
