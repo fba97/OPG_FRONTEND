@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { Personaggio } from '../dto/personaggio';
+import { PartitaService, PartitaSalvataInfo } from '../partita.service';
 
 @Component({
   selector: 'app-homepage',
@@ -12,23 +13,12 @@ export class HomepageComponent implements OnInit {
 
   personaggiList: Array<Personaggio> = []
 
-  constructor(private router: Router, private service: UserService) { }
-
-  // , private service: UserService
+  constructor(private router: Router, private service: UserService, private partitaService: PartitaService) { }
 
   ngOnInit(): void {
-    //RECUPERO I DATI DAL BACKEND
-
     this.service.findAllHeroes().subscribe(response => {
       this.personaggiList = response as Array<Personaggio>;
-      for (let i = 0; 1 < 7; i++) {
-        if (this.personaggiList[i].id > 5) {
-          this.personaggiList.splice(this.personaggiList[i].id, 2)
-        }
-      }
     });
-
-
   }
 
   isSidebarVisible = true;
@@ -44,16 +34,47 @@ export class HomepageComponent implements OnInit {
   showForm = false;
 
   listaSaga = ['Dressrosa'];
-  showPartite = false;
-  listaPartite = ['Partita1', 'Partita2', 'Partita3'];
 
-  mostraForm() {
+  nomePartita = '';
+  creaPartitaErrore = '';
 
+  creaPartita() {
+    this.creaPartitaErrore = '';
+    const idPersonaggi = this.personaggiList.filter(p => p.selected).map(p => p.id);
+
+    if (idPersonaggi.length === 0) {
+      this.creaPartitaErrore = 'Seleziona almeno un eroe.';
+      return;
+    }
+
+    const nome = this.nomePartita?.trim() || `Partita ${new Date().toLocaleString()}`;
+
+    this.partitaService.startGame(nome, 1, idPersonaggi).subscribe({
+      next: () => this.router.navigateByUrl('/partita'),
+      error: (err) => this.creaPartitaErrore = 'Errore nella creazione della partita: ' + (err?.message ?? err)
+    });
   }
+
+  listaPartite: PartitaSalvataInfo[] = [];
+  selectedPartitaId: number | null = null;
+  caricaPartitaErrore = '';
 
   caricaPartita() {
-
+    this.caricaPartitaErrore = '';
+    this.partitaService.getPartiteSalvate().subscribe({
+      next: (partite) => this.listaPartite = partite,
+      error: (err) => this.caricaPartitaErrore = 'Errore nel recupero delle partite salvate: ' + (err?.message ?? err)
+    });
   }
 
-
+  confermaCaricamento() {
+    if (this.selectedPartitaId == null) {
+      this.caricaPartitaErrore = 'Seleziona una partita da caricare.';
+      return;
+    }
+    this.partitaService.loadGame(this.selectedPartitaId).subscribe({
+      next: () => this.router.navigateByUrl('/partita'),
+      error: (err) => this.caricaPartitaErrore = 'Errore nel caricamento della partita: ' + (err?.message ?? err)
+    });
+  }
 }

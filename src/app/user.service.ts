@@ -18,7 +18,7 @@ export class UserService {
 
     findAllHeroes(): Observable<Object> {
 
-        return this.client.get('https://localhost:7087/api/Personaggio/GetAllPersonaggiBase');
+        return this.client.get('https://localhost:7087/api/Update/Personaggi');
     }
 
     findAllCombattimentiattivi(): Observable<Object> {

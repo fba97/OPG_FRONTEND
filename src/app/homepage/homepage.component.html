@@ -92,8 +92,12 @@ height: 100vh;">
                     <!-- Seconda sezione -->
                     <div class="row mt-3 border">
                         <div class="col-md-3">
-                            <button type="submit" class="btn btn-primary" style="width: 150px; text-align: left;">Crea
+                            <input type="text" [(ngModel)]="nomePartita" name="nomePartita"
+                                placeholder="Nome partita" class="form-control mb-2">
+                            <button type="button" class="btn btn-primary" style="width: 150px; text-align: left;"
+                                (click)="creaPartita()">Crea
                                 partita</button>
+                            <div *ngIf="creaPartitaErrore" class="text-danger mt-1">{{ creaPartitaErrore }}</div>
                         </div>
                         <div class="col-md-4">
                             <form>
@@ -120,15 +124,20 @@ height: 100vh;">
                     <!-- Terza sezione -->
                     <div class="row mt-3 border">
                         <div class="col-md-3">
-                            <button class="btn btn-primary" (click)="caricaPartita()">Carica partite</button>
+                            <button type="button" class="btn btn-primary" (click)="caricaPartita()">Carica
+                                partite</button>
+                            <button type="button" class="btn btn-secondary mt-1" [disabled]="selectedPartitaId == null"
+                                (click)="confermaCaricamento()">Carica la selezionata</button>
+                            <div *ngIf="caricaPartitaErrore" class="text-danger mt-1">{{ caricaPartitaErrore }}</div>
                         </div>
                         <div class="col-md-8">
                             <form>
                                 <label style="font-weight: 500;">Seleziona la partita:</label>
                                 <div class="hero-select-container" style="width: 500px;">
                                     <div *ngFor="let p of listaPartite">
-                                        <input type="radio" name="partita" value="{{p}}">
-                                        {{ p }}
+                                        <input type="radio" name="partita" [value]="p.idPartita"
+                                            [(ngModel)]="selectedPartitaId">
+                                        {{ p.nome }} (id {{ p.idPartita }})
                                     </div>
                                 </div>
                             </form>
