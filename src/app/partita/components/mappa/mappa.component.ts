@@ -69,6 +69,7 @@ export class MappaComponent implements OnInit, AfterViewInit {
       console.log('SVG Element trovato, registro i punti');
       this.mapManager.registerSvgPoints(svgElement);
       this.setupPointClickListeners(svgElement);
+      this.setupAreaClickListeners(svgElement);
     } else {
       console.error('SVG Element non trovato nel DOM');
     }
@@ -149,6 +150,49 @@ export class MappaComponent implements OnInit, AfterViewInit {
 
     this.azioniService.muoviVersoPunto(pointId).subscribe({
       error: (error) => console.error('Errore durante il movimento verso il punto', pointId, error)
+    });
+  }
+
+  // Aggiunge il listener di click alle Aree della mappa: zoom sull'area cliccata.
+  // I click sui Punti (annidati dentro le Aree nell'SVG) fermano la propagazione da
+  // soli, quindi non arrivano mai qui: cliccare un punto muove, cliccare altrove
+  // nell'area zooma.
+  private setupAreaClickListeners(svgElement: SVGElement) {
+    const areas = svgElement.querySelectorAll('[id^="Area_"]');
+    areas.forEach(area => {
+      area.addEventListener('click', () => {
+        if (this.dragMoved) {
+          // Click "fantasma" dopo un trascinamento della mappa, non un vero click.
+          return;
+        }
+        this.zoomToArea(area as SVGGraphicsElement);
+      });
+    });
+  }
+
+  private readonly AREA_ZOOM_SCALE = 3.5;
+
+  // Zooma centrando l'area cliccata: prima applica il livello di zoom target,
+  // poi misura dove l'area finisce sullo schermo (getBoundingClientRect, che
+  // riflette gia' il nuovo transform) e trasla la mappa per centrarla li'.
+  private zoomToArea(areaElement: SVGGraphicsElement) {
+    this.scale = this.AREA_ZOOM_SCALE;
+    this.pointX = 0;
+    this.pointY = 0;
+    this.updateMapTransform();
+
+    requestAnimationFrame(() => {
+      const containerRect = this.mapContainer.nativeElement.getBoundingClientRect();
+      const areaRect = areaElement.getBoundingClientRect();
+
+      const containerCenterX = containerRect.left + containerRect.width / 2;
+      const containerCenterY = containerRect.top + containerRect.height / 2;
+      const areaCenterX = areaRect.left + areaRect.width / 2;
+      const areaCenterY = areaRect.top + areaRect.height / 2;
+
+      this.pointX += containerCenterX - areaCenterX;
+      this.pointY += containerCenterY - areaCenterY;
+      this.updateMapTransform();
     });
   }
 
@@ -243,23 +287,19 @@ export class MappaComponent implements OnInit, AfterViewInit {
   }
 
 
+  // L'SVG (viewBox 0 0 1564.7873 1740.7908, preserveAspectRatio di default "xMidYMid
+  // meet") si adatta e si centra gia' da solo dentro il suo contenitore CSS (100%x100%
+  // di .map-container) senza bisogno di alcun transform: prima qui venivano applicati
+  // offset/scala arbitrari (calcolati per uno schermo specifico, mai in base alle
+  // dimensioni reali del container) che spostavano la mappa FUORI dal centro invece
+  // di centrarla. Riportare pointX/pointY/scale allo stato neutro (nessun transform)
+  // e' quindi la centratura corretta: zoom e trascinamento restano relativi a questa
+  // base pulita.
   private centerMap() {
-    const mapContainer = this.mapContainer.nativeElement;
-    const svgContent = mapContainer.querySelector('.svg-content') as HTMLElement;
-
-    if (svgContent) {
-      // Ottieni le dimensioni del container e dell'SVG
-      const containerRect = mapContainer.getBoundingClientRect();
-      const svgRect = svgContent.getBoundingClientRect();
-
-      // Calcola le coordinate per centrare
-      console.log('dimensioni X', { ContainerRectWidth: containerRect.width , svgRectWidth: svgRect.width });
-      console.log('dimensioni Y', { containerRectHeight: containerRect.width , svgRectHeight: svgRect.height });
-      this.pointX =- 500;
-      this.pointY =- 400;
-      this.scale = this.scale * 0.14;
-      this.updateMapTransform();
-    }
+    this.pointX = 0;
+    this.pointY = 0;
+    this.scale = 1;
+    this.updateMapTransform();
   }
 
   private setupDragEvents(svgContent: HTMLElement) {
