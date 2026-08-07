@@ -4,6 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { MapManagerService } from '../../services/map-manager.service';
 import { GameStateService } from '../../services/game-state.service';
 import { AzioniService } from '../../services/azioni.service';
+import { Punto } from '../../../dto/game';
 
 @Component({
   selector: 'app-mappa',
@@ -20,6 +21,7 @@ export class MappaComponent implements OnInit, AfterViewInit {
   private start = { x: 0, y: 0 };
   characters: any[] = [];
   svgContent: SafeHtml | null = null;
+  private punti: Punto[] = [];
 
   constructor(
     private http: HttpClient, 
@@ -74,8 +76,18 @@ export class MappaComponent implements OnInit, AfterViewInit {
   private setupPointClickListeners(svgElement: SVGElement) {
     const points = svgElement.querySelectorAll('[id^="Punto_"]');
     points.forEach(point => {
-      // Feedback visivo minimo: cursore a mano sui punti cliccabili
-      (point as HTMLElement).style.cursor = 'pointer';
+      const el = point as HTMLElement;
+
+      // Evidenzia il punto al passaggio del mouse, solo se non e' bloccato
+      el.addEventListener('mouseenter', () => {
+        const pointId = parseInt(point.id.split('_')[1], 10);
+        if (!this.isPuntoBloccato(pointId)) {
+          el.style.filter = 'brightness(1.6) drop-shadow(0 0 4px #00ff88)';
+        }
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.filter = '';
+      });
 
       point.addEventListener('click', (event: Event) => {
         event.stopPropagation();
@@ -87,11 +99,47 @@ export class MappaComponent implements OnInit, AfterViewInit {
         this.onPointClick(pointId);
       });
     });
+
+    this.updatePointsHighlighting();
   }
 
-  // Richiede lo spostamento del personaggio in turno verso il punto cliccato
+  // Punto bloccato = non ci si puo' muovere li' (campo Blocco lato backend)
+  private isPuntoBloccato(pointId: number): boolean {
+    return this.punti.find(p => p.id === pointId)?.blocco ?? false;
+  }
+
+  // Applica cursore/opacita' a tutti i punti registrati in base a Blocco: distingue
+  // visivamente i punti raggiungibili da quelli bloccati, invece di scoprirlo solo dopo
+  // aver cliccato. Gli stili sono inline (non tramite classi CSS) perche' l'SVG e'
+  // iniettato via innerHTML/SafeHtml e non e' raggiungibile dalle regole CSS con
+  // l'encapsulation standard di Angular.
+  private updatePointsHighlighting() {
+    this.mapManager.svgPointsMap.forEach((element, pointId) => {
+      if (this.isPuntoBloccato(pointId)) {
+        element.style.cursor = 'not-allowed';
+        element.style.opacity = '0.35';
+      } else {
+        element.style.cursor = 'pointer';
+        element.style.opacity = '1';
+      }
+    });
+  }
+
+  // Richiede lo spostamento del personaggio in turno verso il punto cliccato,
+  // dopo conferma dell'utente. Se il punto e' bloccato, avvisa senza chiamare l'API.
   private onPointClick(pointId: number) {
-    console.log('Click su punto', pointId, '- richiesta movimento');
+    if (this.isPuntoBloccato(pointId)) {
+      alert(`Il punto ${pointId} e' bloccato: non puoi spostarti li'.`);
+      return;
+    }
+
+    const punto = this.punti.find(p => p.id === pointId);
+    const nomePunto = punto?.descrizione || `punto ${pointId}`;
+    const confermato = confirm(`Vuoi spostare il personaggio in ${nomePunto}?`);
+    if (!confermato) {
+      return;
+    }
+
     this.azioniService.muoviVersoPunto(pointId).subscribe({
       error: (error) => console.error('Errore durante il movimento verso il punto', pointId, error)
     });
@@ -108,6 +156,11 @@ export class MappaComponent implements OnInit, AfterViewInit {
     this.mapManager.characters$.subscribe(characters => {
       this.characters = characters;
       this.drawCharacters();
+    });
+
+    this.mapManager.points$.subscribe(punti => {
+      this.punti = punti;
+      this.updatePointsHighlighting();
     });
   }
   private drawCharacters() {
