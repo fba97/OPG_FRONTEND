@@ -14,6 +14,16 @@
     overflow: hidden;
   }
 
+  .azioni-residue-info {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #00BFFF;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+  }
+
   .nav-buttons {
     display: flex;
     flex-direction: column;

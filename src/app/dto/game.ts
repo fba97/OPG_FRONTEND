@@ -141,6 +141,12 @@ export interface Combattimento {
     listaNPCs: number[];
 }
 
+// Mappa la classe backend Primitives/Turno.cs, serializzata dentro ActualPartita.ActualTurno
+export interface Turno {
+    azioniMassimePerTurno: number;
+    azioniRimanenti: number;
+}
+
 export interface Passo {
     id: number;
     sorgente: number;
@@ -180,6 +186,7 @@ export interface ActualPartita {
     inventari: Inventario[];
     combattimenti: Combattimento[];
     missioni: Missione[];
+    actualTurno?: Turno;
 }
 
 export interface Game {
@@ -209,4 +216,5 @@ export interface PartitaSoft {
     combattimenti: Combattimento[];
     missioni: Missione[];
     Punti: Punto[];
+    actualTurno?: Turno;
 }
