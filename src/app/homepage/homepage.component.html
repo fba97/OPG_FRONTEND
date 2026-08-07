@@ -138,6 +138,8 @@ height: 100vh;">
                                         <input type="radio" name="partita" [value]="p.idPartita"
                                             [(ngModel)]="selectedPartitaId">
                                         {{ p.nome }} (id {{ p.idPartita }})
+                                        <button type="button" class="btn btn-sm btn-outline-danger"
+                                            (click)="eliminaPartita(p.idPartita)">Elimina</button>
                                     </div>
                                 </div>
                             </form>

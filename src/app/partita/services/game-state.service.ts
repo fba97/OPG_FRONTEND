@@ -1,7 +1,7 @@
 // src/app/partita/services/game-state.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, timer } from 'rxjs';
+import { BehaviorSubject, Observable, of, timer } from 'rxjs';
 import { switchMap, catchError, tap, shareReplay, map } from 'rxjs/operators';
 import { Combattimento, PartitaSoft, Turno } from '../../dto/game';
 import { Personaggio } from '../../dto/personaggio';
@@ -28,8 +28,12 @@ export class GameStateService {
   private cartaCasualeSubject = new BehaviorSubject<string>('');
   cartaCasuale$ = this.cartaCasualeSubject.asObservable();
 
-  private isGameActiveSubject = new BehaviorSubject<boolean>(false);
-  isGameActive$ = this.isGameActiveSubject.asObservable();
+  // Attiva quando l'ultimo polling ha trovato una partita in corso (nessun subject manuale:
+  // prima non veniva mai impostato a true da nessuna parte, quindi i controlli "Salva/Termina
+  // partita" restavano invisibili per sempre)
+  isGameActive$ = this.gameState$.pipe(
+    map(state => state !== null)
+  );
 
   private currentTurnSubject = new BehaviorSubject<string>('Giocatore');
   currentTurn$ = this.currentTurnSubject.asObservable();
@@ -67,15 +71,19 @@ export class GameStateService {
     });
   }
 
-  private fetchGameUpdate(): Observable<PartitaSoft> {
+  private fetchGameUpdate(): Observable<PartitaSoft | null> {
     return this.http.get<PartitaSoft>(this.UPDATE_URL).pipe(
       tap(gameState => {
         this.gameStateSubject.next(gameState);
         this.updateDerivedStates(gameState);
       }),
       catchError(error => {
+        // Non rilanciare l'errore: altrimenti il polling (timer + switchMap) si fermerebbe
+        // per sempre al primo errore (es. nessuna partita ancora caricata), invece di
+        // riprovare al giro successivo.
         console.error('Error fetching game update:', error);
-        throw error;
+        this.gameStateSubject.next(null);
+        return of(null);
       })
     );
   }
@@ -123,7 +131,7 @@ export class GameStateService {
   }
 
   // Metodo per forzare un aggiornamento immediato
-  forceUpdate(): Observable<PartitaSoft> {
+  forceUpdate(): Observable<PartitaSoft | null> {
     return this.fetchGameUpdate();
   }
 
@@ -133,16 +141,4 @@ export class GameStateService {
       this.updatePolling.unsubscribe();
     }
   }
-  
-    // Add the missing methods
-    saveGame() {
-      // Implement save game logic
-      console.log('Saving game...');
-    }
-  
-    endGame() {
-      // Implement end game logic
-      console.log('Ending game...');
-      this.isGameActiveSubject.next(false);
-    }
 }

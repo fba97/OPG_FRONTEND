@@ -11,11 +11,8 @@ export class PartitaComponent implements OnInit {
   isSidebarVisible = true;
 
   menuItems = [
-    { name: 'Mainpage', url: 'http://localhost:4200/mainpage' },
-    { name: 'Login', url: 'http://localhost:4200/login' },
-    { name: 'Register', url: 'http://localhost:4200/register' },
-    { name: 'Eroi', url: 'http://localhost:4200/personaggi' },
-    { name: 'Combattimento', url: 'http://localhost:4200/combattimento' }
+    { name: 'Torna alla home', url: 'http://localhost:4200/homepage' },
+    { name: 'Eroi', url: 'http://localhost:4200/personaggi' }
   ];
 
   constructor(private gameState: GameStateService) {}

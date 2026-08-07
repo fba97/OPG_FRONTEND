@@ -84,4 +84,17 @@ export class HomepageComponent implements OnInit {
       error: (err) => this.caricaPartitaErrore = 'Errore nel caricamento della partita: ' + this.messaggioErrore(err)
     });
   }
+
+  eliminaPartita(idPartita: number) {
+    this.caricaPartitaErrore = '';
+    this.partitaService.eliminaPartita(idPartita).subscribe({
+      next: () => {
+        this.listaPartite = this.listaPartite.filter(p => p.idPartita !== idPartita);
+        if (this.selectedPartitaId === idPartita) {
+          this.selectedPartitaId = null;
+        }
+      },
+      error: (err) => this.caricaPartitaErrore = 'Errore nell\'eliminazione della partita: ' + this.messaggioErrore(err)
+    });
+  }
 }

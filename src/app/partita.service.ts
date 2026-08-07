@@ -35,4 +35,13 @@ export class PartitaService {
     getPartiteSalvate(): Observable<PartitaSalvataInfo[]> {
         return this.client.get<PartitaSalvataInfo[]>(`${this.BASE_URL}/GetPartiteSalvate`);
     }
+
+    saveGame(): Observable<Object> {
+        return this.client.post(`${this.BASE_URL}/SaveGame`, null);
+    }
+
+    eliminaPartita(idPartita: number): Observable<Object> {
+        const params = new HttpParams().set('idPartita', idPartita.toString());
+        return this.client.delete(`${this.BASE_URL}/EliminaPartitaSalvata`, { params });
+    }
 }

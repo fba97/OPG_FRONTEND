@@ -17,4 +17,9 @@ export class AzioniService {
       params: { destinazione: destinazione.toString() }
     });
   }
+
+  // Termina il turno del personaggio attuale, anche se non ha usato tutte le azioni disponibili
+  concludiTurno(): Observable<Object> {
+    return this.http.post(`${this.BASE_URL}/ConcludiTurno`, null);
+  }
 }

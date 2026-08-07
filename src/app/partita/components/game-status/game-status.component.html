@@ -30,7 +30,8 @@
       </button>
       <button class="control-btn end-btn" (click)="endGame()">
         <mat-icon>exit_to_app</mat-icon>
-        Termina Partita
+        Torna alla home
       </button>
+      <div *ngIf="messaggioSalvataggio">{{ messaggioSalvataggio }}</div>
     </div>
   </div>

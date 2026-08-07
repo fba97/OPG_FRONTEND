@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy  } from '@angular/core';
 import { Inventario, Personaggio } from '../../../dto/personaggio';
 import { GameStateService } from '../../services/game-state.service';
+import { AzioniService } from '../../services/azioni.service';
 import { Subscription } from 'rxjs';
 import { Turno } from '../../../dto/game';
 
@@ -28,7 +29,7 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
 
   private characterSubscription!: Subscription;
   private turnoSubscription!: Subscription;
-  constructor(private gameState: GameStateService) {}
+  constructor(private gameState: GameStateService, private azioniService: AzioniService) {}
 
   // Azioni residue nel turno corrente (default 2, coerente con Turno.cs lato backend)
   azioniRimanenti: number = 2;
@@ -148,6 +149,16 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
 
   performItemAction(action: string) {
     console.log(`Performing action: ${action}`);
+  }
+
+  terminaTurnoErrore = '';
+
+  terminaTurno() {
+    this.terminaTurnoErrore = '';
+    this.azioniService.concludiTurno().subscribe({
+      next: () => {},
+      error: (err) => this.terminaTurnoErrore = 'Errore nel terminare il turno: ' + (err?.error ?? err?.message ?? err)
+    });
   }
 
   unlockSkill(skill: Skill) {
