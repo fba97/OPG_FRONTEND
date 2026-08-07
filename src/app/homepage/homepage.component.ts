@@ -51,8 +51,15 @@ export class HomepageComponent implements OnInit {
 
     this.partitaService.startGame(nome, 1, idPersonaggi).subscribe({
       next: () => this.router.navigateByUrl('/partita'),
-      error: (err) => this.creaPartitaErrore = 'Errore nella creazione della partita: ' + (err?.message ?? err)
+      error: (err) => this.creaPartitaErrore = 'Errore nella creazione della partita: ' + this.messaggioErrore(err)
     });
+  }
+
+  private messaggioErrore(err: any): string {
+    if (typeof err?.error === 'string' && err.error.length > 0) {
+      return err.error;
+    }
+    return err?.message ?? String(err);
   }
 
   listaPartite: PartitaSalvataInfo[] = [];
@@ -63,7 +70,7 @@ export class HomepageComponent implements OnInit {
     this.caricaPartitaErrore = '';
     this.partitaService.getPartiteSalvate().subscribe({
       next: (partite) => this.listaPartite = partite,
-      error: (err) => this.caricaPartitaErrore = 'Errore nel recupero delle partite salvate: ' + (err?.message ?? err)
+      error: (err) => this.caricaPartitaErrore = 'Errore nel recupero delle partite salvate: ' + this.messaggioErrore(err)
     });
   }
 
@@ -74,7 +81,7 @@ export class HomepageComponent implements OnInit {
     }
     this.partitaService.loadGame(this.selectedPartitaId).subscribe({
       next: () => this.router.navigateByUrl('/partita'),
-      error: (err) => this.caricaPartitaErrore = 'Errore nel caricamento della partita: ' + (err?.message ?? err)
+      error: (err) => this.caricaPartitaErrore = 'Errore nel caricamento della partita: ' + this.messaggioErrore(err)
     });
   }
 }
