@@ -19,6 +19,8 @@ export class MappaComponent implements OnInit, AfterViewInit {
   private pointX = 0;
   private pointY = 0;
   private start = { x: 0, y: 0 };
+  private dragStart = { x: 0, y: 0 };
+  private dragMoved = false;
   characters: any[] = [];
   svgContent: SafeHtml | null = null;
   private punti: Punto[] = [];
@@ -91,6 +93,11 @@ export class MappaComponent implements OnInit, AfterViewInit {
 
       point.addEventListener('click', (event: Event) => {
         event.stopPropagation();
+        if (this.dragMoved) {
+          // Click "fantasma" generato dal rilascio del mouse dopo un trascinamento
+          // della mappa: non e' un'intenzione di movimento, va ignorato.
+          return;
+        }
         const pointId = parseInt(point.id.split('_')[1], 10);
         if (isNaN(pointId)) {
           console.error('Id punto non valido:', point.id);
@@ -257,24 +264,35 @@ export class MappaComponent implements OnInit, AfterViewInit {
 
   private setupDragEvents(svgContent: HTMLElement) {
     const mapContainer = this.mapContainer.nativeElement;
-    
+
     mapContainer.addEventListener('mousedown', (e: MouseEvent) => {
       console.log('Mouse down', { x: e.clientX, y: e.clientY });
       this.panning = true;
+      this.dragMoved = false;
+      this.dragStart = { x: e.clientX, y: e.clientY };
       e.preventDefault();
       this.start = { x: e.clientX - this.pointX, y: e.clientY - this.pointY };
       console.log('Start point', this.start);
     });
-   
+
     document.addEventListener('mousemove', (e: MouseEvent) => {
       if (!this.panning) return;
       console.log('Mouse move', { x: e.clientX, y: e.clientY });
+      if (!this.dragMoved) {
+        const dx = e.clientX - this.dragStart.x;
+        const dy = e.clientY - this.dragStart.y;
+        // Soglia oltre la quale consideriamo il gesto un vero trascinamento della mappa,
+        // non un click: sotto questa soglia rimane un click valido su un punto.
+        if (Math.hypot(dx, dy) > 6) {
+          this.dragMoved = true;
+        }
+      }
       this.pointX = e.clientX - this.start.x;
       this.pointY = e.clientY - this.start.y;
       console.log('New points', { x: this.pointX, y: this.pointY });
       this.updateMapTransform();
     });
-   
+
     document.addEventListener('mouseup', () => {
       console.log('Mouse up, panning stopped');
       this.panning = false;
