@@ -1,13 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy  } from '@angular/core';
+import { Inventario, Personaggio } from '../../../dto/personaggio';
+import { GameStateService } from '../../services/game-state.service';
+import { Subscription } from 'rxjs';
 
-interface Character {
-  name: string;
-  health: number;
-  maxHealth: number;
-  defense: number;
-  attack: number;
-  imageUrl: string;
-}
 
 interface Section {
   id: string;
@@ -15,12 +10,8 @@ interface Section {
   icon: string;
 }
 
-interface InventoryItem {
-  name: string;
-  icon: string;
-}
-
 interface Skill {
+  id: number;
   name: string;
   icon: string;
   cost: number;
@@ -32,20 +23,29 @@ interface Skill {
   templateUrl: './character-actions.component.html',
   styleUrls: ['./character-actions.component.css']
 })
-export class CharacterActionsComponent {
-  character: Character = {
-    name: 'Hero',
-    health: 80,
-    maxHealth: 100,
-    defense: 10,
-    attack: 15,
-    imageUrl: 'assets/images/character.png' // Assicurati che l'immagine esista
-  };
+export class CharacterActionsComponent implements OnInit, OnDestroy {
+
+  private characterSubscription: Subscription;
+  constructor(private gameState: GameStateService) {}
+  
+  characterInTurn: Personaggio = {    id: 1, nome: 'prova', puntiVita:30, attacco: 5, difesa:10, descrizione:'Descrizione', tipoPersonaggio: 1, posizione: 1, taglia: 1, livello: 1, gittataAttacco: 1, gittataOggetti: 1,inventario:     
+    {
+      id: 1,
+      personaggioId: 1,
+      capacitaMassima: 1,
+      tipo: 1,
+      oggetti: []
+    }, 
+    stato: 1,  
+    selected: true, 
+    imageUrl: '' 
+  }
+  inventory: Inventario | undefined;
 
   sections: Section[] = [
-    { id: 'stats', label: 'Stats', icon: '📊' },
-    { id: 'inventory', label: 'Inventory', icon: '🎒' },
-    { id: 'skills', label: 'Skills', icon: '⚔️' }
+    { id: 'stats', label: '', icon: '📊' },
+    { id: 'inventory', label: '', icon: '🎒' },
+    { id: 'skills', label: '', icon: '⚔️' }
   ];
 
   inventoryFilters = [
@@ -54,18 +54,46 @@ export class CharacterActionsComponent {
     { id: 'armor', icon: '🛡️' }
   ];
 
-  filteredItems: InventoryItem[] = [
-    { name: 'Sword', icon: '🗡️' },
-    { name: 'Shield', icon: '🛡️' },
-    { name: 'Potion', icon: '🧪' }
-  ];
 
+  ngOnInit(): void {
+    // Sottoscrizione al personaggio selezionato
+    if(this.gameState.selectedCharacter$ == null)
+    {
+      
+    }
+    this.characterSubscription = this.gameState.selectedCharacter$.subscribe(c => {
+      this.characterInTurn = c;
+      // Puoi aggiungere qui ulteriori logiche per aggiornare il componente in base al personaggio selezionato
+    });
+    this.inventory = this.characterInTurn?.inventario;
+  }
+
+  
+  ngOnDestroy(): void {
+    // Pulizia della sottoscrizione per evitare memory leak
+    if (this.characterSubscription) {
+      this.characterSubscription.unsubscribe();
+    }
+  }
+
+  // Skill tiers and skills
   skillTiers = [
     {
-      name: 'Basic Skills',
+      name: 'Novice',
       skills: [
-        { name: 'Slash', icon: '⚔️', cost: 5, unlocked: true },
-        { name: 'Shield Block', icon: '🛡️', cost: 8, unlocked: false }
+        { id: 1, name: 'Basic Attack', icon: '⚔️', unlocked: false, cost: 0 }
+      ]
+    },
+    {
+      name: 'Adept',
+      skills: [
+        { id: 2, name: 'Power Strike', icon: '💥', unlocked: false, cost: 300 }
+      ]
+    },
+    {
+      name: 'Master',
+      skills: [
+        { id: 3, name: 'Whirlwind', icon: '🌪️', unlocked: false, cost: 800 }
       ]
     }
   ];
@@ -81,7 +109,11 @@ export class CharacterActionsComponent {
   }
 
   nextItem() {
-    if (this.currentItemIndex < this.filteredItems.length - 1) {
+    var filteredItemsLenght = 0;
+    if(this.inventory != null)
+      filteredItemsLenght = this.inventory.oggetti.length;
+
+    if (this.currentItemIndex < filteredItemsLenght - 1) {
       this.currentItemIndex++;
     }
   }

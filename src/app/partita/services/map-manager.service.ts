@@ -1,7 +1,8 @@
 // map-manager.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Personaggio, Punto } from '../../dto/game';
+import { Punto } from '../../dto/game';
+import { Personaggio } from '../../dto/personaggio';
 
 @Injectable({
   providedIn: 'root'

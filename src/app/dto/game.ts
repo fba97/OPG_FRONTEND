@@ -1,3 +1,5 @@
+import { Personaggio } from "./personaggio";
+
 // src/app/dto/types.ts
 export enum StatoMissione {
     Nuova = 1,
@@ -72,36 +74,65 @@ export interface Mappa {
     aree: Area[];
 }
 
-export interface Personaggio {
-    id: number;
-    nome: string;
-    punti_Vita: number;
-    attacco: number;
-    difesa: number;
-    descrizione: string;
-    tipoPersonaggio: TipoPersonaggio;
-    posizione: number;
-    taglia: number;
-    livello: number;
-    inventario: Inventario;
-    stato?: Stato;
-}
 
+
+
+
+export enum TipoOggetto {
+    Generico = 1,
+    Probabilita = 2,
+    Imprevisto = 3
+}
+export enum StatoOggetto {
+    Nuovo = 1,
+    Usato = 2,
+    Attivato = 3, //questo per effetti continui ad attivazione singola
+    Equipaggiato = 4 // questo è per gli oggetti che hanno bonus che si usano solo su determinate condizioni
+}
+export enum TipoInventario {
+    Personaggio = 1,
+    Mappa = 2,
+    Negozio = 3
+}
+  
 export interface Oggetto {
     id: number;
     nome: string;
     descrizione: string;
-    tipo: number;
+    tipo: TipoOggetto;
+    stato: StatoOggetto;
+    
     bonusAttacco: number;
     bonusDifesa: number;
-    id_Posizione?: number;
-    id_Inventario?: number;
+    idPosizione?: number | null;
+    idInventario?: number | null;
+    effetto: EffettoOggetto;
+  }
+
+  export interface EffettoOggetto {
+    nome: string;
+    descrizione: string;
+  }
+
+export interface OggettoInventario {
+    oggetto: Oggetto;
+    quantita: number;
+    isEquipaggiato: boolean;
 }
 
 export interface Inventario {
-    id: number;
-    listaIdOggetti: Oggetto[];
+  id: number;
+  personaggioId: number | null; // Null per inventari non legati a personaggi (es. casse)
+  capacitaMassima: number;
+  tipo: TipoInventario;
+  oggetti: OggettoInventario[];
 }
+
+
+
+
+
+
 
 export interface Combattimento {
     id: number;

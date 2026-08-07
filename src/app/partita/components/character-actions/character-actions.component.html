@@ -1,4 +1,3 @@
-
 <div class="character-panel">
     <div class="nav-buttons">
       <button 
@@ -15,13 +14,16 @@
     <div class="main-content">
       <div class="content-section" [ngSwitch]="currentSection">
         <div *ngSwitchCase="'stats'" class="stats-panel">
+          <h2 class="skills-title">Stats</h2>
           <div class="stat-row">
             <span class="stat-label">HEALTH</span>
             <div class="stat-bar">
               <div class="bar">
-                <div class="fill" [style.width.%]="(character.health / character.maxHealth) * 100"></div>
+                <div class="fill" [style.width.%]="((characterInTurn?.puntiVita ?? 0) / 30) * 100"></div>
               </div>
-              <span class="stat-value">{{ character.health }}/{{ character.maxHealth }}</span>
+html
+Copy
+<div class="fill" [style.width.%]="((characterInTurn?.puntiVita ?? 0) / 30) * 100"></div>
             </div>
           </div>
           
@@ -29,9 +31,9 @@
             <span class="stat-label">DEFENSE</span>
             <div class="stat-bar">
               <div class="bar">
-                <div class="fill" [style.width.%]="(character.defense / 15) * 100"></div>
+                <div class="fill" [style.width.%]="((characterInTurn?.difesa ?? 0) / 10) * 100"></div>
               </div>
-              <span class="stat-value">{{ character.defense }}</span>
+              <span class="stat-value">{{ characterInTurn?.difesa }}</span>
             </div>
           </div>
 
@@ -39,9 +41,9 @@
             <span class="stat-label">ATTACK</span>
             <div class="stat-bar">
               <div class="bar">
-                <div class="fill" [style.width.%]="(character.attack / 20) * 100"></div>
+                <div class="fill" [style.width.%]="((characterInTurn?.attacco ?? 0) / 10) * 100"></div>
               </div>
-              <span class="stat-value">{{ character.attack }}</span>
+              <span class="stat-value">{{ characterInTurn?.attacco }}</span>
             </div>
           </div>
         </div>
@@ -76,7 +78,7 @@
             </div>
             <button class="carousel-nav next" (click)="nextItem()">&gt;</button>
           </div>
-          
+        
           <div class="inventory-actions">
             <button class="action-button trade" (click)="performItemAction('trade')">
               <span class="action-icon">🔄</span>
@@ -123,14 +125,14 @@
           </div>
         </div>
       </div>
-      
+
       <div class="character-cards-container">
         <div class="card-stack">
           <div class="character-card back-card-3"></div>
           <div class="character-card back-card-2"></div>
           <div class="character-card back-card-1"></div>
           <div class="character-card main-card">
-            <img [src]="character.imageUrl" [alt]="character.name" class="character-image">
+            <img [src]="characterInTurn?.imageUrl" [alt]="characterInTurn?.nome" class="characterInTurn-image">
           </div>
         </div>
       </div>

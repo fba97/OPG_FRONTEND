@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, timer } from 'rxjs';
 import { switchMap, catchError, tap, shareReplay, map } from 'rxjs/operators';
-import { Game, ActualPartita, Personaggio, Combattimento, PartitaSoft } from '../../dto/game';
+import { Combattimento, PartitaSoft } from '../../dto/game';
+import { Personaggio } from '../../dto/personaggio';
 
 @Injectable({
   providedIn: 'root'
@@ -47,6 +48,7 @@ export class GameStateService {
   
 
   private updatePolling: any;
+
 
   constructor(private http: HttpClient) {
     this.startPolling();
@@ -109,15 +111,6 @@ export class GameStateService {
 
   getSelectedCharacter(): Personaggio | null {
     return this.selectedCharacterSubject.value;
-  }
-
-
-  getAllPersonaggi(): Personaggio[] {
-    return this.gameStateSubject.value?.personaggi || [];
-  }
-
-  getPersonaggiInPartita(): Personaggio[] {
-    return this.gameStateSubject.value?.personaggi || [];
   }
 
   getCombattimentiAttivi(): Combattimento[] {

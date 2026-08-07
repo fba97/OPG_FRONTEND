@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CombattimentoComponent } from './combattimento/combattimento.component';
-import { DettagliocombattimentoComponent } from './dettagliocombattimento/dettagliocombattimento.component';
 import { OggettiComponent } from './oggetti/oggetti.component';
 import { BossComponent } from './boss/boss.component';
 import { FruttiComponent } from './frutti/frutti.component';
@@ -39,14 +37,12 @@ import { CharacterActionsComponent } from './partita/components/character-action
     LoginComponent,
     RegisterComponent,
     HomepageComponent,
-    CombattimentoComponent,
     OggettiComponent,
     BossComponent,
     FruttiComponent,
     PersonaggiComponent,
     ProbabilitaComponent,
     ImprevistiComponent,
-    DettagliocombattimentoComponent,
     GameStatusComponent,
     PartitaComponent,
     LeftSidebarComponent,
