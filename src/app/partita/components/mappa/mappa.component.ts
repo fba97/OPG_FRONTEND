@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { MapManagerService } from '../../services/map-manager.service';
 import { GameStateService } from '../../services/game-state.service';
+import { AzioniService } from '../../services/azioni.service';
 
 @Component({
   selector: 'app-mappa',
@@ -23,8 +24,9 @@ export class MappaComponent implements OnInit, AfterViewInit {
   constructor(
     private http: HttpClient, 
     private sanitizer: DomSanitizer, 
-    private mapManager: MapManagerService, 
-    private gameState: GameStateService
+    private mapManager: MapManagerService,
+    private gameState: GameStateService,
+    private azioniService: AzioniService
   ) {}
 
   ngOnInit(): void {
@@ -62,9 +64,37 @@ export class MappaComponent implements OnInit, AfterViewInit {
     if (svgElement) {
       console.log('SVG Element trovato, registro i punti');
       this.mapManager.registerSvgPoints(svgElement);
+      this.setupPointClickListeners(svgElement);
     } else {
       console.error('SVG Element non trovato nel DOM');
     }
+  }
+
+  // Aggiunge il listener di click ai Punti della mappa per il movimento (click-to-move)
+  private setupPointClickListeners(svgElement: SVGElement) {
+    const points = svgElement.querySelectorAll('[id^="Punto_"]');
+    points.forEach(point => {
+      // Feedback visivo minimo: cursore a mano sui punti cliccabili
+      (point as HTMLElement).style.cursor = 'pointer';
+
+      point.addEventListener('click', (event: Event) => {
+        event.stopPropagation();
+        const pointId = parseInt(point.id.split('_')[1], 10);
+        if (isNaN(pointId)) {
+          console.error('Id punto non valido:', point.id);
+          return;
+        }
+        this.onPointClick(pointId);
+      });
+    });
+  }
+
+  // Richiede lo spostamento del personaggio in turno verso il punto cliccato
+  private onPointClick(pointId: number) {
+    console.log('Click su punto', pointId, '- richiesta movimento');
+    this.azioniService.muoviVersoPunto(pointId).subscribe({
+      error: (error) => console.error('Errore durante il movimento verso il punto', pointId, error)
+    });
   }
 
   // Aggiorna subscription
