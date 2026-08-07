@@ -70,7 +70,16 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
     this.inventory = this.characterInTurn?.inventario;
   }
 
-  
+  // Oggetti dell'inventario filtrati in base alla categoria selezionata (inventoryFilters)
+  get filteredItems(): any[] {
+    const items = this.inventory?.oggetti ?? [];
+    if (this.currentFilter === 'all') {
+      return items;
+    }
+    return items.filter(item => item?.tipo === this.currentFilter);
+  }
+
+
   ngOnDestroy(): void {
     // Pulizia della sottoscrizione per evitare memory leak
     if (this.characterSubscription) {

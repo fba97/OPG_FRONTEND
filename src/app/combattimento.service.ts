@@ -19,7 +19,8 @@ export class CombattimentoService {
     }
 
     combattimento(idAttaccato: any, idAttaccante: any): Observable<Object> {
-        return this.client.post('https://localhost:7087/api/Combattimento/PostAttacco', idAttaccato, idAttaccante);
+        // Il model binding di ASP.NET Core per parametri semplici su una POST li legge dalla query string
+        return this.client.post(`https://localhost:7087/api/Combattimento/PostAttacco?idAttaccato=${idAttaccato}&idAttaccante=${idAttaccante}`, null);
     }
 
     //recupera l'oggetto player dalla lista tramite l'id 
