@@ -1,4 +1,193 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: var(--font-body); background: var(--color-ink); }
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+/* Pulsanti condivisi dalle schermate d'ingresso (mainpage/login/register/homepage) */
+.btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-align: center;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-control);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:disabled,
+.btn.btn--disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+  filter: grayscale(0.4);
+}
+
+.btn--gold {
+  background: linear-gradient(180deg, var(--color-gold-light), var(--color-gold));
+  color: var(--color-ink);
+  box-shadow: var(--shadow-card);
+}
+.btn--gold:hover { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); }
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-parchment);
+  border-color: var(--color-gold);
+}
+.btn--outline:hover { background: rgba(201, 162, 39, 0.15); }
+
+/* Variante leggibile su sfondi chiari (es. pannelli pergamena/card-frame-panel) */
+.btn--outline-dark {
+  background: transparent;
+  color: var(--color-wood-dark);
+  border-color: var(--color-wood);
+}
+.btn--outline-dark:hover { background: rgba(92, 58, 33, 0.12); }
+
+.btn--danger {
+  background: linear-gradient(180deg, var(--color-crimson-light), var(--color-crimson));
+  color: var(--color-parchment);
+  box-shadow: var(--shadow-card);
+}
+
+.btn--navy {
+  background: linear-gradient(180deg, var(--color-navy-light), var(--color-navy));
+  color: var(--color-parchment);
+  box-shadow: var(--shadow-card);
+}
+
+.btn--small {
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.85rem;
+}
+
+/* Form/panel condivisi dalle schermate d'ingresso */
+.text-input {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-control);
+  border: 1px solid var(--color-wood);
+  background: var(--color-parchment);
+  color: var(--color-ink);
+  font-size: 1rem;
+}
+.text-input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 2px var(--color-gold-light);
+}
+
+.error-text {
+  color: var(--color-crimson-light);
+  font-size: 0.9rem;
+  margin-top: var(--space-2);
+}
+
+.card-frame-panel {
+  background: var(--color-parchment);
+  color: var(--color-ink);
+  border: var(--border-wood);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-panel);
+}
+
+/* Pattern condiviso "griglia di carte filtrabile" (schermate dizionario: eroi/nemici, oggetti) */
+.card-grid-page {
+  min-height: 100vh;
+  display: flex;
+  background: var(--color-ink);
+}
+
+.card-grid-page__content {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-6);
+  overflow-y: auto;
+}
+
+.card-grid-page__title {
+  margin: 0 0 var(--space-5);
+  color: var(--color-gold-light);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.filter-chip {
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  border: 1px solid var(--color-gold);
+  background: transparent;
+  color: var(--color-parchment);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-chip:hover {
+  background: rgba(201, 162, 39, 0.15);
+}
+
+.filter-chip.active {
+  background: linear-gradient(180deg, var(--color-gold-light), var(--color-gold));
+  color: var(--color-ink);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-5);
+}
+
+.card-grid__empty {
+  color: var(--color-parchment-dark);
+  font-style: italic;
+  padding: var(--space-6);
+}
+
+.entity-card {
+  display: block;
+}
+
+.entity-card app-card-frame {
+  display: block;
+  aspect-ratio: 0.72;
+}
+
+.entity-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.entity-card__name {
+  display: block;
+  margin-top: var(--space-2);
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--color-parchment);
+}
+
+.entity-card__meta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: 2px;
+  font-size: 0.75rem;
+  color: var(--color-gold-light);
+}

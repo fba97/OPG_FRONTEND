@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-//import { UserService } from '../user.service';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { Probabilita } from '../dto/probabilita';
+import { SidebarMenuItem } from '../partita/components/left-sidebar/left-sidebar.component';
+import { DIZIONARI_MENU, TORNA_ALLA_HOME } from '../shared/nav-menu';
 
 @Component({
   selector: 'app-probabilita',
   templateUrl: './probabilita.component.html',
   styleUrls: ['./probabilita.component.css']
 })
-export class ProbabilitaComponent implements OnInit {
+export class ProbabilitaComponent {
+
+  menuItems: SidebarMenuItem[] = [TORNA_ALLA_HOME, ...DIZIONARI_MENU];
 
   probabilitaList: Array<Probabilita> = [
     { id: 1, nome: "Usopp", descrizione: "descrizione", carta: "/assets/images/probabilita/coup_de_boo.svg" },
@@ -27,32 +29,17 @@ export class ProbabilitaComponent implements OnInit {
     { id: 14, nome: "Law", descrizione: "descrizione", carta: "/assets/images/probabilita/concerto_soul_king.svg" },
     { id: 15, nome: "Usopp", descrizione: "descrizione", carta: "/assets/images/probabilita/hack.svg" },
     { id: 16, nome: "Law", descrizione: "descrizione", carta: "/assets/images/probabilita/ucy.svg" }
+  ];
 
-  ]
-
-  constructor(private router: Router) { }
-
-  // , private service: UserService
-
-  ngOnInit(): void {
-
-    // this.service.findAll().subscribe(response => {
-    //   this.playersList = response as Array<Player>;
-    // });
-  }
-
-  utilizza(id: Number) {
-    //this.router.navigateByUrl('/dettaglio/' + id);
-  }
+  // Carta appena pescata, mostrata dentro l'app (prima "Genera" faceva window.location.href
+  // verso il file SVG grezzo, uscendo dalla SPA — bug UX a parte dal collegamento mappa).
+  cartaEstratta: Probabilita | null = null;
 
   generaProbabilita() {
+    if (!this.probabilitaList.length) {
+      return;
+    }
     const index = Math.floor(Math.random() * this.probabilitaList.length);
-    const carta = this.probabilitaList[index];
-    window.location.href = 'http://localhost:4200' + carta.carta;
-
-    //rimuovo la carta scelta dalla lista
-    this.probabilitaList.splice(index, 1)
-    //DA SISTEMARE,SE SI RICARICA LA PAGINA LA LISTA SI RIEMPIE DI NUOVO
+    this.cartaEstratta = this.probabilitaList[index];
   }
-
 }

@@ -1,0 +1,13 @@
+<div
+  class="card-frame"
+  [class.card-frame--locked]="locked"
+  [class.card-frame--selected]="selected"
+  [class.card-frame--compact]="compact"
+>
+  <div class="card-frame__inner">
+    <ng-content></ng-content>
+  </div>
+  <div class="card-frame__lock" *ngIf="locked">
+    <mat-icon>lock</mat-icon>
+  </div>
+</div>

@@ -26,6 +26,11 @@ export class UserService {
         return this.client.get('https://localhost:7087/api/Combattimento/GetAllCombattimenti');
     }
 
+    findAllOggetti(): Observable<Object> {
+
+        return this.client.get('https://localhost:7087/api/Update/Oggetti');
+    }
+
     saveHeroesdata(heroData: any): Observable<Object> {
         return this.client.post('https://localhost:7087/api/Personaggio/GetAllPersonaggiBase', heroData);
     }

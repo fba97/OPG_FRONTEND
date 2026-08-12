@@ -1,0 +1,47 @@
+/*
+ * Design tokens — tema pirata/One Piece (Dressrosa).
+ * Solo custom properties, nessuna regola. Consumato da ogni component.css
+ * dell'app tramite var(--nome-token).
+ */
+:root {
+  /* Colore */
+  --color-crimson: #D42026;
+  --color-crimson-light: #f43a40;
+  --color-gold: #C9A227;
+  --color-gold-light: #E4C463;
+  --color-navy: #003A70;
+  --color-navy-light: #004d94;
+  --color-parchment: #EFE1BF;
+  --color-parchment-dark: #DCC896;
+  --color-wood: #5C3A21;
+  --color-wood-dark: #3A2314;
+  --color-ink: #2A1B10;
+  --color-ink-soft: #5a4736;
+
+  /* Stato */
+  --color-danger: var(--color-crimson);
+  --color-success: #3E7A3E;
+  --color-disabled: #9c9184;
+
+  /* Tipografia */
+  --font-display: 'Cinzel', 'Roboto', serif;
+  --font-body: 'Roboto', 'Helvetica Neue', sans-serif;
+
+  /* Spaziatura (scala 4px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+
+  /* Forma / profondità */
+  --radius-card: 12px;
+  --radius-control: 8px;
+  --shadow-panel: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --border-wood: 3px solid var(--color-wood);
+  --border-gold-hairline: 1px solid var(--color-gold);
+}

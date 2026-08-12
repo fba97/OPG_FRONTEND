@@ -1,4 +1,8 @@
-.carte {
-    width: 110%;
-    height: auto;
+.carta-estratta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 220px;
+  margin: var(--space-4) 0;
 }

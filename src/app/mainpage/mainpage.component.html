@@ -1,40 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="myApp">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Login/Register Page</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-</head>
-
-<body background="/assets/images/mainpagebackground.jpg" style="height: 721px;">
-
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-6 offset-md-3" style="margin-top: 5%; color: white;">
-                <h2 class="border p-3">Login and Register page</h2>
-                <hr>
-                <div class="text-center" style="margin-top: 40%;">
-                    <a href="/login">
-                        <button type="button" class="btn btn-primary" style="width: 250px;">Login</button>
-                    </a>
-                    <br>
-                    <a href="/register">
-                        <button type="button" class="btn btn-secondary" style="width: 250px;">Register</button>
-                    </a>
-                </div>
-            </div>
-        </div>
+<div class="mainpage">
+  <div class="mainpage__panel">
+    <h1 class="mainpage__title">OPG</h1>
+    <p class="mainpage__subtitle">Alla conquista di Dressrosa</p>
+    <div class="mainpage__actions">
+      <a routerLink="/login" class="btn btn--gold">Accedi</a>
+      <a routerLink="/register" class="btn btn--outline">Registrati</a>
     </div>
-
-    <!-- AngularJS -->
-    <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <!-- Angular Route -->
-    <script src="https://code.angularjs.org/1.6.9/angular-route.min.js"></script>
-
-    <!-- App Script -->
-
-</body>
-
-</html>
+  </div>
+</div>

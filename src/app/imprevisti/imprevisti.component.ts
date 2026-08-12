@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-//import { UserService } from '../user.service';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { Imprevisti } from '../dto/imprevisti';
+import { SidebarMenuItem } from '../partita/components/left-sidebar/left-sidebar.component';
+import { DIZIONARI_MENU, TORNA_ALLA_HOME } from '../shared/nav-menu';
 
 @Component({
   selector: 'app-imprevisti',
   templateUrl: './imprevisti.component.html',
   styleUrls: ['./imprevisti.component.css']
 })
-export class ImprevistiComponent implements OnInit {
+export class ImprevistiComponent {
+
+  menuItems: SidebarMenuItem[] = [TORNA_ALLA_HOME, ...DIZIONARI_MENU];
 
   imprevistiList: Array<Imprevisti> = [
     { id: 1, nome: "Cos'è quello??", descrizione: "descrizione", carta: "/assets/images/imprevisti/cos'è_quello.svg" },
@@ -21,33 +23,17 @@ export class ImprevistiComponent implements OnInit {
     { id: 8, nome: "Ira di Burgess", descrizione: "descrizione", carta: "/assets/images/imprevisti/ira_di_burgess.svg" },
     { id: 9, nome: "Sabo: Artiglio di Drago", descrizione: "descrizione", carta: "/assets/images/imprevisti/sabo_artigliodidrago.svg" },
     { id: 10, nome: "Sorriso amaro", descrizione: "descrizione", carta: "/assets/images/imprevisti/sorriso_amaro.svg" },
+  ];
 
-  ]
-
-  constructor(private router: Router) { }
-
-  // , private service: UserService
-
-  ngOnInit(): void {
-
-    // this.service.findAll().subscribe(response => {
-    //   this.playersList = response as Array<Player>;
-    // });
-  }
-
-  utilizza(id: Number) {
-    //this.router.navigateByUrl('/dettaglio/' + id);
-  }
+  // Carta appena pescata, mostrata dentro l'app (prima "Genera" faceva window.location.href
+  // verso il file SVG grezzo, uscendo dalla SPA — bug UX a parte dal collegamento mappa).
+  cartaEstratta: Imprevisti | null = null;
 
   generaImprevisto() {
+    if (!this.imprevistiList.length) {
+      return;
+    }
     const index = Math.floor(Math.random() * this.imprevistiList.length);
-    const carta = this.imprevistiList[index];
-    //dopo aver scelto casualmente una carta, redirect alla carta scelta
-    window.location.href = 'http://localhost:4200' + carta.carta;
-
-    //rimuovo la carta scelta dalla lista
-    this.imprevistiList.splice(index, 1)
-    //DA SISTEMARE,SE SI RICARICA LA PAGINA LA LISTA SI RIEMPIE DI NUOVO
+    this.cartaEstratta = this.imprevistiList[index];
   }
-
 }

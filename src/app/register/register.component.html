@@ -1,72 +1,31 @@
-<!doctype html>
-<html lang="en">
+<div class="auth-page">
+  <div class="auth-page__panel">
+    <a routerLink="/mainpage" class="auth-page__back">← Torna alla pagina principale</a>
+    <h2 class="auth-page__title">Registrazione</h2>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <form (ngSubmit)="onSubmit()" class="auth-form">
+      <div class="auth-form__field">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" [(ngModel)]="user.nome" required>
+      </div>
+      <div class="auth-form__field">
+        <label for="surname">Cognome</label>
+        <input type="text" id="surname" name="surname" [(ngModel)]="user.cognome" required>
+      </div>
+      <div class="auth-form__field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+      </div>
+      <div class="auth-form__field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
+      </div>
+      <div class="auth-form__field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+      </div>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Register</title>
-
-
-
-</head>
-
-<body background="/assets/images/registerbackground.jpg" style="
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center center;
-height: 100vh;">
-
-    <div class="container" style="width: 500px; float:left; font-size: large; font-weight: 500;">
-
-        <button type="button" class="btn btn-primary" routerLink="/mainpage">
-            Torna alla pagina principale
-            <i class="bi bi-arrow-right"></i>
-        </button>
-        <br>
-        <br>
-        <h2 style="color:white;">Registrazione</h2>
-        <br>
-        <form (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.nome" required>
-            </div>
-            <div class="form-group">
-                <label for="surname">Cognome:</label>
-                <input type="text" class="form-control" id="surname" name="surname" [(ngModel)]="user.cognome" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
-            </div>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username"
-                    required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password"
-                    required>
-            </div>
-            <br>
-            <button type="submit" class="btn btn-primary">Registrati</button>
-        </form>
-    </div>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-
-</body>
-
-</html>
+      <button type="submit" class="btn btn--gold auth-form__submit">Registrati</button>
+    </form>
+  </div>
+</div>

@@ -3,6 +3,8 @@ import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { Personaggio } from '../dto/personaggio';
 import { PartitaService, PartitaSalvataInfo } from '../partita.service';
+import { SidebarMenuItem } from '../partita/components/left-sidebar/left-sidebar.component';
+import { DIZIONARI_MENU, HOME_MENU } from '../shared/nav-menu';
 
 @Component({
   selector: 'app-homepage',
@@ -21,19 +23,10 @@ export class HomepageComponent implements OnInit {
     });
   }
 
-  isSidebarVisible = true;
-
-  toggleSidebar() {
-    this.isSidebarVisible = !this.isSidebarVisible;
-  }
-
-  showStat = false;
-  numPartite = 10;
-  numVittorie = 6;
-  numSconfitte = 4;
-  showForm = false;
+  menuItems: SidebarMenuItem[] = [...HOME_MENU, ...DIZIONARI_MENU];
 
   listaSaga = ['Dressrosa'];
+  selectedSaga = this.listaSaga[0];
 
   nomePartita = '';
   creaPartitaErrore = '';

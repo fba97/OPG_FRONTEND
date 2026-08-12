@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { Router } from '@angular/router';
 import { Personaggio } from '../dto/personaggio';
+import { TipoPersonaggio } from '../dto/game';
+import { resolvePersonaggioImage } from '../shared/character-portrait';
+import { SidebarMenuItem } from '../partita/components/left-sidebar/left-sidebar.component';
+import { DIZIONARI_MENU, TORNA_ALLA_HOME } from '../shared/nav-menu';
+
+type FiltroPersonaggio = 'tutti' | 'eroi' | 'nemici';
 
 @Component({
   selector: 'app-personaggi',
@@ -9,28 +14,38 @@ import { Personaggio } from '../dto/personaggio';
   styleUrls: ['./personaggi.component.css']
 })
 export class PersonaggiComponent implements OnInit {
+  heroesList: Personaggio[] = [];
+  currentFilter: FiltroPersonaggio = 'tutti';
 
-  heroesList = new Array<Personaggio>
+  menuItems: SidebarMenuItem[] = [TORNA_ALLA_HOME, ...DIZIONARI_MENU];
 
-  // playersList: Array<Player> = [
-  //   { id: 1, nome: "Usopp", carta: "/assets/images/personaggi/usopp.svg" },
-  //   { id: 2, nome: "Law", carta: "/assets/images/personaggi/law.svg" }
-  // ]
-
-  constructor(private router: Router, private service: UserService) { }
-
-  // 
+  constructor(private service: UserService) {}
 
   ngOnInit(): void {
-    //RECUPERO I DATI DAL BACKEND
-
     this.service.findAllHeroes().subscribe(response => {
-      this.heroesList = response as Array<Personaggio>;
+      this.heroesList = response as Personaggio[];
     });
   }
 
-  informazioni(id: Number) {
-    //this.router.navigateByUrl('/dettaglio/' + id);
+  private isNemico(p: Personaggio): boolean {
+    return p.tipoPersonaggio === TipoPersonaggio.NemicoPersonaggio || p.tipoPersonaggio === TipoPersonaggio.NemicoNPC;
   }
 
+  get filteredList(): Personaggio[] {
+    if (this.currentFilter === 'eroi') {
+      return this.heroesList.filter(p => !this.isNemico(p));
+    }
+    if (this.currentFilter === 'nemici') {
+      return this.heroesList.filter(p => this.isNemico(p));
+    }
+    return this.heroesList;
+  }
+
+  resolveImage(p: Personaggio): string {
+    return resolvePersonaggioImage(p);
+  }
+
+  isCardNemico(p: Personaggio): boolean {
+    return this.isNemico(p);
+  }
 }

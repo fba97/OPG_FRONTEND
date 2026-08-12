@@ -1,62 +1,30 @@
-<!doctype html>
-<html lang="en">
+<div class="card-grid-page">
+  <app-left-sidebar [menuItems]="menuItems"></app-left-sidebar>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div class="card-grid-page__content">
+    <h1 class="card-grid-page__title">Eroi &amp; Nemici</h1>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Lista oggetti</title>
-
-</head>
-
-<body background="/assets/images/background.jpg" style="position: relative; align-items: center; width: max-content;">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <a href="http://localhost:4200/homepage" class="btn btn-warning btn-lg btn-block"
-                    style="margin-top: 20px;">Homepage</a>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex">
-
-        <!-- CICLO I PERSONAGGI-->
-        <div class="p-2" *ngFor="let p of heroesList">
-            <table>
-                <tr>
-                    <td><img [src]="p.descrizione" class="carte"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <button type="button" class="btn btn-warning btn-lg btn-block margin"
-                            style="margin-left: 42px; width: 220px; font-weight:500;"
-                            (click)=" informazioni(p.id)">Informazioni</button>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-        </div>
+    <div class="filter-bar">
+      <button class="filter-chip" [class.active]="currentFilter === 'tutti'" (click)="currentFilter = 'tutti'">Tutti</button>
+      <button class="filter-chip" [class.active]="currentFilter === 'eroi'" (click)="currentFilter = 'eroi'">Eroi</button>
+      <button class="filter-chip" [class.active]="currentFilter === 'nemici'" (click)="currentFilter = 'nemici'">Nemici</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-
-</body>
-
-</html>
+    <div class="card-grid" *ngIf="filteredList.length; else vuoto">
+      <div class="entity-card" *ngFor="let p of filteredList">
+        <app-card-frame [selected]="isCardNemico(p)">
+          <img [src]="resolveImage(p)" [alt]="p.nome">
+        </app-card-frame>
+        <span class="entity-card__name">{{ p.nome }}</span>
+        <div class="entity-card__meta">
+          <span title="Vita">❤ {{ p.punti_Vita }}</span>
+          <span title="Attacco">⚔ {{ p.attacco }}</span>
+          <span title="Difesa">🛡 {{ p.difesa }}</span>
+        </div>
+      </div>
+    </div>
+    <ng-template #vuoto>
+      <div class="card-grid__empty">Nessun personaggio trovato.</div>
+    </ng-template>
+  </div>
+</div>

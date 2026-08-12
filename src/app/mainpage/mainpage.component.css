@@ -1,0 +1,40 @@
+.mainpage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(20, 12, 6, 0.65), rgba(20, 12, 6, 0.75)),
+    url('/assets/images/mainpagebackground.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.mainpage__panel {
+  text-align: center;
+  padding: var(--space-8) var(--space-8);
+  background: rgba(42, 27, 16, 0.55);
+  border: var(--border-wood);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: blur(2px);
+}
+
+.mainpage__title {
+  margin: 0;
+  font-size: 4rem;
+  color: var(--color-gold-light);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.mainpage__subtitle {
+  margin: var(--space-2) 0 var(--space-7);
+  color: var(--color-parchment);
+  font-style: italic;
+}
+
+.mainpage__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+}
