@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OggettiComponent } from './oggetti/oggetti.component';
-import { BossComponent } from './boss/boss.component';
 import { FruttiComponent } from './frutti/frutti.component';
 import { PersonaggiComponent } from './personaggi/personaggi.component';
 import { ProbabilitaComponent } from './probabilita/probabilita.component';
@@ -22,10 +21,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { GameStatusComponent } from './partita/components/game-status/game-status.component';
 import { PartitaComponent } from './partita/partita.component';
 import { LeftSidebarComponent } from './partita/components/left-sidebar/left-sidebar.component';
-import { CharacterInfoComponent } from './partita/components/character-info/character-info.component'; 
-import { MappaComponent } from './partita/components/mappa/mappa.component'; 
+import { MappaComponent } from './partita/components/mappa/mappa.component';
 import { TurnComponent } from './partita/components/turn/turn.component'; 
 import { CharacterActionsComponent } from './partita/components/character-actions/character-actions.component';
+import { CardFrameComponent } from './shared/components/card-frame/card-frame.component';
+import { CombatModalComponent } from './partita/components/combat-modal/combat-modal.component';
 
 
 
@@ -38,7 +38,6 @@ import { CharacterActionsComponent } from './partita/components/character-action
     RegisterComponent,
     HomepageComponent,
     OggettiComponent,
-    BossComponent,
     FruttiComponent,
     PersonaggiComponent,
     ProbabilitaComponent,
@@ -46,10 +45,11 @@ import { CharacterActionsComponent } from './partita/components/character-action
     GameStatusComponent,
     PartitaComponent,
     LeftSidebarComponent,
-    CharacterInfoComponent,
     MappaComponent,
     TurnComponent,
-    CharacterActionsComponent
+    CharacterActionsComponent,
+    CardFrameComponent,
+    CombatModalComponent
 
   ],
   imports: [

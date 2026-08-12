@@ -1,0 +1,69 @@
+<div class="combat-overlay" *ngIf="target">
+  <div class="combat-modal">
+    <button class="combat-modal__close" (click)="chiudi()" title="Chiudi">✕</button>
+    <h2 class="combat-modal__title">Combattimento</h2>
+
+    <div class="combat-modal__arena">
+      <div class="combatant">
+        <app-card-frame [selected]="true" class="combatant__portrait">
+          <img [src]="resolveImage(attaccante)" [alt]="attaccante?.nome">
+        </app-card-frame>
+        <span class="combatant__name">{{ attaccante?.nome }}</span>
+        <span class="combatant__hp">
+          <mat-icon>favorite</mat-icon>
+          {{ attaccante?.punti_Vita ?? '—' }}
+        </span>
+      </div>
+
+      <img src="assets/images/vs.png" alt="VS" class="combat-modal__vs">
+
+      <div class="combatant">
+        <app-card-frame class="combatant__portrait">
+          <img [src]="resolveImage(attaccato)" [alt]="attaccato?.nome">
+        </app-card-frame>
+        <span class="combatant__name">{{ attaccato?.nome }}</span>
+        <span class="combatant__hp">
+          <mat-icon>favorite</mat-icon>
+          {{ attaccato?.punti_Vita ?? '—' }}
+        </span>
+      </div>
+    </div>
+
+    <div class="combat-modal__result" *ngIf="ultimoDanno !== null && attaccato && attaccato.punti_Vita > 0">
+      {{ attaccante?.nome }} infligge {{ ultimoDanno }} danni a {{ attaccato.nome }}!
+    </div>
+    <div class="combat-modal__result combat-modal__result--defeated" *ngIf="attaccato && attaccato.punti_Vita <= 0">
+      {{ attaccato.nome }} è sconfitto!
+    </div>
+
+    <div *ngIf="attaccoErrore" class="combat-modal__error">{{ attaccoErrore }}</div>
+    <div *ngIf="fuggiErrore" class="combat-modal__error">{{ fuggiErrore }}</div>
+    <div *ngIf="skillErrore" class="combat-modal__error">{{ skillErrore }}</div>
+
+    <div class="combat-modal__skills" *ngIf="skillUsabili.length && attaccato && attaccato.punti_Vita > 0">
+      <button
+        *ngFor="let skill of skillUsabili"
+        class="btn btn--outline"
+        (click)="usaSkill(skill)"
+        [disabled]="skillInCorsoId === skill.id"
+        [title]="skill.descrizione"
+      >
+        {{ skillInCorsoId === skill.id ? '...' : skill.nome }}
+      </button>
+    </div>
+
+    <div class="combat-modal__actions">
+      <button
+        class="btn btn--danger"
+        (click)="attacca()"
+        [disabled]="attaccoInCorso || (attaccato && attaccato.punti_Vita <= 0)"
+      >
+        {{ attaccoInCorso ? 'Attacco...' : 'Attacca' }}
+      </button>
+      <button class="btn btn--outline" (click)="fuggi()" [disabled]="fuggiInCorso">
+        {{ fuggiInCorso ? 'Fuga...' : 'Fuggi' }}
+      </button>
+      <button class="btn btn--outline" (click)="chiudi()">Chiudi</button>
+    </div>
+  </div>
+</div>

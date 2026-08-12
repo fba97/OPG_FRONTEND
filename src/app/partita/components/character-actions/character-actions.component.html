@@ -1,142 +1,191 @@
 <div class="character-panel">
-    <div class="nav-buttons">
-      <button 
-        *ngFor="let section of sections" 
-        (click)="currentSection = section.id"
-        class="nav-button"
-        [class.active]="currentSection === section.id"
-      >
-        <div class="button-icon">{{ section.icon }}</div>
-        <div class="button-label">{{ section.label }}</div>
-      </button>
+  <div class="nav-buttons">
+    <button
+      *ngFor="let section of sections"
+      (click)="currentSection = section.id"
+      class="nav-button"
+      [class.active]="currentSection === section.id"
+      [attr.title]="section.label"
+    >
+      <mat-icon>{{ section.icon }}</mat-icon>
+    </button>
+  </div>
+
+  <div class="main-content">
+    <div class="azioni-residue-info">
+      Azioni residue: {{ azioniRimanenti }}/{{ azioniMassimePerTurno }}
+      <button type="button" class="end-turn-button" (click)="terminaTurno()">Fine turno</button>
+    </div>
+    <div *ngIf="terminaTurnoErrore" class="text-danger">{{ terminaTurnoErrore }}</div>
+    <div class="content-section" [ngSwitch]="currentSection">
+      <div *ngSwitchCase="'stats'" class="stats-panel">
+        <h2 class="skills-title">Statistiche</h2>
+        <div class="stat-row">
+          <span class="stat-label">
+            <mat-icon>favorite</mat-icon>
+            VITA
+          </span>
+          <span class="stat-value">{{ characterInTurn?.punti_Vita ?? '—' }}</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-label">
+            <mat-icon>shield</mat-icon>
+            DIFESA
+          </span>
+          <span class="stat-value">{{ characterInTurn?.difesa ?? '—' }}</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-label">
+            <mat-icon>sports_martial_arts</mat-icon>
+            ATTACCO
+          </span>
+          <span class="stat-value">{{ characterInTurn?.attacco ?? '—' }}</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-label">
+            <mat-icon>social_distance</mat-icon>
+            GITTATA
+          </span>
+          <span class="stat-value">{{ characterInTurn?.gittataAttacco ?? '—' }}</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-label">
+            <mat-icon>paid</mat-icon>
+            SOLDI
+          </span>
+          <span class="stat-value">{{ characterInTurn?.soldi ?? 0 }}</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-label">
+            <mat-icon>military_tech</mat-icon>
+            LIVELLO
+          </span>
+          <span class="stat-value">{{ characterInTurn?.livello ?? 0 }}</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-label">
+            <mat-icon>star</mat-icon>
+            ESPERIENZA
+          </span>
+          <span class="stat-value">{{ characterInTurn?.esperienza ?? 0 }}</span>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'inventory'" class="inventory-panel">
+        <h2 class="inventory-title">Inventario</h2>
+
+        <div class="inventory-filters">
+          <button
+            *ngFor="let filter of inventoryFilters"
+            (click)="currentFilter = filter.id; currentItemIndex = 0"
+            class="filter-button"
+            [class.active]="currentFilter === filter.id"
+            [attr.title]="filter.label"
+          >
+            <mat-icon>{{ filter.icon }}</mat-icon>
+          </button>
+        </div>
+
+        <div class="inventory-carousel" *ngIf="filteredItems.length; else noItems">
+          <button class="carousel-nav prev" (click)="prevItem()" [disabled]="currentItemIndex === 0">&lt;</button>
+          <div class="carousel-container">
+            <div class="carousel-track" [style.transform]="'translateX(' + (-currentItemIndex * 120) + 'px)'">
+              <div *ngFor="let item of filteredItems; let i = index"
+                   class="carousel-item"
+                   [class.active]="i === currentItemIndex">
+                <app-card-frame [compact]="true">
+                  <div class="item-card">
+                    <div class="item-name">{{ item.oggetto.nome }}</div>
+                    <div class="item-qty" *ngIf="item.quantita > 1">x{{ item.quantita }}</div>
+                  </div>
+                </app-card-frame>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-nav next" (click)="nextItem()" [disabled]="currentItemIndex >= filteredItems.length - 1">&gt;</button>
+        </div>
+        <ng-template #noItems>
+          <div class="inventory-empty">Nessun oggetto</div>
+        </ng-template>
+
+        <div *ngIf="usaOggettoErrore" class="text-danger">{{ usaOggettoErrore }}</div>
+        <div *ngIf="vendiOggettoErrore" class="text-danger">{{ vendiOggettoErrore }}</div>
+        <div *ngIf="scambiaOggettoErrore" class="text-danger">{{ scambiaOggettoErrore }}</div>
+        <div *ngIf="equipaggiaOggettoErrore" class="text-danger">{{ equipaggiaOggettoErrore }}</div>
+
+        <div class="trade-target" *ngIf="compagni.length">
+          <label for="destinatario">A:</label>
+          <select id="destinatario" [(ngModel)]="destinatarioId">
+            <option *ngFor="let c of compagni" [ngValue]="c.id">{{ c.nome }}</option>
+          </select>
+        </div>
+
+        <div class="inventory-actions">
+          <button class="action-button trade" [disabled]="!filteredItems.length || !compagni.length" (click)="scambiaOggettoSelezionato()">
+            <mat-icon>swap_horiz</mat-icon>
+            <span>Scambia</span>
+          </button>
+          <button class="action-button sell" [disabled]="!filteredItems.length" (click)="vendiOggettoSelezionato()">
+            <mat-icon>sell</mat-icon>
+            <span>Vendi</span>
+          </button>
+          <button class="action-button use" [disabled]="!filteredItems.length" (click)="usaOggettoSelezionato()">
+            <mat-icon>auto_fix_high</mat-icon>
+            <span>Usa</span>
+          </button>
+          <button class="action-button equip" [disabled]="!filteredItems.length" (click)="equipaggiaOggettoSelezionato()">
+            <mat-icon>military_tech</mat-icon>
+            <span>{{ filteredItems[currentItemIndex]?.isEquipaggiato ? 'Disequip.' : 'Equipaggia' }}</span>
+          </button>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'skills'" class="skills-panel">
+        <h2 class="skills-title">Skill</h2>
+
+        <div *ngIf="sbloccaSkillErrore" class="text-danger">{{ sbloccaSkillErrore }}</div>
+
+        <div class="skills-container">
+          <div class="skill-slots" *ngIf="skillDisponibili.length; else nessunaSkill">
+            <div *ngFor="let skill of skillDisponibili" class="skill-slot" [class.unlocked]="isSkillSbloccata(skill)">
+              <div class="skill-card" [class.locked]="!isSkillSbloccata(skill)">
+                <div class="skill-nome">{{ skill.nome }}</div>
+                <div class="skill-descrizione">{{ skill.descrizione }}</div>
+                <div class="lock-overlay" *ngIf="!isSkillSbloccata(skill)">
+                  <div class="lock-icon">🔒</div>
+                  <div class="skill-cost">{{ skill.costo }} 🪙</div>
+                  <button
+                    class="unlock-button"
+                    [disabled]="!puoSbloccare(skill) || sbloccaInCorsoId === skill.id"
+                    (click)="unlockSkill(skill)"
+                  >Sblocca</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ng-template #nessunaSkill>
+            <div class="inventory-empty">Nessuna skill disponibile per questo personaggio</div>
+          </ng-template>
+        </div>
+      </div>
     </div>
 
-    <div class="main-content">
-      <div class="azioni-residue-info">
-        Azioni residue: {{ azioniRimanenti }}/{{ azioniMassimePerTurno }}
-        <button type="button" class="end-turn-button" (click)="terminaTurno()">Fine turno</button>
+    <div class="character-cards-container">
+      <div class="card-stack">
+        <div class="character-card back-card-3"></div>
+        <div class="character-card back-card-2"></div>
+        <div class="character-card back-card-1"></div>
+        <app-card-frame [selected]="true" class="main-card">
+          <img [src]="resolveImage(characterInTurn)" [alt]="characterInTurn?.nome" class="characterInTurn-image">
+        </app-card-frame>
       </div>
-      <div *ngIf="terminaTurnoErrore" class="text-danger">{{ terminaTurnoErrore }}</div>
-      <div class="content-section" [ngSwitch]="currentSection">
-        <div *ngSwitchCase="'stats'" class="stats-panel">
-          <h2 class="skills-title">Stats</h2>
-          <div class="stat-row">
-            <span class="stat-label">HEALTH</span>
-            <div class="stat-bar">
-              <div class="bar">
-                <div class="fill" [style.width.%]="((characterInTurn?.puntiVita ?? 0) / 30) * 100"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="stat-row">
-            <span class="stat-label">DEFENSE</span>
-            <div class="stat-bar">
-              <div class="bar">
-                <div class="fill" [style.width.%]="((characterInTurn?.difesa ?? 0) / 10) * 100"></div>
-              </div>
-              <span class="stat-value">{{ characterInTurn?.difesa }}</span>
-            </div>
-          </div>
-
-          <div class="stat-row">
-            <span class="stat-label">ATTACK</span>
-            <div class="stat-bar">
-              <div class="bar">
-                <div class="fill" [style.width.%]="((characterInTurn?.attacco ?? 0) / 10) * 100"></div>
-              </div>
-              <span class="stat-value">{{ characterInTurn?.attacco }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div *ngSwitchCase="'inventory'" class="inventory-panel">
-          <h2 class="inventory-title">Inventory</h2>
-          
-          <div class="inventory-filters">
-            <button 
-              *ngFor="let filter of inventoryFilters" 
-              (click)="currentFilter = filter.id"
-              class="filter-button"
-              [class.active]="currentFilter === filter.id"
-            >
-              <div class="filter-icon">{{ filter.icon }}</div>
-            </button>
-          </div>
-          
-          <div class="inventory-carousel">
-            <button class="carousel-nav prev" (click)="prevItem()">&lt;</button>
-            <div class="carousel-container">
-              <div class="carousel-track" [style.transform]="'translateX(' + (-currentItemIndex * 120) + 'px)'">
-                <div *ngFor="let item of filteredItems; let i = index"
-                     class="carousel-item" 
-                     [class.active]="i === currentItemIndex">
-                  <div class="item-card">
-                    <div class="item-icon">{{ item.icon }}</div>
-                    <div class="item-name">{{ item.name }}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-nav next" (click)="nextItem()">&gt;</button>
-          </div>
-        
-          <div class="inventory-actions">
-            <button class="action-button trade" (click)="performItemAction('trade')">
-              <span class="action-icon">🔄</span>
-              <span>Trade</span>
-            </button>
-            <button class="action-button sell" (click)="performItemAction('sell')">
-              <span class="action-icon">💰</span>
-              <span>Sell</span>
-            </button>
-            <button class="action-button use" (click)="performItemAction('use')">
-              <span class="action-icon">✨</span>
-              <span>Use</span>
-            </button>
-            <button class="action-button equip" (click)="performItemAction('equip')">
-              <span class="action-icon">👤</span>
-              <span>Equip</span>
-            </button>
-          </div>
-        </div>
-
-        <div *ngSwitchCase="'skills'" class="skills-panel">
-          <h2 class="skills-title">Skills</h2>
-          
-          <div class="skills-container">
-            <div class="skill-column" *ngFor="let tier of skillTiers">
-              <h3 class="tier-title">{{ tier.name }}</h3>
-              
-              <div class="skill-slots">
-                <div *ngFor="let skill of tier.skills" class="skill-slot" [class.unlocked]="skill.unlocked">
-                  <div class="skill-card" [class.locked]="!skill.unlocked">
-                    <div *ngIf="!skill.unlocked" class="lock-overlay">
-                      <div class="lock-icon">🔒</div>
-                      <div class="skill-cost">{{ skill.cost }} 🪙</div>
-                      <button class="unlock-button" (click)="unlockSkill(skill)">Unlock</button>
-                    </div>
-                    <div *ngIf="skill.unlocked" class="skill-content">
-                      <div class="skill-icon">{{ skill.icon }}</div>
-                      <div class="skill-name">{{ skill.name }}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="character-cards-container">
-        <div class="card-stack">
-          <div class="character-card back-card-3"></div>
-          <div class="character-card back-card-2"></div>
-          <div class="character-card back-card-1"></div>
-          <div class="character-card main-card">
-            <img [src]="characterInTurn?.imageUrl" [alt]="characterInTurn?.nome" class="characterInTurn-image">
-          </div>
-        </div>
-      </div>
+      <span class="character-name" *ngIf="characterInTurn as c">{{ c.nome }}</span>
     </div>
   </div>
+</div>

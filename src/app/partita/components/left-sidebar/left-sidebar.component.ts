@@ -1,5 +1,10 @@
 // src/app/partita/components/left-sidebar/left-sidebar.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+export interface SidebarMenuItem {
+  name: string;
+  route: string;
+}
 
 @Component({
   selector: 'app-left-sidebar',
@@ -7,15 +12,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-sidebar.component.css']
 })
 export class LeftSidebarComponent implements OnInit {
-  isOpen = true;
+  @Input() menuItems: SidebarMenuItem[] = [];
 
-  menuItems = [
-    { name: 'Mainpage', url: 'http://localhost:4200/mainpage' },
-    { name: 'Login', url: 'http://localhost:4200/login' },
-    { name: 'Register', url: 'http://localhost:4200/register' },
-    { name: 'Eroi', url: 'http://localhost:4200/personaggi' },
-    { name: 'Combattimento', url: 'http://localhost:4200/combattimento' }
-  ];
+  isOpen = true;
 
   constructor() {}
 
@@ -35,8 +34,17 @@ export class LeftSidebarComponent implements OnInit {
         return 'person_add';
       case 'eroi':
         return 'people';
-      case 'combattimento':
-        return 'sports_kabaddi';
+      case 'oggetti':
+        return 'inventory_2';
+      case 'frutti':
+        return 'egg';
+      case 'probabilità':
+        return 'casino';
+      case 'imprevisti':
+        return 'help';
+      case 'torna alla home':
+      case 'torna alla partita':
+        return 'sailing';
       default:
         return 'navigate_next';
     }

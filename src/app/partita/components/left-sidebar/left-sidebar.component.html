@@ -6,12 +6,13 @@
 
   <div class="sidebar-content" *ngIf="isOpen">
     <div class="sidebar-header">
-      <img src="assets/one-piece-logo.png" alt="One Piece Logo" class="logo">
+      <span class="sidebar-wordmark">OPG</span>
     </div>
 
     <mat-nav-list class="navigation-list">
-      <a mat-list-item *ngFor="let item of menuItems" 
-         [href]="item.url" 
+      <a mat-list-item *ngFor="let item of menuItems"
+         [routerLink]="item.route"
+         routerLinkActive="active"
          class="nav-item">
         <mat-icon matListItemIcon>
           {{ getIconForMenuItem(item.name) }}
@@ -19,5 +20,7 @@
         <span class="nav-label">{{ item.name }}</span>
       </a>
     </mat-nav-list>
+
+    <ng-content></ng-content>
   </div>
 </div>

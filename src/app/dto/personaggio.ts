@@ -1,7 +1,9 @@
+import { OggettoInventario } from './game';
+
 export interface Personaggio {
     id: number;
     nome: string;
-    puntiVita: number;  // Cambiato per corrispondere a "punti_Vita" dell'API
+    punti_Vita: number;  // Nome campo verificato dal vivo su GetUpdatePartitaSoft: il backend serializza "punti_Vita" (non puntiVita)
     attacco: number;
     difesa: number;
     descrizione: string;
@@ -9,9 +11,12 @@ export interface Personaggio {
     posizione: number;
     taglia: number;
     livello: number;
+    esperienza: number;
     gittataAttacco: number;
     gittataOggetti: number;
-    inventario: Inventario; 
+    soldi: number;
+    skillSbloccate: number[];
+    inventario: Inventario;
     stato: any;  // Se stato è un oggetto, potresti creare un'interfaccia specifica
     selected: boolean;  // Se serve per la UI
     imageUrl: string;
@@ -22,5 +27,5 @@ export interface Inventario {
     personaggioId: number | null;
     capacitaMassima: number;
     tipo: number;
-    oggetti: any[];  // Se gli oggetti hanno una struttura specifica, puoi definire un'interfaccia Oggetto
+    oggetti: OggettoInventario[];
 }

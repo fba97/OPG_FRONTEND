@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PartitaComponent } from './partita/partita.component';
 import { OggettiComponent } from './oggetti/oggetti.component';
-import { BossComponent } from './boss/boss.component';
 import { FruttiComponent } from './frutti/frutti.component';
 import { PersonaggiComponent } from './personaggi/personaggi.component';
 import { ProbabilitaComponent } from './probabilita/probabilita.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'homepage', component: HomepageComponent },
   { path: 'partita', component: PartitaComponent },
   { path: 'oggetti', component: OggettiComponent },
-  { path: 'bosses', component: BossComponent },
   { path: 'frutti', component: FruttiComponent },
   { path: 'personaggi', component: PersonaggiComponent },
   { path: 'probabilita', component: ProbabilitaComponent },

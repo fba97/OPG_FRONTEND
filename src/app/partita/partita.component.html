@@ -1,30 +1,25 @@
 <!-- src/app/partita/partita.component.html -->
 <div class="game-container">
-    <!-- Sidebar sinistra esistente -->
-    <div class="left-sidebar" [class.collapsed]="!isSidebarVisible">
-      <button mat-icon-button (click)="toggleSidebar()" class="sidebar-toggle">
-        <mat-icon>menu</mat-icon>
-      </button>
-      
-      <div class="sidebar-content">
-        <h3 class="sidebar-title">Menu</h3>
-        <mat-nav-list class="sidebar-nav">
-          <a mat-list-item *ngFor="let item of menuItems" [href]="item.url" class="nav-item">
-            <mat-icon matListItemIcon>navigate_next</mat-icon>
-            <span>{{item.name}}</span>
-          </a>
-        </mat-nav-list>
+  <app-left-sidebar [menuItems]="menuItems">
+    <app-game-status></app-game-status>
+  </app-left-sidebar>
 
-        <app-game-status></app-game-status>
-      </div>
-    </div>
-    
-    <!-- Area centrale con la mappa -->
+  <div class="main-column">
+    <app-turn></app-turn>
     <div class="main-content">
       <app-mappa></app-mappa>
     </div>
-    
-    <!-- Nuovo turn-component destra -->
-    <app-character-actions></app-character-actions> 
-
   </div>
+
+  <app-character-actions></app-character-actions>
+
+  <app-combat-modal></app-combat-modal>
+
+  <div class="victory-overlay" *ngIf="hasWon$ | async">
+    <div class="victory-panel">
+      <h1 class="victory-panel__title">Vittoria!</h1>
+      <p class="victory-panel__text">Doflamingo è stato sconfitto. Dressrosa è libera.</p>
+      <a routerLink="/homepage" class="btn btn--gold">Torna alla home</a>
+    </div>
+  </div>
+</div>

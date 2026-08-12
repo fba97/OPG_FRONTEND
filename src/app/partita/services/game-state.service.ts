@@ -6,6 +6,11 @@ import { switchMap, catchError, tap, shareReplay, map } from 'rxjs/operators';
 import { Combattimento, PartitaSoft, Turno } from '../../dto/game';
 import { Personaggio } from '../../dto/personaggio';
 
+export interface CombatTarget {
+  attaccante: Personaggio;
+  attaccato: Personaggio;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,8 +26,25 @@ export class GameStateService {
   private selectedCharacterSubject = new BehaviorSubject<Personaggio | null>(null);
   selectedCharacter$ = this.selectedCharacterSubject.asObservable();
 
-  private currentCombatSubject = new BehaviorSubject<Combattimento | null>(null);
-  currentCombat$ = this.currentCombatSubject.asObservable();
+  // Bersaglio di combattimento scelto sulla mappa (click su un pezzo nemico), prima che
+  // qualunque Attacco sia stato davvero eseguito — non e' quindi un Combattimento server-side
+  // (che nasce solo al primo Attacco), ma la coppia di personaggi da mostrare nel combat-modal.
+  private combatTargetSubject = new BehaviorSubject<CombatTarget | null>(null);
+  combatTarget$ = this.combatTargetSubject.asObservable();
+
+  setCombatTarget(target: CombatTarget) {
+    this.combatTargetSubject.next(target);
+  }
+
+  clearCombatTarget() {
+    this.combatTargetSubject.next(null);
+  }
+
+  // StatoPartita: 1 nuova, 2 esecuzione, 3 terminata (vittoria, impostata da AttaccoHandler
+  // alla sconfitta del boss — vedi backend AttaccoHandler.cs).
+  hasWon$: Observable<boolean> = this.gameState$.pipe(
+    map(state => state?.statoPartita === 3)
+  );
 
   // Add the missing subjects
   private cartaCasualeSubject = new BehaviorSubject<string>('');
@@ -53,6 +75,31 @@ export class GameStateService {
   // Turno corrente (azioni residue / massime), aggiornato ad ogni polling dal backend
   actualTurno$: Observable<Turno | null> = this.gameState$.pipe(
     map(state => state?.actualTurno ?? null)
+  );
+
+  // Personaggio il cui turno e' attivo in questo momento, derivato da actualTurno.idDelPersonaggioInTurno.
+  // Sostituisce selectedCharacter$ (mai popolato da nessuno, selectCharacter() non e' mai chiamato).
+  characterInTurno$: Observable<Personaggio | null> = this.gameState$.pipe(
+    map(state => state?.personaggi?.find(p => p.id === state?.actualTurno?.idDelPersonaggioInTurno) ?? null)
+  );
+
+  // Personaggio in turno + coda dei prossimi turni, ruotando personaggiIds a partire da quello attuale.
+  turnQueue$: Observable<{ current: Personaggio | null; upcoming: Personaggio[] }> = this.gameState$.pipe(
+    map(state => {
+      const turno = state?.actualTurno;
+      const personaggi = state?.personaggi ?? [];
+      if (!turno) {
+        return { current: null, upcoming: [] };
+      }
+      const currentIdx = turno.personaggiIds.indexOf(turno.idDelPersonaggioInTurno);
+      const rotatedIds = currentIdx === -1
+        ? turno.personaggiIds
+        : [...turno.personaggiIds.slice(currentIdx), ...turno.personaggiIds.slice(0, currentIdx)];
+      const rotatedPersonaggi = rotatedIds
+        .map(id => personaggi.find(p => p.id === id))
+        .filter((p): p is Personaggio => !!p);
+      return { current: rotatedPersonaggi[0] ?? null, upcoming: rotatedPersonaggi.slice(1) };
+    })
   );
 
 

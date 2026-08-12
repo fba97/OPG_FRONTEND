@@ -1,3 +1,17 @@
-<div class="turn-component-container" #mapContainer>
-<div *ngIf="svgContentTurn" [innerHTML]="svgContentTurn" class="svg-content-turn"></div>
+<div class="turn-strip" *ngIf="turnQueue$ | async as queue">
+  <div class="turn-strip__current" *ngIf="queue.current as current">
+    <app-card-frame [selected]="true">
+      <img [src]="resolveImage(current)" [alt]="current.nome" class="turn-strip__portrait turn-strip__portrait--current">
+    </app-card-frame>
+    <span class="turn-strip__name">{{ current.nome }}</span>
+  </div>
+
+  <div class="turn-strip__upcoming" *ngIf="queue.upcoming.length">
+    <span class="turn-strip__label">Prossimi</span>
+    <div class="turn-strip__queue">
+      <app-card-frame [compact]="true" *ngFor="let next of queue.upcoming">
+        <img [src]="resolveImage(next)" [alt]="next.nome" class="turn-strip__portrait">
+      </app-card-frame>
+    </div>
+  </div>
 </div>

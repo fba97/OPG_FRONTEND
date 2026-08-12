@@ -1,15 +1,18 @@
-  /* partita.component.css */
+/* partita.component.css */
 .game-container {
   display: flex;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  grid-template-columns: auto 1fr auto;
-  background: #1a1a1a;
+  background: var(--color-ink);
 }
 
-.left-sidebar {
-  width: 250px;
+.main-column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .main-content {
@@ -21,25 +24,41 @@
   overflow: hidden;
 }
 
-
 app-character-actions {
-  position: fixed;  /* Fissato rispetto alla viewport */
-  bottom: 20px;       /* Distanza dal bordo inferiore */
-  right: 20px;        /* Distanza dal bordo destro */
-  width: 1000px;       /* Larghezza fissa per evitare schiacciamenti */
-  max-height: 2000px;  /* Altezza massima per mantenere proporzioni */
-  background: rgba(26, 26, 26, 0.9); /* Leggera trasparenza per separarlo dallo sfondo */
-  border-radius: 12px; /* Angoli arrotondati per un design moderno */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombra per risaltare sopra gli altri elementi */
-  overflow: hidden; /* Evita overflow del contenuto */
-  z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+  flex-shrink: 0;
+  width: clamp(320px, 28vw, 480px);
+  overflow-y: auto;
+  border-left: 2px solid var(--color-crimson);
 }
 
+.victory-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
 
+.victory-panel {
+  text-align: center;
+  padding: var(--space-8);
+  background: linear-gradient(160deg, #241608, #150c04);
+  border: var(--border-wood);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-panel);
+}
 
+.victory-panel__title {
+  margin: 0;
+  font-size: 3.5rem;
+  color: var(--color-gold-light);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+}
 
-
-
-
-
-
+.victory-panel__text {
+  margin: var(--space-4) 0 var(--space-6);
+  color: var(--color-parchment);
+  font-style: italic;
+}

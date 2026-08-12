@@ -1,23 +1,16 @@
-import { Component, OnInit, OnDestroy  } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Inventario, Personaggio } from '../../../dto/personaggio';
 import { GameStateService } from '../../services/game-state.service';
 import { AzioniService } from '../../services/azioni.service';
 import { Subscription } from 'rxjs';
-import { Turno } from '../../../dto/game';
-
+import { Turno, OggettoInventario, Skill } from '../../../dto/game';
+import { resolvePersonaggioImage } from '../../../shared/character-portrait';
+import { personaggioBaseDaNome } from '../../../shared/personaggio-base';
 
 interface Section {
   id: string;
   label: string;
   icon: string;
-}
-
-interface Skill {
-  id: number;
-  name: string;
-  icon: string;
-  cost: number;
-  unlocked: boolean;
 }
 
 @Component({
@@ -27,55 +20,31 @@ interface Skill {
 })
 export class CharacterActionsComponent implements OnInit, OnDestroy {
 
-  private characterSubscription!: Subscription;
   private turnoSubscription!: Subscription;
+  private gameStateSubscription!: Subscription;
   constructor(private gameState: GameStateService, private azioniService: AzioniService) {}
 
   // Azioni residue nel turno corrente (default 2, coerente con Turno.cs lato backend)
   azioniRimanenti: number = 2;
   azioniMassimePerTurno: number = 2;
 
-  characterInTurn: Personaggio = {    id: 1, nome: 'prova', puntiVita:30, attacco: 5, difesa:10, descrizione:'Descrizione', tipoPersonaggio: 1, posizione: 1, taglia: 1, livello: 1, gittataAttacco: 1, gittataOggetti: 1,inventario:     
-    {
-      id: 1,
-      personaggioId: 1,
-      capacitaMassima: 1,
-      tipo: 1,
-      oggetti: []
-    }, 
-    stato: 1,  
-    selected: true, 
-    imageUrl: '' 
-  }
+  // Null finche' il primo poll non arriva: characterInTurno$ e' derivato da actualTurno,
+  // niente piu' placeholder finto (il vecchio selectedCharacter$ non veniva mai popolato).
+  characterInTurn: Personaggio | null = null;
   inventory: Inventario | undefined;
 
   sections: Section[] = [
-    { id: 'stats', label: '', icon: '📊' },
-    { id: 'inventory', label: '', icon: '🎒' },
-    { id: 'skills', label: '', icon: '⚔️' }
+    { id: 'stats', label: 'Stats', icon: 'bar_chart' },
+    { id: 'inventory', label: 'Inventario', icon: 'backpack' },
+    { id: 'skills', label: 'Skill', icon: 'sports_martial_arts' }
   ];
 
   inventoryFilters = [
-    { id: 'all', icon: '📦' },
-    { id: 'weapons', icon: '🗡️' },
-    { id: 'armor', icon: '🛡️' }
+    { id: 'all', icon: 'inventory_2', label: 'Tutti' },
+    { id: 'equipped', icon: 'shield', label: 'Equipaggiati' }
   ];
 
-
   ngOnInit(): void {
-    // Sottoscrizione al personaggio selezionato
-    if(this.gameState.selectedCharacter$ == null)
-    {
-      
-    }
-    this.characterSubscription = this.gameState.selectedCharacter$.subscribe(c => {
-      if (c) {
-        this.characterInTurn = c;
-      }
-      // Puoi aggiungere qui ulteriori logiche per aggiornare il componente in base al personaggio selezionato
-    });
-    this.inventory = this.characterInTurn?.inventario;
-
     // Sottoscrizione al turno corrente, per mostrare le azioni residue
     this.turnoSubscription = this.gameState.actualTurno$.subscribe((turno: Turno | null) => {
       if (turno) {
@@ -83,49 +52,82 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
         this.azioniMassimePerTurno = turno.azioniMassimePerTurno;
       }
     });
+
+    // Catalogo skill: statico lato backend, basta caricarlo una volta.
+    this.azioniService.getSkillCatalog().subscribe({
+      next: (skills) => this.skillCatalog = skills,
+      error: (err) => this.sbloccaSkillErrore = 'Errore nel caricare le skill: ' + (err?.error ?? err?.message ?? err)
+    });
+
+    // Un'unica sottoscrizione allo stato completo: characterInTurn.inventario e' sempre uno
+    // stub vuoto (id:0, oggetti:[]) lato backend, il vero inventario di un personaggio vive
+    // nell'array separato state.inventari, associato via personaggioId — verificato dal vivo
+    // (Zoro con un oggetto in mano mostrava "Nessun oggetto" nel pannello finche' non e' stata
+    // corretta questa lettura). Da qui deriva anche l'elenco compagni per lo Scambia.
+    this.gameStateSubscription = this.gameState.gameState$.subscribe(state => {
+      const tutti = state?.personaggi ?? [];
+      const idTurno = state?.actualTurno?.idDelPersonaggioInTurno;
+      const nuovoCharacterInTurn = tutti.find(p => p.id === idTurno) ?? null;
+
+      if (nuovoCharacterInTurn?.id !== this.characterInTurn?.id) {
+        this.currentItemIndex = 0;
+      }
+      this.characterInTurn = nuovoCharacterInTurn;
+      this.inventory = state?.inventari?.find(inv => inv.personaggioId === nuovoCharacterInTurn?.id);
+
+      this.compagni = tutti.filter(p =>
+        (p.tipoPersonaggio === 1 || p.tipoPersonaggio === 2) && p.id !== nuovoCharacterInTurn?.id
+      );
+      if (!this.compagni.some(c => c.id === this.destinatarioId)) {
+        this.destinatarioId = this.compagni[0]?.id ?? null;
+      }
+    });
   }
 
-  // Oggetti dell'inventario filtrati in base alla categoria selezionata (inventoryFilters)
-  get filteredItems(): any[] {
+  resolveImage(personaggio: Personaggio | null | undefined): string {
+    return resolvePersonaggioImage(personaggio);
+  }
+
+  // Oggetti dell'inventario filtrati in base alla categoria selezionata (inventoryFilters).
+  // "equipped" filtra su isEquipaggiato (unico stato reale disponibile sul dato di gioco:
+  // non esiste una categoria armi/armature nel modello, TipoOggetto e' Generico/Probabilita/Imprevisto).
+  get filteredItems(): OggettoInventario[] {
     const items = this.inventory?.oggetti ?? [];
-    if (this.currentFilter === 'all') {
-      return items;
+    if (this.currentFilter === 'equipped') {
+      return items.filter(item => item.isEquipaggiato);
     }
-    return items.filter(item => item?.tipo === this.currentFilter);
+    return items;
   }
-
 
   ngOnDestroy(): void {
     // Pulizia della sottoscrizione per evitare memory leak
-    if (this.characterSubscription) {
-      this.characterSubscription.unsubscribe();
-    }
     if (this.turnoSubscription) {
       this.turnoSubscription.unsubscribe();
     }
+    if (this.gameStateSubscription) {
+      this.gameStateSubscription.unsubscribe();
+    }
   }
 
-  // Skill tiers and skills
-  skillTiers = [
-    {
-      name: 'Novice',
-      skills: [
-        { id: 1, name: 'Basic Attack', icon: '⚔️', unlocked: false, cost: 0 }
-      ]
-    },
-    {
-      name: 'Adept',
-      skills: [
-        { id: 2, name: 'Power Strike', icon: '💥', unlocked: false, cost: 300 }
-      ]
-    },
-    {
-      name: 'Master',
-      skills: [
-        { id: 3, name: 'Whirlwind', icon: '🌪️', unlocked: false, cost: 800 }
-      ]
-    }
-  ];
+  // Catalogo skill reale, caricato una volta in ngOnInit da GET api/Azioni/Skill.
+  skillCatalog: Skill[] = [];
+  sbloccaSkillErrore = '';
+  sbloccaInCorsoId: number | null = null;
+
+  // Solo le skill senza proprietario (chiunque puo' impararle) o di proprieta' del
+  // personaggio in turno (confronto via PersonaggioBase, vedi personaggio-base.ts).
+  get skillDisponibili(): Skill[] {
+    const base = personaggioBaseDaNome(this.characterInTurn?.nome);
+    return this.skillCatalog.filter(s => s.proprietario === null || s.proprietario === base);
+  }
+
+  isSkillSbloccata(skill: Skill): boolean {
+    return this.characterInTurn?.skillSbloccate?.includes(skill.id) ?? false;
+  }
+
+  puoSbloccare(skill: Skill): boolean {
+    return !this.isSkillSbloccata(skill) && (this.characterInTurn?.soldi ?? 0) >= skill.costo;
+  }
 
   currentSection = 'stats';
   currentFilter = 'all';
@@ -138,17 +140,82 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
   }
 
   nextItem() {
-    var filteredItemsLenght = 0;
-    if(this.inventory != null)
-      filteredItemsLenght = this.inventory.oggetti.length;
-
-    if (this.currentItemIndex < filteredItemsLenght - 1) {
+    if (this.currentItemIndex < this.filteredItems.length - 1) {
       this.currentItemIndex++;
     }
   }
 
-  performItemAction(action: string) {
-    console.log(`Performing action: ${action}`);
+  // Compagni selezionabili come destinatario di uno Scambia, e destinatario correntemente
+  // selezionato nel menu a tendina del template.
+  compagni: Personaggio[] = [];
+  destinatarioId: number | null = null;
+
+  usaOggettoErrore = '';
+  vendiOggettoErrore = '';
+  scambiaOggettoErrore = '';
+  equipaggiaOggettoErrore = '';
+
+  private avanzaDopoConsumo() {
+    if (this.currentItemIndex >= this.filteredItems.length - 1 && this.currentItemIndex > 0) {
+      this.currentItemIndex--;
+    }
+  }
+
+  // Usa l'oggetto attualmente mostrato nel carosello inventario: applica il suo effetto
+  // (es. moltiplica l'attacco) e lo consuma. A differenza di Scambia/Equipaggia, questa e'
+  // collegata a un vero endpoint (AzioniController.Usa + OggettoManager.UsaOggetto).
+  usaOggettoSelezionato() {
+    const voce = this.filteredItems[this.currentItemIndex];
+    if (!voce) {
+      return;
+    }
+    this.usaOggettoErrore = '';
+    this.azioniService.usaOggetto(voce.oggetto.id).subscribe({
+      next: () => this.avanzaDopoConsumo(),
+      error: (err) => this.usaOggettoErrore = 'Errore nell\'uso dell\'oggetto: ' + (err?.error ?? err?.message ?? err)
+    });
+  }
+
+  // Vende l'oggetto attualmente mostrato in cambio di berry (prezzo placeholder lato server)
+  // e lo consuma. Anche questa e' collegata a un vero endpoint (AzioniController.Vendi).
+  vendiOggettoSelezionato() {
+    const voce = this.filteredItems[this.currentItemIndex];
+    if (!voce) {
+      return;
+    }
+    this.vendiOggettoErrore = '';
+    this.azioniService.vendiOggetto(voce.oggetto.id).subscribe({
+      next: () => this.avanzaDopoConsumo(),
+      error: (err) => this.vendiOggettoErrore = 'Errore nella vendita: ' + (err?.error ?? err?.message ?? err)
+    });
+  }
+
+  // Scambia l'oggetto attualmente mostrato con il compagno selezionato nel menu a tendina.
+  // E' un'azione di turno vera e propria (AzioniController.Scambia -> ActionManager).
+  scambiaOggettoSelezionato() {
+    const voce = this.filteredItems[this.currentItemIndex];
+    if (!voce || !this.characterInTurn || this.destinatarioId === null) {
+      return;
+    }
+    this.scambiaOggettoErrore = '';
+    this.azioniService.scambiaOggetto(this.characterInTurn.id, this.destinatarioId, voce.oggetto.id).subscribe({
+      next: () => this.avanzaDopoConsumo(),
+      error: (err) => this.scambiaOggettoErrore = 'Errore nello scambio: ' + (err?.error ?? err?.message ?? err)
+    });
+  }
+
+  // Equipaggia/disequipaggia l'oggetto attualmente mostrato (click su un oggetto gia'
+  // equipaggiato lo toglie). Non consuma un'azione di turno, come Vendi.
+  equipaggiaOggettoSelezionato() {
+    const voce = this.filteredItems[this.currentItemIndex];
+    if (!voce) {
+      return;
+    }
+    this.equipaggiaOggettoErrore = '';
+    this.azioniService.equipaggiaOggetto(voce.oggetto.id).subscribe({
+      next: () => {},
+      error: (err) => this.equipaggiaOggettoErrore = 'Errore nell\'equipaggiamento: ' + (err?.error ?? err?.message ?? err)
+    });
   }
 
   terminaTurnoErrore = '';
@@ -161,10 +228,22 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
     });
   }
 
+  // Sblocca una skill spendendo Soldi (collegato a AzioniController.SbloccaSkill).
   unlockSkill(skill: Skill) {
-    if (!skill.unlocked) {
-      skill.unlocked = true;
-      console.log(`Unlocked skill: ${skill.name}`);
+    if (this.isSkillSbloccata(skill) || !this.puoSbloccare(skill)) {
+      return;
     }
+    this.sbloccaSkillErrore = '';
+    this.sbloccaInCorsoId = skill.id;
+    this.azioniService.sbloccaSkill(skill.id).subscribe({
+      next: (personaggio) => {
+        this.sbloccaInCorsoId = null;
+        this.characterInTurn = personaggio;
+      },
+      error: (err) => {
+        this.sbloccaInCorsoId = null;
+        this.sbloccaSkillErrore = 'Errore nello sblocco: ' + (err?.error ?? err?.message ?? err);
+      }
+    });
   }
 }

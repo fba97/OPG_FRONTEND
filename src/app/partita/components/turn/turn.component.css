@@ -1,0 +1,58 @@
+.turn-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+}
+
+.turn-strip__current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.turn-strip__current app-card-frame {
+  display: block;
+  width: 72px;
+  height: 100px;
+}
+
+.turn-strip__name {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--color-gold-light);
+  text-align: center;
+}
+
+.turn-strip__upcoming {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.turn-strip__label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-parchment-dark);
+}
+
+.turn-strip__queue {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.turn-strip__queue app-card-frame {
+  display: block;
+  width: 40px;
+  height: 56px;
+}
+
+.turn-strip__portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

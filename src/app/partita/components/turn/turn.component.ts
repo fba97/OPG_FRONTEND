@@ -1,53 +1,22 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { GameStateService } from '../../services/game-state.service';
+import { Personaggio } from '../../../dto/personaggio';
+import { resolvePersonaggioImage } from '../../../shared/character-portrait';
 
 @Component({
-    selector: 'app-turn',
-    templateUrl: './turn.component.html',
-    styleUrls: []
+  selector: 'app-turn',
+  templateUrl: './turn.component.html',
+  styleUrls: ['./turn.component.css']
 })
+export class TurnComponent {
+  turnQueue$: Observable<{ current: Personaggio | null; upcoming: Personaggio[] }>;
 
-export class TurnComponent implements OnInit {
-  @ViewChild('turn-component-container') turnComponentContainer!: ElementRef;
-
-  svgContentTurn: SafeHtml | null = null;
-
-    constructor(
-        private http: HttpClient,
-        private sanitizer: DomSanitizer
-    ) { }
-
-    ngOnInit(): void {
-        this.loadSvg();
-    }
-
-    private loadSvg() {
-        this.http.get('assets/images/UI/turn.svg', { responseType: 'text' }).subscribe({
-            next: (svg) => {
-                this.svgContentTurn = this.sanitizer.bypassSecurityTrustHtml(svg);
-                setTimeout(() => { 
-                    this.observeSvgContent();
-                }, 300);
-            },
-            error: (error) => console.error('Errore nel caricamento dell\'SVG:', error)
-        });
-    }
-
-    
-  private observeSvgContent() {
-    if (!this.turnComponentContainer) {
-      console.error('mapContainer non è definito!');
-      return;
-    }
-    const mapContainerEl = this.turnComponentContainer.nativeElement;
-    const svgContent = mapContainerEl.querySelector('.svg-content-turn') as HTMLElement;
-    console.log(svgContent); // Log l'elemento svg-content trovato
-    if (svgContent) {
-      //this.setupDragEvents(svgContent);
-    } else {
-      console.error('Non è stato trovato un elemento .svg-content');
-    }
+  constructor(private gameState: GameStateService) {
+    this.turnQueue$ = this.gameState.turnQueue$;
   }
 
+  resolveImage(personaggio: Personaggio | null | undefined): string {
+    return resolvePersonaggioImage(personaggio);
+  }
 }

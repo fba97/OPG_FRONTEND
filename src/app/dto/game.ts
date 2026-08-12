@@ -104,7 +104,7 @@ export interface Oggetto {
     
     bonusAttacco: number;
     bonusDifesa: number;
-    idPosizione?: number | null;
+    id_Posizione?: number | null; // nome campo verificato dal vivo: il backend serializza "id_Posizione" (non idPosizione)
     idInventario?: number | null;
     effetto: EffettoOggetto;
   }
@@ -134,15 +134,50 @@ export interface Inventario {
 
 
 
+export enum StatoCombattimento {
+    InCorso = 1,
+    Concluso = 2,
+    Fuggito = 3
+}
+
 export interface Combattimento {
     id: number;
     nome: string;
     listaEroi: number[];
     listaNPCs: number[];
+    stato: StatoCombattimento;
+}
+
+// Risposta di POST api/Azioni/Attacco: e' l'oggetto Attacco lato backend serializzato cosi'
+// com'e' (non un DTO di risultato dedicato) — contiene i due personaggi con l'HP gia' aggiornato.
+export interface AttaccoResult {
+    personaggio: Personaggio;
+    difensore: Personaggio;
+}
+
+// Mappa Primitives/EventoMappa.cs — punto della mappa assegnato come trigger
+// Probabilita'/Imprevisto (tipo riusa TipoOggetto.Probabilita=2/Imprevisto=3).
+export interface EventoMappa {
+    idPunto: number;
+    tipo: TipoOggetto;
+}
+
+// Mappa Primitives/Skill.cs — catalogo hardcoded lato backend (nessuna tabella DB).
+export interface Skill {
+    id: number;
+    nome: string;
+    descrizione: string;
+    costo: number;
+    proprietario: number | null; // enum PersonaggioBase, null = chiunque puo' sbloccarla
+    moltiplicatoreDanno: number;
 }
 
 // Mappa la classe backend Primitives/Turno.cs, serializzata dentro ActualPartita.ActualTurno
 export interface Turno {
+    personaggiIds: number[];
+    idDelPersonaggioInTurno: number;
+    turnoCorrente: number;
+    giocoIniziato: boolean;
     azioniMassimePerTurno: number;
     azioniRimanenti: number;
 }
@@ -215,6 +250,9 @@ export interface PartitaSoft {
     statoPartita: number;
     combattimenti: Combattimento[];
     missioni: Missione[];
-    Punti: Punto[];
+    punti: Punto[];
+    aree: Area[];
+    tessere: Tessera[];
+    eventiMappa: EventoMappa[];
     actualTurno?: Turno;
 }

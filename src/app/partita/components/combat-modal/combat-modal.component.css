@@ -1,0 +1,134 @@
+.combat-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.combat-modal {
+  position: relative;
+  width: min(560px, 90vw);
+  padding: var(--space-6);
+  background: linear-gradient(160deg, #241608, #150c04);
+  border: var(--border-wood);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-panel);
+  color: var(--color-parchment);
+}
+
+.combat-modal__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold);
+  background: transparent;
+  color: var(--color-gold-light);
+  cursor: pointer;
+}
+
+.combat-modal__title {
+  margin: 0 0 var(--space-5);
+  text-align: center;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.combat-modal__arena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.combatant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.combatant__portrait {
+  display: block;
+  width: 120px;
+  height: 160px;
+}
+
+.combatant__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.combatant__name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.combatant__hp {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-crimson-light);
+  font-weight: 600;
+}
+
+.combatant__hp mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.combat-modal__vs {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.combat-modal__result {
+  text-align: center;
+  margin-bottom: var(--space-4);
+  color: var(--color-gold-light);
+  font-family: var(--font-display);
+}
+
+.combat-modal__result--defeated {
+  color: var(--color-crimson-light);
+}
+
+.combat-modal__error {
+  text-align: center;
+  margin-bottom: var(--space-3);
+  color: var(--color-crimson-light);
+  font-size: 0.9rem;
+}
+
+.combat-modal__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.combat-modal__actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.combat-modal__actions .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
