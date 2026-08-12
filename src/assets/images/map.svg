@@ -6,8 +6,8 @@
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="map.svg"
-   height="1740.7908mm"
-   width="1564.7874mm"
+   height="68.872"
+   width="61.909"
    xml:space="preserve"
    class="svg-content"
    viewBox="0 0 1564.7873 1740.7908"
@@ -25,15 +25,15 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.17496666"
-     inkscape:cx="2337.5882"
-     inkscape:cy="4177.9387"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="adiacenze" /><defs
+     inkscape:current-layer="layer1"
+     inkscape:zoom="0.69986664"
+     inkscape:cx="694.41801"
+     inkscape:cy="460.08765"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8" /><defs
      id="defs2" /><g
      inkscape:label="Livello 1"
      inkscape:groupmode="layer"
@@ -60,43 +60,43 @@
                inkscape:randomized="0"
                d="M 75.914321,-7.9904713 -21.430527,175.13724 -228.6962,182.39798 -338.61702,6.5310119 -241.27217,-176.59669 -34.0065,-183.85744 Z"
                transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,219.20125,206.63194)" /><ellipse
-               style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
                id="Punto_5"
                cx="209.49109"
                cy="196.88557"
                rx="1.4999996"
                ry="1.4999995" /><ellipse
-               style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
                id="Punto_6"
                cx="209.56317"
                cy="206.23929"
                rx="1.4999996"
                ry="1.4999995" /><ellipse
-               style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
                id="Punto_7"
                cx="209.62573"
                cy="215.62808"
                rx="1.4999996"
                ry="1.4999995" /><ellipse
-               style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
                id="Punto_8"
                cx="217.57947"
                cy="210.9689"
                rx="1.4999996"
                ry="1.4999995" /><ellipse
-               style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
                id="Punto_9"
                cx="217.64746"
                cy="201.55165"
                rx="1.4999996"
                ry="1.4999995" /><ellipse
-               style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
                id="Punto_10"
                cx="201.43188"
                cy="211.01071"
                rx="1.4999996"
                ry="1.4999995" /><ellipse
-               style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;opacity:1"
+               style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
                id="Punto_11"
                cx="201.4126"
                cy="201.65265"
@@ -2769,1348 +2769,1348 @@
                transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,16.931325,205.22381)" /></g></g></g><g
          id="adiacenze"
          transform="matrix(1.003544,0,0,1.003544,-0.5349157,-0.71391676)"
-         style="opacity:0.253;stroke:#000000;stroke-opacity:1;stroke-width:0.74502166;stroke-dasharray:none"><path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         style="opacity:0.253;stroke:#000000;stroke-width:0.745022;stroke-dasharray:none;stroke-opacity:1"><path
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 40.63349,137.05214 9.38655,4.92411"
    id="Adiacenza_Punto_234_Punto_4" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 50.09698,142.13013 8.00168,4.53941"
    id="Adiacenza_Punto_4_Punto_2" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.17913,156.82549 -8.92495,-5.30881"
    id="Adiacenza_Punto_185_Punto_3" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.25252,146.74648 7.92475,4.84714"
    id="Adiacenza_Punto_2_Punto_3" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.5917,215.76082 -2.23123,13.84903"
    id="Adiacenza_Punto_7_Punto_1" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.12653,225.83983 -7.92472,-4.84714"
    id="Adiacenza_Punto_15_Punto_13" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.35569,230.4562 -0.30777,-9.69434"
    id="Adiacenza_Punto_14_Punto_13" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 176.1232,225.76291 7.92472,-4.84716"
    id="Adiacenza_Punto_17_Punto_13" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.27875,230.4562 -8.30943,-4.69329"
    id="Adiacenza_Punto_14_Punto_17" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.04792,211.45224 0.15389,9.61739"
    id="Adiacenza_Punto_12_Punto_13" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 175.96932,216.45328 8.15554,4.30858"
    id="Adiacenza_Punto_18_Punto_13" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.35735,216.37634 -8.0786,4.61635"
    id="Adiacenza_Punto_16_Punto_13" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 201.43615,211.06753 -9.15574,5.30881"
    id="Adiacenza_Punto_10_Punto_16" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.51476,206.22036 0.15388,9.38657"
    id="Adiacenza_Punto_6_Punto_7" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 217.6703,210.91365 -8.00166,-4.69329"
    id="Adiacenza_Punto_8_Punto_6" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 217.6703,201.29628 -0.15388,9.84819"
    id="Adiacenza_Punto_9_Punto_8" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.5917,206.22036 -0.0769,-9.46348"
    id="Adiacenza_Punto_6_Punto_5" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 201.35921,201.68096 8.07861,-5.1549"
    id="Adiacenza_Punto_11_Punto_5" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 201.35921,211.14447 v -9.46351"
    id="Adiacenza_Punto_10_Punto_1" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.5917,206.22036 -8.15555,4.84717"
    id="Adiacenza_Punto_6_Punto_10" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.5917,206.14342 8.00166,-4.61634"
    id="Adiacenza_Punto_6_Punto_9" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 175.99787,225.81056 -9.35752,4.13473"
    id="Adiacenza_Punto_17_Punto_23" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.69735,234.62405 8.05182,-4.67876"
    id="Adiacenza_Punto_20_Punto_23" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.47973,225.26653 -7.943,4.89638"
    id="Adiacenza_Punto_19_Punto_25" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.69735,234.73284 v -9.57511"
    id="Adiacenza_Punto_20_Punto_150" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.69735,244.09036 v -9.46631"
    id="Adiacenza_Punto_21_Punto_150" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.74917,239.30281 -7.943,4.67876"
    id="Adiacenza_Punto_22_Punto_21" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.53673,239.4116 8.16062,4.56997"
    id="Adiacenza_Punto_24_Punto_21" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.42793,230.16291 8.37824,4.56993"
    id="Adiacenza_Punto_25_Punto_20" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.74917,239.4116 -8.05182,-4.78755"
    id="Adiacenza_Punto_22_Punto_20" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.69735,263.89347 8.05182,4.89638"
    id="Adiacenza_Punto_149_Punto_150" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.58855,254.64478 0.1088,9.46631"
    id="Adiacenza_Punto_148_Punto_149" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.69735,243.98157 -0.1088,10.88083"
    id="Adiacenza_Punto_21_Punto_148" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.53673,259.43233 8.48706,4.67876"
    id="Adiacenza_Punto_152_Punto_149" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.42793,268.89865 8.37824,-4.78756"
    id="Adiacenza_Punto_151_Punto_149" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.75434,259.54116 -9.24869,-5.98448"
    id="Adiacenza_Punto_152_Punto_145" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.61445,244.19918 9.0311,-4.78758"
    id="Adiacenza_Punto_146_Punto_24" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.56265,249.09554 8.37824,-4.78756"
    id="Adiacenza_Punto_143_Punto_146" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.72327,253.99192 -8.16062,-5.00518"
    id="Adiacenza_Punto_145_Punto_143" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.67144,258.45306 -0.10879,-9.57514"
    id="Adiacenza_Punto_144_Punto_143" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.64555,268.78985 -9.0311,5.00518"
    id="Adiacenza_Punto_151_Punto_29" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.56265,278.58258 8.48704,-5.00517"
    id="Adiacenza_Punto_27_Punto_29" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.50565,283.04372 -7.83421,-4.46114"
    id="Adiacenza_Punto_28_Punto_27" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.67144,269.00747 -0.10879,9.46632"
    id="Adiacenza_Punto_26_Punto_27" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.56265,258.23544 -0.10883,10.88083"
    id="Adiacenza_Punto_144_Punto_26" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.40202,283.15255 8.26942,-4.89638"
    id="Adiacenza_Punto_30_Punto_27" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.40202,273.90385 8.16063,4.56994"
    id="Adiacenza_Punto_31_Punto_27" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.40202,253.7743 8.26942,-4.89638"
    id="Adiacenza_Punto_147_Punto_143" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.56265,239.52043 0.10879,9.57511"
    id="Adiacenza_Punto_142_Punto_143" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.83466,228.966 -0.27203,10.55441"
    id="Adiacenza_Punto_137_Punto_142" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.72327,224.34165 -8.21505,-4.95078"
    id="Adiacenza_Punto_138_Punto_136" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.67144,229.07483 0.0544,-9.62953"
    id="Adiacenza_Punto_137_Punto_136" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.66884,214.87534 -0.10879,9.41191"
    id="Adiacenza_Punto_139_Punto_138" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.45642,224.23285 8.21502,-4.84198"
    id="Adiacenza_Punto_140_Punto_136" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.45382,210.03338 0.16322,9.57511"
    id="Adiacenza_Punto_135_Punto_136" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.77767,214.76654 -8.26945,-4.73316"
    id="Adiacenza_Punto_139_Punto_135" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.61964,215.20178 7.88858,4.46114"
    id="Adiacenza_Punto_141_Punto_136" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.72327,214.87534 8.86785,-5.00518"
    id="Adiacenza_Punto_139_Punto_133" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.69735,214.60332 -0.0544,10.71761"
    id="Adiacenza_Punto_130_Punto_19" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.59112,229.99969 -8.81345,-5.71244"
    id="Adiacenza_Punto_25_Punto_138" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.58595,209.92456 -7.8886,4.56996"
    id="Adiacenza_Punto_131_Punto_130" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.48233,209.87016 8.26942,4.78756"
    id="Adiacenza_Punto_133_Punto_130" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.80617,205.0826 -8.21505,4.84196"
    id="Adiacenza_Punto_129_Punto_133" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.74917,209.97896 -8.05182,-4.78756"
    id="Adiacenza_Punto_131_Punto_129" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.96679,200.45824 -8.21504,4.56994"
    id="Adiacenza_Punto_132_Punto_129" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.53415,195.77948 0.2176,9.1399"
    id="Adiacenza_Punto_128_Punto_129" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.64555,200.62146 8.0518,4.35232"
    id="Adiacenza_Punto_134_Punto_129" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.56005,194.74581 8.70466,5.71243"
    id="Adiacenza_Punto_45_Punto_134" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.80357,200.34945 9.3031,-4.13473"
    id="Adiacenza_Punto_132_Punto_119" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.21289,200.94788 -0.1088,10.39119"
    id="Adiacenza_Punto_116_Punto_12" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 176.05227,216.50747 -9.35752,-6.58291"
    id="Adiacenza_Punto_18_Punto_131" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.32171,200.94788 -0.0544,-9.46632"
    id="Adiacenza_Punto_116_Punto_115" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 176.05227,196.26912 8.32384,-4.89638"
    id="Adiacenza_Punto_119_Punto_115" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.37351,196.26912 -8.21502,-4.95078"
    id="Adiacenza_Punto_117_Punto_115" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.42791,186.8572 -8.37821,4.73316"
    id="Adiacenza_Punto_118_Punto_115" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 175.99787,186.74841 8.10622,4.78755"
    id="Adiacenza_Punto_120_Punto_115" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.21289,182.01525 v 9.62951"
    id="Adiacenza_Punto_114_Punto_1" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 201.35019,181.63441 -9.1943,5.114"
    id="Adiacenza_Punto_105_Punto_118" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.21289,171.35201 -0.0544,10.93526"
    id="Adiacenza_Punto_109_Punto_114" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.80357,180.49191 9.1399,6.41969"
    id="Adiacenza_Punto_124_Punto_120" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.26472,186.8572 -0.10883,9.35752"
    id="Adiacenza_Punto_118_Punto_117" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 201.40462,201.76393 -9.24873,-5.54921"
    id="Adiacenza_Punto_11_Punto_117" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.51081,186.31317 -0.0544,10.33679"
    id="Adiacenza_Punto_103_Punto_5" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 201.35019,181.68881 8.26945,-4.78756"
    id="Adiacenza_Punto_105_Punto_102" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 217.72586,181.68881 -8.16062,-4.73316"
    id="Adiacenza_Punto_104_Punto_102" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.51081,186.25877 v -9.35752"
    id="Adiacenza_Punto_103_Punto_1" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.56524,167.59813 v 9.35752"
    id="Adiacenza_Punto_101_Punto_1" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.56524,157.31576 v 10.44559"
    id="Adiacenza_Punto_97_Punto_8" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 201.40462,172.49451 8.32381,-5.00518"
    id="Adiacenza_Punto_106_Punto_101" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.1015,166.89087 9.41191,5.54924"
    id="Adiacenza_Punto_110_Punto_106" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.72843,157.42456 -0.16319,-9.57511"
    id="Adiacenza_Punto_97_Punto_96" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.40202,138.65512 0.21762,9.41192"
    id="Adiacenza_Punto_95_Punto_96" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 217.67144,143.33388 -8.1062,4.73316"
    id="Adiacenza_Punto_98_Punto_96" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.56524,138.76394 -8.16062,4.78756"
    id="Adiacenza_Punto_95_Punto_100" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.15589,137.78467 9.24873,5.82123"
    id="Adiacenza_Punto_250_Punto_100" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.61964,148.12146 -8.21502,4.67876"
    id="Adiacenza_Punto_96_Punto_99" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.21032,157.31576 9.24869,-4.62436"
    id="Adiacenza_Punto_111_Punto_99" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.15849,152.5826 0.1088,9.3575"
    id="Adiacenza_Punto_107_Punto_108" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.32171,171.56963 -0.10882,-9.52071"
    id="Adiacenza_Punto_109_Punto_108" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.21032,166.9453 -7.943,4.46113"
    id="Adiacenza_Punto_110_Punto_109" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 175.99787,166.83647 8.16062,-4.67875"
    id="Adiacenza_Punto_112_Punto_108" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 175.99787,157.53338 0.1088,9.35749"
    id="Adiacenza_Punto_113_Punto_112" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.63676,128.75811 -0.10879,10.01036"
    id="Adiacenza_Punto_92_Punto_95" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.74559,119.29177 0.10879,9.57514"
    id="Adiacenza_Punto_91_Punto_92" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 201.58496,124.29697 8.0518,-4.89637"
    id="Adiacenza_Punto_94_Punto_91" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 217.90621,114.61301 -8.37824,5.0052"
    id="Adiacenza_Punto_93_Punto_91" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 209.52797,109.93428 0.10879,9.35749"
    id="Adiacenza_Punto_90_Punto_91" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.26472,157.26136 -8.16063,4.84196"
    id="Adiacenza_Punto_111_Punto_108" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 175.99787,166.67328 -9.2487,4.29792"
    id="Adiacenza_Punto_112_Punto_125" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.69475,180.54634 -7.9974,4.51553"
    id="Adiacenza_Punto_124_Punto_123" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.37353,180.65513 8.16062,4.62436"
    id="Adiacenza_Punto_126_Punto_123" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.59112,171.07999 v 9.52074"
    id="Adiacenza_Punto_127_Punto_1" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.64295,166.34684 -8.37824,4.78758"
    id="Adiacenza_Punto_121_Punto_127" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.69475,170.9712 -8.1062,-4.62436"
    id="Adiacenza_Punto_125_Punto_121" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.69735,175.75875 -0.0544,-9.62953"
    id="Adiacenza_Punto_122_Punto_121" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.91237,180.54634 -8.32382,-4.95078"
    id="Adiacenza_Punto_124_Punto_122" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.86057,185.27949 -0.32642,10.28237"
    id="Adiacenza_Punto_123_Punto_128" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.66884,185.33389 9.03111,-4.89638"
    id="Adiacenza_Punto_46_Punto_126" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.56265,199.58776 -8.21503,-4.67873"
    id="Adiacenza_Punto_44_Punto_47" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.2932,185.44269 8.21502,4.78758"
    id="Adiacenza_Punto_48_Punto_43" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.45382,180.60073 -7.77978,4.73316"
    id="Adiacenza_Punto_42_Punto_48" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.77767,194.90903 -8.32385,-4.84198"
    id="Adiacenza_Punto_45_Punto_43" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.56005,185.22507 -7.83421,5.0052"
    id="Adiacenza_Punto_46_Punto_43" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.61445,165.8572 -8.0518,14.68914"
    id="Adiacenza_Punto_51_Punto_42" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.61704,161.28726 -0.10882,9.0855"
    id="Adiacenza_Punto_49_Punto_50" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.66884,166.34684 -8.10619,-5.1684"
    id="Adiacenza_Punto_51_Punto_49" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.34762,156.7173 8.1606,4.46114"
    id="Adiacenza_Punto_54_Punto_49" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64554,146.65255 8.26942,-5.00518"
    id="Adiacenza_Punto_56_Punto_59" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.86316,155.95564 -0.21762,-9.41191"
    id="Adiacenza_Punto_57_Punto_56" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.69736,151.33131 8.97668,5.38599"
    id="Adiacenza_Punto_58_Punto_54" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.34762,166.02042 -8.59586,4.62436"
    id="Adiacenza_Punto_53_Punto_66" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.53674,166.07482 0.27202,-10.06475"
    id="Adiacenza_Punto_62_Punto_57" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.80616,171.07999 -8.21502,-4.95077"
    id="Adiacenza_Punto_66_Punto_62" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.59114,175.54113 -8.21502,-4.67876"
    id="Adiacenza_Punto_63_Punto_68" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.48232,166.29244 -8.1062,4.78755"
    id="Adiacenza_Punto_62_Punto_68" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.75176,180.21989 -8.05182,-4.56993"
    id="Adiacenza_Punto_65_Punto_63" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.69994,184.89865 -0.0544,-9.57514"
    id="Adiacenza_Punto_64_Punto_63" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.59374,180.27429 8.16062,4.73319"
    id="Adiacenza_Punto_67_Punto_64" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.51082,185.55151 -9.1943,-5.44041"
    id="Adiacenza_Punto_48_Punto_65" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.67144,190.33907 -8.16062,4.56996"
    id="Adiacenza_Punto_43_Punto_47" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.49208,141.97625 8.00167,-4.77022"
    id="Adiacenza_Punto_61_Punto_55" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.49208,151.36282 v -9.69433"
    id="Adiacenza_Punto_60_Punto_150" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.72457,146.51565 -8.30943,4.92411"
    id="Adiacenza_Punto_56_Punto_60" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 91.490219,156.44078 9.078811,-5.23184"
    id="Adiacenza_Punto_183_Punto_60" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.56903,141.97625 -9.078811,-4.77022"
    id="Adiacenza_Punto_61_Punto_189" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64763,127.05007 0.0769,10.07901"
    id="Adiacenza_Punto_194_Punto_55" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.72457,117.74044 -0.0769,9.46349"
    id="Adiacenza_Punto_193_Punto_194" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.72623,122.43373 -8.00166,-4.92411"
    id="Adiacenza_Punto_195_Punto_193" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.49208,122.58758 8.07861,-5.07796"
    id="Adiacenza_Punto_197_Punto_193" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.80317,113.04716 -8.15554,4.5394"
    id="Adiacenza_Punto_196_Punto_193" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.56903,113.1241 8.0786,-5.00105"
    id="Adiacenza_Punto_198_Punto_192" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64763,117.58656 -8.0786,-4.3086"
    id="Adiacenza_Punto_193_Punto_198" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.72457,108.35387 8.15554,4.69329"
    id="Adiacenza_Punto_192_Punto_196" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.80317,93.581552 -8.00166,4.616345"
    id="Adiacenza_Punto_202_Punto_201" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.72457,88.81134 8.15554,4.462476"
    id="Adiacenza_Punto_200_Punto_202" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.80317,84.118055 -8.15554,4.693285"
    id="Adiacenza_Punto_203_Punto_200" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64763,79.347832 8.15554,4.924102"
    id="Adiacenza_Punto_199_Punto_203" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.56903,84.194993 8.0786,-4.847161"
    id="Adiacenza_Punto_205_Punto_199" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.56903,93.427671 -0.0769,-9.309616"
    id="Adiacenza_Punto_204_Punto_205" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64763,98.274837 -8.15555,-4.616344"
    id="Adiacenza_Punto_201_Punto_204" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.72623,83.964176 8.84798,-4.847161"
    id="Adiacenza_Punto_203_Punto_209" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.5759,74.346791 -8.07863,4.616345"
    id="Adiacenza_Punto_207_Punto_209" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.65282,64.960224 -0.0769,9.232688"
    id="Adiacenza_Punto_206_Punto_207" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.34342,69.730447 8.23248,4.770224"
    id="Adiacenza_Punto_210_Punto_207" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.64929,64.652469 8.84798,5.077978"
    id="Adiacenza_Punto_214_Punto_210" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64763,59.959184 8.00166,4.693285"
    id="Adiacenza_Punto_212_Punto_214" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.49208,55.419778 8.38637,4.462468"
    id="Adiacenza_Punto_215_Punto_212" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.49375,50.418738 0.15388,9.617384"
    id="Adiacenza_Punto_211_Punto_212" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.57069,79.347832 0.15388,-10.309836"
    id="Adiacenza_Punto_199_Punto_213" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.5759,141.82237 v -9.69433"
    id="Adiacenza_Punto_275_Punto_1" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.42036,137.05214 8.3094,-4.9241"
    id="Adiacenza_Punto_277_Punto_274" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.42036,127.66557 -0.15388,9.38657"
    id="Adiacenza_Punto_278_Punto_277" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.5759,122.89535 -8.15554,4.61634"
    id="Adiacenza_Punto_273_Punto_278" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.73144,136.89826 -8.00168,4.61635"
    id="Adiacenza_Punto_276_Punto_275" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.34861,142.13013 -8.77105,-5.38575"
    id="Adiacenza_Punto_272_Punto_276" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.96579,127.51169 -8.30942,14.7723"
    id="Adiacenza_Punto_265_Punto_272" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.57756,136.74438 8.92493,-14.31065"
    id="Adiacenza_Punto_276_Punto_266" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.65803,117.97124 0.30776,9.38657"
    id="Adiacenza_Punto_264_Punto_265" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.50249,122.58758 8.15554,-4.77022"
    id="Adiacenza_Punto_266_Punto_264" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.50415,146.74648 -8.30943,4.92408"
    id="Adiacenza_Punto_267_Punto_271" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.65637,142.13013 -0.15388,9.23269"
    id="Adiacenza_Punto_272_Punto_271" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.65803,156.44078 v -9.6943"
    id="Adiacenza_Punto_268_Punto_1" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.81357,151.36282 -8.00166,-4.77022"
    id="Adiacenza_Punto_269_Punto_267" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.65969,142.13013 -7.84778,4.46247"
    id="Adiacenza_Punto_270_Punto_267" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 175.89238,137.82153 -9.23269,4.15472"
    id="Adiacenza_Punto_252_Punto_270" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 175.89238,128.28107 0.15388,9.54046"
    id="Adiacenza_Punto_253_Punto_252" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.35735,138.12929 -8.15554,4.46246"
    id="Adiacenza_Punto_250_Punto_249" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 176.04626,137.97541 8.15555,4.46246"
    id="Adiacenza_Punto_252_Punto_249" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.04958,137.97541 0.15389,-9.69434"
    id="Adiacenza_Punto_250_Punto_251" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.20181,123.51087 8.00166,4.7702"
    id="Adiacenza_Punto_248_Punto_251" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 176.04626,128.58884 8.00166,-4.92411"
    id="Adiacenza_Punto_253_Punto_248" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.20181,113.50878 -0.30777,10.00209"
    id="Adiacenza_Punto_255_Punto_248" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.04958,108.73855 -7.84777,4.61635"
    id="Adiacenza_Punto_256_Punto_255" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 192.20347,99.659746 v 9.232684"
    id="Adiacenza_Punto_257_Punto_9" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 184.20181,104.42997 8.15554,-4.924106"
    id="Adiacenza_Punto_254_Punto_257" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 176.04626,99.505864 8.30943,4.616346"
    id="Adiacenza_Punto_258_Punto_254" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 166.50581,93.504612 -7.6939,-4.462455"
    id="Adiacenza_Punto_261_Punto_260" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 158.65803,79.193953 -0.15388,9.38657"
    id="Adiacenza_Punto_259_Punto_260" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.34861,84.271934 8.15554,-4.770223"
    id="Adiacenza_Punto_263_Punto_259" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 150.65637,93.504612 -0.15388,-9.386557"
    id="Adiacenza_Punto_262_Punto_263" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.73144,98.736482 8.92493,-5.23187"
    id="Adiacenza_Punto_282_Punto_262" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.42202,93.812375 8.46328,4.616344"
    id="Adiacenza_Punto_279_Punto_282" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.26648,98.890364 8.30942,-5.077989"
    id="Adiacenza_Punto_284_Punto_279" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.7281,107.96917 -0.30774,-9.540451"
    id="Adiacenza_Punto_283_Punto_284" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 133.88364,112.58551 -8.15554,-4.61634"
    id="Adiacenza_Punto_280_Punto_283" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 141.57756,107.81529 -8.00166,4.77022"
    id="Adiacenza_Punto_281_Punto_280" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 91.671458,127.99191 8.704662,-5.54921"
    id="Adiacenza_Punto_190_Punto_197" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.402012,122.98674 8.051827,4.89637"
    id="Adiacenza_Punto_186_Punto_190" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.510835,132.34425 7.943004,-4.78755"
    id="Adiacenza_Punto_187_Punto_190" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 91.453839,137.24063 -8.051827,-4.89638"
    id="Adiacenza_Punto_189_Punto_187" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.402012,141.81057 0.108823,-9.57511"
    id="Adiacenza_Punto_188_Punto_187" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.350212,127.99191 7.943004,4.46114"
    id="Adiacenza_Punto_191_Punto_187" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.402012,141.91939 v 10.01035"
    id="Adiacenza_Punto_188_Punto_150" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 91.780255,156.7173 -8.26942,-5.11397"
    id="Adiacenza_Punto_183_Punto_179" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.293216,161.39606 8.269419,4.78758"
    id="Adiacenza_Punto_180_Punto_182" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.619632,170.75358 -0.21762,-9.2487"
    id="Adiacenza_Punto_181_Punto_180" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.132593,156.6085 8.160623,4.56994"
    id="Adiacenza_Punto_185_Punto_180" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.510835,151.82095 -8.378242,4.89635"
    id="Adiacenza_Punto_179_Punto_185" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.241389,165.96602 8.269446,-4.78758"
    id="Adiacenza_Punto_184_Punto_180" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.619632,170.75358 -0.21762,9.90155"
    id="Adiacenza_Punto_181_Punto_86" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.402012,189.90383 -0.108796,-9.46632"
    id="Adiacenza_Punto_87_Punto_86" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.350212,185.44269 8.160623,4.56996"
    id="Adiacenza_Punto_89_Punto_87" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.459009,194.80021 8.160623,-4.89638"
    id="Adiacenza_Punto_88_Punto_87" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.293216,209.92456 0.217619,-20.02073"
    id="Adiacenza_Punto_82_Punto_87" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.241389,224.17846 8.051827,-14.2539"
    id="Adiacenza_Punto_85_Punto_82" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.619632,219.06446 -8.378243,4.89638"
    id="Adiacenza_Punto_83_Punto_85" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.510835,228.63959 -8.160623,-4.67875"
    id="Adiacenza_Punto_84_Punto_85" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.59374,229.72767 -17.082905,-1.1969"
    id="Adiacenza_Punto_74_Punto_84" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.53674,224.83129 -8.26945,4.89638"
    id="Adiacenza_Punto_69_Punto_74" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.69736,229.83649 -8.16062,-4.89638"
    id="Adiacenza_Punto_73_Punto_69" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.75436,234.40643 -8.16062,-4.56994"
    id="Adiacenza_Punto_70_Punto_74" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.75436,224.94011 -0.32644,9.68394"
    id="Adiacenza_Punto_69_Punto_70" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.69736,229.94529 -7.8342,4.35234"
    id="Adiacenza_Punto_73_Punto_70" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.69736,239.08519 0.2176,-9.46632"
    id="Adiacenza_Punto_72_Punto_73" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64554,243.76395 8.26942,-4.56997"
    id="Adiacenza_Punto_71_Punto_72" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.2932,224.28725 -8.59584,5.44042"
    id="Adiacenza_Punto_140_Punto_73" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.37612,200.24062 8.48704,5.00518"
    id="Adiacenza_Punto_81_Punto_76" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.91496,209.59814 -8.26942,-4.78755"
    id="Adiacenza_Punto_78_Punto_76" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.80616,200.023 -0.1088,9.57514"
    id="Adiacenza_Punto_79_Punto_78" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64554,195.34424 8.26942,4.78759"
    id="Adiacenza_Punto_75_Punto_79" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.59374,200.24062 8.16062,-4.78755"
    id="Adiacenza_Punto_81_Punto_75" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.37612,209.48932 0.21762,-9.2487"
    id="Adiacenza_Punto_80_Punto_81" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.58854,209.70694 -7.943,4.67876"
    id="Adiacenza_Punto_78_Punto_77" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.42792,225.04891 0.32644,-10.77201"
    id="Adiacenza_Punto_69_Punto_77" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.402012,209.81576 17.191728,-0.10882"
    id="Adiacenza_Punto_82_Punto_80" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.350212,166.07482 -9.031102,5.00517"
    id="Adiacenza_Punto_184_Punto_177" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 66.210314,180.54634 9.248695,4.89635"
    id="Adiacenza_Punto_176_Punto_89" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.158487,175.64996 8.160623,-4.56997"
    id="Adiacenza_Punto_174_Punto_177" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 50.215484,180.43751 8.051826,-4.67876"
    id="Adiacenza_Punto_178_Punto_174" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.376107,185.11627 -0.21762,-9.57514"
    id="Adiacenza_Punto_175_Punto_174" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 66.31911,180.43751 -7.943003,-4.67876"
    id="Adiacenza_Punto_176_Punto_174" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.26731,185.11627 -0.217619,10.77204"
    id="Adiacenza_Punto_175_Punto_164" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.26731,205.35462 -0.108823,-9.90155"
    id="Adiacenza_Punto_165_Punto_164" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 66.31911,200.67586 -8.160623,4.56994"
    id="Adiacenza_Punto_167_Punto_165" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.350212,194.69141 -9.031102,6.09325"
    id="Adiacenza_Punto_88_Punto_167" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.26731,214.60332 -0.108823,-9.57514"
    id="Adiacenza_Punto_166_Punto_165" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 50.106687,200.78466 7.83418,4.46114"
    id="Adiacenza_Punto_168_Punto_165" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 40.422752,194.58259 9.792732,6.20207"
    id="Adiacenza_Punto_170_Punto_168" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 40.640346,185.44269 v 9.24872"
    id="Adiacenza_Punto_171_Punto_33" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.588546,190.23027 7.834206,4.56994"
    id="Adiacenza_Punto_169_Punto_170" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 40.640346,185.22507 -8.160597,4.67876"
    id="Adiacenza_Punto_171_Punto_169" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 24.536719,185.22507 8.378243,5.22282"
    id="Adiacenza_Punto_173_Punto_169" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 24.319126,194.80021 8.160623,-4.78756"
    id="Adiacenza_Punto_172_Punto_169" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 49.997864,180.54634 -9.575112,4.78755"
    id="Adiacenza_Punto_178_Punto_171" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.588546,248.87792 -0.21762,-9.68394"
    id="Adiacenza_Punto_225_Punto_224" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.588546,228.74839 -0.108797,10.55442"
    id="Adiacenza_Punto_228_Punto_224" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 24.427923,224.28725 8.487039,4.35234"
    id="Adiacenza_Punto_231_Punto_228" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.588546,219.4997 -8.160623,4.67876"
    id="Adiacenza_Punto_227_Punto_231" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 40.749169,223.96084 v -9.46632"
    id="Adiacenza_Punto_229_Punto_33" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.479749,219.4997 8.26942,-5.00518"
    id="Adiacenza_Punto_227_Punto_230" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.479749,209.70694 0.108797,9.57514"
    id="Adiacenza_Punto_226_Punto_227" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 50.215484,230.05408 -9.792732,-5.98445"
    id="Adiacenza_Punto_220_Punto_229" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 66.31911,230.16291 -8.269419,-4.78756"
    id="Adiacenza_Punto_219_Punto_216" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.158487,234.51525 8.160623,-4.56996"
    id="Adiacenza_Punto_217_Punto_219" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.158487,225.37535 0.108823,9.35749"
    id="Adiacenza_Punto_216_Punto_217" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 49.780244,230.48932 8.487066,4.46114"
    id="Adiacenza_Punto_220_Punto_217" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 58.158487,264.21989 -0.108796,-9.46632"
    id="Adiacenza_Punto_222_Punto_221" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 49.997864,268.89865 8.160623,-4.56994"
    id="Adiacenza_Punto_223_Punto_222" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.459009,253.23026 8.051826,-4.56994"
    id="Adiacenza_Punto_163_Punto_160" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.402012,239.08519 0.108823,9.79273"
    id="Adiacenza_Punto_159_Punto_160" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.510835,258.01782 -0.217619,10.66321"
    id="Adiacenza_Punto_161_Punto_36" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 91.562635,273.14217 -8.378242,4.78758"
    id="Adiacenza_Punto_40_Punto_37" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.293216,268.35461 v 9.46632"
    id="Adiacenza_Punto_36_Punto_33" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 91.453839,282.49969 -7.943004,-4.46114"
    id="Adiacenza_Punto_39_Punto_37" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.241389,282.82613 8.378243,4.46114"
    id="Adiacenza_Punto_41_Punto_38" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 83.184393,277.82093 0.544036,9.35752"
    id="Adiacenza_Punto_37_Punto_38" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 75.132593,282.39089 8.378242,-4.78758"
    id="Adiacenza_Punto_41_Punto_37" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.48491,288.15772 -9.248691,-5.65803"
    id="Adiacenza_Punto_35_Punto_39" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.75436,283.37016 v 9.68394"
    id="Adiacenza_Punto_32_Punto_28" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.70253,288.15772 8.16063,4.46114"
    id="Adiacenza_Punto_35_Punto_33" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.69736,287.9401 -7.943,4.89638"
    id="Adiacenza_Punto_34_Punto_33" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.64554,283.26134 8.37824,4.78758"
    id="Adiacenza_Punto_32_Punto_34" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.72844,283.15255 -8.70466,4.89637"
    id="Adiacenza_Punto_30_Punto_34" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.75436,273.14217 -0.21762,10.01038"
    id="Adiacenza_Punto_154_Punto_32" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 108.75436,263.56706 -0.10882,10.01035"
    id="Adiacenza_Punto_153_Punto_154" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.59374,268.68103 8.16062,-5.11397"
    id="Adiacenza_Punto_157_Punto_153" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 91.671458,273.03337 8.595832,-4.35234"
    id="Adiacenza_Punto_40_Punto_157" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 100.48491,259.10592 8.16063,4.89637"
    id="Adiacenza_Punto_158_Punto_153" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 91.453839,253.55668 9.031071,5.54924"
    id="Adiacenza_Punto_162_Punto_158" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.80616,258.99709 -8.16062,4.67876"
    id="Adiacenza_Punto_156_Punto_153" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 116.80616,268.68103 -8.26942,-4.78756"
    id="Adiacenza_Punto_155_Punto_153" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.40202,273.90385 -8.92228,-5.76686"
    id="Adiacenza_Punto_31_Punto_155" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 125.2932,253.6655 -8.59584,5.54921"
    id="Adiacenza_Punto_147_Punto_156" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.479749,132.45305 8.26942,4.78758"
    id="Adiacenza_Punto_233_Punto_234" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.370926,122.98674 0.108823,9.35751"
    id="Adiacenza_Punto_232_Punto_233" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 24.427923,127.77429 8.269419,4.56996"
    id="Adiacenza_Punto_236_Punto_233" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.697342,112.86756 -0.108796,9.90156"
    id="Adiacenza_Punto_238_Punto_232" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.697342,103.29245 0.108823,9.68393"
    id="Adiacenza_Punto_237_Punto_238" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 24.427923,108.08 8.160623,-4.89637"
    id="Adiacenza_Punto_239_Punto_237" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 15.396847,113.194 8.922279,-5.0052"
    id="Adiacenza_Punto_243_Punto_239" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m -0.81560244,113.3028 8.05182634,4.56996"
    id="Adiacenza_Punto_244_Punto_240" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 15.505644,112.97638 -8.1606234,5.00518"
    id="Adiacenza_Punto_243_Punto_240" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 24.427923,127.66549 -9.139899,-5.00517"
    id="Adiacenza_Punto_236_Punto_242" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 7.2362239,117.76394 v 9.46631"
    id="Adiacenza_Punto_240_Punto_231" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 7.4538173,146.59813 -0.3264165,-9.2487"
    id="Adiacenza_Punto_246_Punto_245" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 15.396847,141.91939 -8.0518264,5.00518"
    id="Adiacenza_Punto_247_Punto_246" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 24.536719,137.13181 -9.248695,5.114"
    id="Adiacenza_Punto_235_Punto_247" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
    d="m 32.479749,132.23546 -8.051826,4.78755"
    id="Adiacenza_Punto_233_Punto_235" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 83.292745,248.57254 0.217617,9.35751"
    id="Adiacenza_Punto_160_Punto_161" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 83.510362,248.62694 8.160621,4.78757"
    id="Adiacenza_Punto_160_Punto_162" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 58.15803,255.04663 0.217617,-10.98964"
    id="Adiacenza_Punto_221_Punto_218" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 58.321244,234.9171 -0.0544,9.35751"
    id="Adiacenza_Punto_217_Punto_218" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 207.35082,229.81703 -15.11853,-4.27012"
    id="Adiacenza_Punto_1_Punto_15" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 201.46498,152.83948 c 0.0769,-9.3481 0.0769,-9.3481 0.0769,-9.3481"
    id="Adiacenza_Punto_99_Punto_100" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 83.555839,161.18737 c -0.153876,-9.30963 -0.153876,-9.30963 -0.153876,-9.30963"
    id="Adiacenza_Punto_180_Punto_179" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 91.557506,165.72678 0.07694,-9.23269"
    id="Adiacenza_Punto_182_Punto_183" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 7.3092127,117.71679 7.9247253,4.84716"
    id="Adiacenza_Punto_240_Punto_242" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 7.3092127,127.1803 -0.076939,10.2329"
    id="Adiacenza_Punto_241_Punto_245" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 133.56624,123.02559 0.23082,-10.6176"
    id="Adiacenza_Punto_273_Punto_280" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 108.56104,108.25329 0.23082,-10.002085"
    id="Adiacenza_Punto_192_Punto_201" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 141.64484,79.170312 -7.92472,-4.770223"
    id="Adiacenza_Punto_208_Punto_207" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 108.79186,69.32211 -0.15388,-9.309629"
    id="Adiacenza_Punto_213_Punto_212" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 116.8601,141.886 c 25.0259,14.58032 25.0259,14.58032 25.0259,14.58032"
    id="Adiacenza_Punto_59_Punto_52" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 58.321241,214.67875 v 10.77202"
    id="Adiacenza_Punto_166_Punto_33" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 141.61398,98.689116 0.0544,9.520724"
    id="Adiacenza_Punto_282_Punto_281" />
 <path
-   style="fill:#c20000;stroke:#000000;stroke-width:0.74502166;stroke-linecap:round;stroke-dasharray:none;paint-order:markers fill stroke;stroke-opacity:1"
+   style="fill:#c20000;stroke:#000000;stroke-width:0.745022;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
    d="m 58.158027,264.45854 17.19171,-11.09845"
    id="Adiacenza_Punto_222_Punto_163" />
 

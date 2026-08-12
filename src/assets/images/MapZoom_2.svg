@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="720.026mm"
+   height="866.86279mm"
+   viewBox="0 0 720.026 866.86278"
+   version="1.1"
+   id="svg10433"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="MapZoom_2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview10435"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.19041982"
+     inkscape:cx="966.28595"
+     inkscape:cy="1312.8885"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="adiacenze" />
+  <defs
+     id="defs10430" />
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="Tessera_12"
+       transform="matrix(11.285889,0,0,11.285889,-1694.5615,-2144.4631)"
+       style="opacity:0.371084">
+      <path
+         sodipodi:type="star"
+         style="fill:#895100;fill-opacity:1;stroke:#000000;stroke-width:13.5625;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path354-9-07"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="-131.35135"
+         sodipodi:cy="-0.72972971"
+         sodipodi:r1="207.39281"
+         sodipodi:r2="179.28645"
+         sodipodi:arg1="-0.035016767"
+         sodipodi:arg2="0.48858195"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 75.914321,-7.9904713 -21.430527,175.13724 -228.6962,182.39798 -338.61702,6.5310119 -241.27217,-176.59669 -34.0065,-183.85744 Z"
+         transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,219.20125,206.63194)" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_5"
+         cx="209.49109"
+         cy="196.88557"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_6"
+         cx="209.56317"
+         cy="206.23929"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_7"
+         cx="209.62573"
+         cy="215.62808"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_8"
+         cx="217.57947"
+         cy="210.9689"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_9"
+         cx="217.64746"
+         cy="201.55165"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_10"
+         cx="201.43188"
+         cy="211.01071"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_11"
+         cx="201.4126"
+         cy="201.65265"
+         rx="1.4999996"
+         ry="1.4999995" />
+    </g>
+    <g
+       id="Tessera_13"
+       transform="matrix(11.285889,0,0,11.285889,-1694.5615,-2144.4631)">
+      <path
+         sodipodi:type="star"
+         style="fill:#895100;fill-opacity:1;stroke:#000000;stroke-width:13.5625;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path354-9-50"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="-131.35135"
+         sodipodi:cy="-0.72972971"
+         sodipodi:r1="207.39281"
+         sodipodi:r2="179.28645"
+         sodipodi:arg1="-0.035016767"
+         sodipodi:arg2="0.48858195"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 75.914321,-7.9904713 -21.430527,175.13724 -228.6962,182.39798 -338.61702,6.5310119 -241.27217,-176.59669 -34.0065,-183.85744 Z"
+         transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,193.83399,221.34289)" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_12"
+         cx="184.12383"
+         cy="211.59653"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_13"
+         cx="184.19591"
+         cy="220.95024"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_14"
+         cx="184.25847"
+         cy="230.33904"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_15"
+         cx="192.2122"
+         cy="225.67986"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_16"
+         cx="192.2802"
+         cy="216.2626"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_17"
+         cx="176.06462"
+         cy="225.72166"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_18"
+         cx="176.04533"
+         cy="216.3636"
+         rx="1.4999996"
+         ry="1.4999995" />
+    </g>
+    <g
+       id="Tessera_14"
+       transform="matrix(11.285889,0,0,11.285889,-1694.5615,-2144.4631)"
+       style="opacity:0.542169">
+      <path
+         sodipodi:type="star"
+         style="fill:#895100;fill-opacity:1;stroke:#000000;stroke-width:13.5625;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path354-9-87"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="-131.35135"
+         sodipodi:cy="-0.72972971"
+         sodipodi:r1="207.39281"
+         sodipodi:r2="179.28645"
+         sodipodi:arg1="-0.035016767"
+         sodipodi:arg2="0.48858195"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 75.914321,-7.9904713 -21.430527,175.13724 -228.6962,182.39798 -338.61702,6.5310119 -241.27217,-176.59669 -34.0065,-183.85744 Z"
+         transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,168.35631,234.99353)" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_19"
+         cx="158.64615"
+         cy="225.24716"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_20"
+         cx="158.71823"
+         cy="234.60088"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_21"
+         cx="158.78079"
+         cy="243.98967"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_22"
+         cx="166.73453"
+         cy="239.33049"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_23"
+         cx="166.80252"
+         cy="229.91324"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_24"
+         cx="150.58694"
+         cy="239.3723"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_25"
+         cx="150.56766"
+         cy="230.01424"
+         rx="1.4999996"
+         ry="1.4999995" />
+    </g>
+    <g
+       id="Tessera_30"
+       style="opacity:0.477108;stroke:#000000;stroke-opacity:1"
+       transform="matrix(11.285889,0,0,11.285889,-1694.5615,-2144.4631)">
+      <path
+         sodipodi:type="star"
+         style="fill:#fff4e3;fill-opacity:1;stroke:#000000;stroke-width:13.5625;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path354-9-65"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="-131.35135"
+         sodipodi:cy="-0.72972971"
+         sodipodi:r1="207.39281"
+         sodipodi:r2="179.28645"
+         sodipodi:arg1="-0.035016767"
+         sodipodi:arg2="0.48858195"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 75.914321,-7.9904713 -21.430527,175.13724 -228.6962,182.39798 -338.61702,6.5310119 -241.27217,-176.59669 -34.0065,-183.85744 Z"
+         transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,193.83399,191.85948)" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_114"
+         cx="184.12383"
+         cy="182.11311"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_115"
+         cx="184.19591"
+         cy="191.46683"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_116"
+         cx="184.25847"
+         cy="200.85562"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_117"
+         cx="192.2122"
+         cy="196.19644"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_118"
+         cx="192.2802"
+         cy="186.77919"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_119"
+         cx="176.06462"
+         cy="196.23825"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_120"
+         cx="176.04533"
+         cy="186.88019"
+         rx="1.4999996"
+         ry="1.4999995" />
+    </g>
+    <g
+       id="Tessera_32"
+       style="opacity:0.477108;stroke:#000000;stroke-opacity:1"
+       transform="matrix(11.285889,0,0,11.285889,-1694.5615,-2144.4631)">
+      <path
+         sodipodi:type="star"
+         style="fill:#fff4e3;fill-opacity:1;stroke:#000000;stroke-width:13.5625;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path354-9-92"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="-131.35135"
+         sodipodi:cy="-0.72972971"
+         sodipodi:r1="207.39281"
+         sodipodi:r2="179.28645"
+         sodipodi:arg1="-0.035016767"
+         sodipodi:arg2="0.48858195"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 75.914321,-7.9904713 -21.430527,175.13724 -228.6962,182.39798 -338.61702,6.5310119 -241.27217,-176.59669 -34.0065,-183.85744 Z"
+         transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,168.35631,205.52077)" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_128"
+         cx="158.64615"
+         cy="195.7744"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_129"
+         cx="158.71823"
+         cy="205.12811"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_130"
+         cx="158.78079"
+         cy="214.51691"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_131"
+         cx="166.73453"
+         cy="209.85773"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_132"
+         cx="166.80252"
+         cy="200.44048"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_133"
+         cx="150.58694"
+         cy="209.89954"
+         rx="1.4999996"
+         ry="1.4999995" />
+      <ellipse
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="Punto_134"
+         cx="150.56766"
+         cy="200.54147"
+         rx="1.4999996"
+         ry="1.4999995" />
+    </g>
+    <g
+       id="Tessera_1"
+       transform="matrix(11.285889,0,0,11.285889,-1694.5615,-2144.4631)"
+       style="opacity:0.371084">
+      <path
+         sodipodi:type="star"
+         style="fill:#3827ff;fill-opacity:1;stroke:#000000;stroke-width:13.5625;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path354-9-54"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="-131.35135"
+         sodipodi:cy="-0.72972971"
+         sodipodi:r1="207.39281"
+         sodipodi:r2="179.28645"
+         sodipodi:arg1="-0.035016767"
+         sodipodi:arg2="0.48858195"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 75.914321,-7.9904713 -21.430527,175.13724 -228.6962,182.39798 -338.61702,6.5310119 -241.27217,-176.59669 -34.0065,-183.85744 Z"
+         transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,219.20125,236.00465)" />
+      <g
+         id="nave"
+         transform="translate(-1.6462291,1.8614319)">
+        <ellipse
+           style="fill:#764f22;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           id="ellipse14512"
+           cx="128.17198"
+           cy="288.64194"
+           rx="3.699482"
+           ry="6.474093"
+           transform="rotate(-18.091612)" />
+        <ellipse
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           id="Punto_1"
+           cx="209.70428"
+           cy="229.79509"
+           rx="1.4999996"
+           ry="1.4999995" />
+        <path
+           style="fill:#c20000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+           d="m 205.84049,237.09363 c 2.48436,-4.44623 6.35133,-6.43449 12.5234,-4.3248 z"
+           id="path12270"
+           sodipodi:nodetypes="ccc" />
+      </g>
+    </g>
+    <g
+       id="Tessera_2"
+       transform="matrix(11.285889,0,0,11.285889,-1694.5615,-2144.4631)"
+       style="opacity:0.513253">
+      <path
+         sodipodi:type="star"
+         style="fill:#3827ff;fill-opacity:1;stroke:#000000;stroke-width:13.5625;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path354-9-5"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="-131.35135"
+         sodipodi:cy="-0.72972971"
+         sodipodi:r1="207.39281"
+         sodipodi:r2="179.28645"
+         sodipodi:arg1="-0.035016767"
+         sodipodi:arg2="0.48858195"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 75.914321,-7.9904713 -21.430527,175.13724 -228.6962,182.39798 -338.61702,6.5310119 -241.27217,-176.59669 -34.0065,-183.85744 Z"
+         transform="matrix(0.0736422,0.00244615,-0.00244946,0.07374183,193.83399,250.29713)" />
+    </g>
+    <g
+       id="adiacenze"
+       style="opacity:0.253;stroke:#000000;stroke-width:0.745022;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(6.7112141,0,0,6.7112141,-341.448,-851.40509)">
+
+
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 150.94054,170.34408 -3.76544,23.3717"
+   id="Adiacenza_Punto_7_Punto_1" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 121.46622,187.35348 108.0924,179.17342"
+   id="Adiacenza_Punto_15_Punto_13" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 108.35209,195.1441 -0.5194,-16.36024"
+   id="Adiacenza_Punto_14_Punto_13" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 94.458891,187.22367 13.373799,-8.18009"
+   id="Adiacenza_Punto_17_Punto_13" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 108.22224,195.1441 94.199201,187.22367"
+   id="Adiacenza_Punto_14_Punto_17" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 107.83269,163.07289 0.25971,16.23036"
+   id="Adiacenza_Punto_12_Punto_13" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 94.199201,171.51268 13.763339,7.27118"
+   id="Adiacenza_Punto_18_Punto_13" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 121.85574,171.38284 -13.6335,7.79058"
+   id="Adiacenza_Punto_16_Punto_13" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 137.17718,162.42365 -15.45128,8.95919"
+   id="Adiacenza_Punto_10_Punto_16" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 150.8107,154.24354 0.25968,15.84084"
+   id="Adiacenza_Punto_6_Punto_7" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 164.57403,162.16396 -13.50365,-7.92042"
+   id="Adiacenza_Punto_8_Punto_6" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 164.57403,145.93363 -0.25969,16.61987"
+   id="Adiacenza_Punto_9_Punto_8" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 150.94054,154.24354 -0.12978,-15.97062"
+   id="Adiacenza_Punto_6_Punto_5" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 137.04733,146.58282 13.63352,-8.69944"
+   id="Adiacenza_Punto_11_Punto_5" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 137.04733,162.5535 V 146.58282"
+   id="Adiacenza_Punto_10_Punto_1" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 150.94054,154.24354 -13.76336,8.18011"
+   id="Adiacenza_Punto_6_Punto_10" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 150.94054,154.11369 13.50365,-7.79056"
+   id="Adiacenza_Punto_6_Punto_9" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 94.247387,187.30408 -15.791813,6.9778"
+   id="Adiacenza_Punto_17_Punto_23" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 65.050922,202.17778 13.588296,-7.8959"
+   id="Adiacenza_Punto_20_Punto_23" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 64.683665,186.38598 51.27901,194.64913"
+   id="Adiacenza_Punto_19_Punto_25" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 65.050922,202.36137 v -16.159"
+   id="Adiacenza_Punto_20_Punto_150" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 65.050922,218.15319 V 202.17778"
+   id="Adiacenza_Punto_21_Punto_150" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 78.639218,210.07369 -13.404651,7.8959"
+   id="Adiacenza_Punto_22_Punto_21" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 51.27901,210.25727 13.771912,7.71232"
+   id="Adiacenza_Punto_24_Punto_21" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 51.095398,194.64913 14.139169,7.71224"
+   id="Adiacenza_Punto_25_Punto_20" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 78.639218,210.25727 65.050922,202.17778"
+   id="Adiacenza_Punto_22_Punto_20" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 65.050922,168.39068 -0.09181,18.08709"
+   id="Adiacenza_Punto_130_Punto_19" />
+
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 78.363775,160.49477 -13.312853,7.71229"
+   id="Adiacenza_Punto_131_Punto_130" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 51.187203,160.40297 13.955524,8.07951"
+   id="Adiacenza_Punto_133_Punto_130" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 65.234567,152.32345 -13.863768,8.17132"
+   id="Adiacenza_Punto_129_Punto_133" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 78.639218,160.58658 65.050922,152.50706"
+   id="Adiacenza_Punto_131_Punto_129" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 79.006471,144.51936 -13.863744,7.71225"
+   id="Adiacenza_Punto_132_Punto_129" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 64.775504,136.62345 65.142727,152.048"
+   id="Adiacenza_Punto_128_Punto_129" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 51.462655,144.7948 13.588267,7.345"
+   id="Adiacenza_Punto_134_Punto_129" />
+
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 78.731028,144.33576 15.699968,-6.9778"
+   id="Adiacenza_Punto_132_Punto_119" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 108.1111,145.34567 -0.18361,17.53624"
+   id="Adiacenza_Punto_116_Punto_12" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 94.339185,171.60413 78.547384,160.49477"
+   id="Adiacenza_Punto_18_Punto_131" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 108.29474,145.34567 -0.0918,-15.97542"
+   id="Adiacenza_Punto_116_Punto_115" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 94.339185,137.44977 14.047365,-8.26316"
+   id="Adiacenza_Punto_119_Punto_115" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="M 121.88302,137.44977 108.01929,129.0948"
+   id="Adiacenza_Punto_117_Punto_115" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 121.97482,121.56615 -14.13912,7.98771"
+   id="Adiacenza_Punto_118_Punto_115" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 94.247387,121.38256 13.680103,8.0795"
+   id="Adiacenza_Punto_120_Punto_115" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 108.1111,113.39485 v 16.25082"
+   id="Adiacenza_Punto_114_Punto_1" />
+
+
+
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 121.69942,121.56615 -0.18366,15.79181"
+   id="Adiacenza_Punto_118_Punto_117" />
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+   d="m 137.12397,146.72284 -15.60821,-9.36488"
+   id="Adiacenza_Punto_11_Punto_117" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<path
+   style="fill:#c20000;stroke:#000000;stroke-width:1.2573;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+   d="M 147.15881,194.06543 121.6447,186.85915"
+   id="Adiacenza_Punto_1_Punto_15" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</g>
+  </g>
+</svg>

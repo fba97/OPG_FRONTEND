@@ -1,5 +1,6 @@
 <!-- Mappa di sfondo con controlli -->
-<div class="map-background">
+<div class="map-frame">
+  <div class="map-background">
     <div class="map-container" #mapContainer>
       <div *ngIf="svgContent" [innerHTML]="svgContent" class="svg-content"></div>
       <div *ngIf="!svgContent" class="loading">
@@ -7,16 +8,10 @@
         <span>Caricamento mappa...</span>
       </div>
     </div>
-    <div class="map-controls">
-      <button mat-mini-fab (click)="zoomIn()" class="map-control-btn">
-        <mat-icon>add</mat-icon>
-      </button>
-      <button mat-mini-fab (click)="zoomOut()" class="map-control-btn">
-        <mat-icon>remove</mat-icon>
-      </button>
-      <button mat-mini-fab (click)="resetZoom()" class="map-control-btn">
-        <mat-icon>refresh</mat-icon>
+    <div class="map-controls" *ngIf="cameraState === 'area'">
+      <button mat-mini-fab (click)="tornaAOverview()" class="map-control-btn" title="Torna alla mappa">
+        <mat-icon>arrow_back</mat-icon>
       </button>
     </div>
   </div>
-  
+</div>
