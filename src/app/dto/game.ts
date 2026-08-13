@@ -146,6 +146,7 @@ export interface Combattimento {
     listaEroi: number[];
     listaNPCs: number[];
     stato: StatoCombattimento;
+    log: string[];  // Cronaca colpo per colpo (Combattimento.Log lato backend): l'unico modo di sapere cosa hanno fatto i nemici nel loro turno
 }
 
 // Risposta di POST api/Azioni/Attacco: e' l'oggetto Attacco lato backend serializzato cosi'

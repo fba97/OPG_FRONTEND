@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { CombatTarget, GameStateService } from '../../services/game-state.service';
 import { AzioniService } from '../../services/azioni.service';
 import { Personaggio } from '../../../dto/personaggio';
-import { Skill } from '../../../dto/game';
+import { Skill, Combattimento, StatoCombattimento, TipoPersonaggio } from '../../../dto/game';
 import { resolvePersonaggioImage } from '../../../shared/character-portrait';
 import { personaggioBaseDaNome } from '../../../shared/personaggio-base';
 
@@ -22,6 +22,20 @@ export class CombatModalComponent implements OnInit, OnDestroy {
   attaccoErrore = '';
   fuggiErrore = '';
   ultimoDanno: number | null = null;
+
+  // Esito dell'ultimo colpo, dal risultato dell'API: senza questo il giocatore vede solo dei
+  // punti vita che calano e non sa se ha tirato bene, male o se ha subito un contrattacco.
+  ultimoTiro: number | null = null;
+  ultimoCritico = false;
+  ultimoColpoDebole = false;
+  dannoContrattacco: number | null = null;
+
+  // Lo scontro vero, letto da PartitaSoft.combattimenti. Il pannello mostrava solo i due
+  // personaggi passati dal chiamante, mentre il backend teneva da sempre le liste complete di
+  // alleati e nemici coinvolti: nessuno le leggeva.
+  combattimento: Combattimento | null = null;
+  alleati: Personaggio[] = [];
+  nemici: Personaggio[] = [];
 
   skillCatalog: Skill[] = [];
   skillInCorsoId: number | null = null;
@@ -59,6 +73,8 @@ export class CombatModalComponent implements OnInit, OnDestroy {
       this.ultimoDanno = null;
       this.attaccante = target?.attaccante ?? null;
       this.attaccato = target?.attaccato ?? null;
+      this.ultimoTiro = null;
+      this.dannoContrattacco = null;
     });
 
     // Tiene i due personaggi aggiornati con l'HP corrente ad ogni poll (ogni 1s), cosi' il
@@ -71,6 +87,8 @@ export class CombatModalComponent implements OnInit, OnDestroy {
       const d = state.personaggi.find(p => p.id === this.target!.attaccato.id);
       if (a) { this.attaccante = a; }
       if (d) { this.attaccato = d; }
+
+      this.aggiornaSchieramenti(state.combattimenti ?? [], state.personaggi);
     });
   }
 
@@ -79,8 +97,65 @@ export class CombatModalComponent implements OnInit, OnDestroy {
     this.gameStateSub?.unsubscribe();
   }
 
+  // Ricostruisce i due schieramenti dallo scontro in corso che coinvolge questi personaggi.
+  // Fallback deliberato: se nessun Combattimento corrisponde — succede davvero, perche' lo
+  // scontro nasce solo al primo attacco andato a segno — si mostrano comunque i due
+  // partecipanti noti, cosi' il pannello non regredisce mai rispetto a prima.
+  private aggiornaSchieramenti(combattimenti: Combattimento[], personaggi: Personaggio[]) {
+    const idCoinvolti = [this.attaccante?.id, this.attaccato?.id].filter(id => id != null);
+
+    this.combattimento = combattimenti.find(c =>
+      c.stato === StatoCombattimento.InCorso &&
+      idCoinvolti.some(id => c.listaEroi.includes(id!) || c.listaNPCs.includes(id!))
+    ) ?? null;
+
+    const perId = (ids: number[]) => ids
+      .map(id => personaggi.find(p => p.id === id))
+      .filter((p): p is Personaggio => !!p);
+
+    if (this.combattimento) {
+      this.alleati = perId(this.combattimento.listaEroi);
+      this.nemici = perId(this.combattimento.listaNPCs);
+      return;
+    }
+
+    const nemicoNoto = [this.attaccante, this.attaccato].find(p => p && this.eNemico(p));
+    const alleatoNoto = [this.attaccante, this.attaccato].find(p => p && !this.eNemico(p));
+
+    this.alleati = alleatoNoto ? [alleatoNoto] : [];
+    this.nemici = nemicoNoto ? [nemicoNoto] : [];
+  }
+
+  private eNemico(p: Personaggio): boolean {
+    return p.tipoPersonaggio === TipoPersonaggio.NemicoNPC
+        || p.tipoPersonaggio === TipoPersonaggio.NemicoPersonaggio;
+  }
+
+  // Cambia bersaglio scegliendolo fra i nemici ancora in piedi dello scontro. attacca(),
+  // usaSkill() e fuggi() non cambiano: passano gia' this.attaccato.id.
+  selezionaBersaglio(nemico: Personaggio) {
+    if (nemico.punti_Vita <= 0) {
+      return;
+    }
+    this.attaccato = nemico;
+    this.attaccoErrore = '';
+  }
+
+  get logScontro(): string[] {
+    return this.combattimento?.log ?? [];
+  }
+
   resolveImage(personaggio: Personaggio | null): string {
     return resolvePersonaggioImage(personaggio);
+  }
+
+  // Il backend restituisce l'oggetto Attacco completo di tiro, danno ed eventuale
+  // contrattacco: qui si tiene solo l'ultimo, il resto della cronaca sta nel log dello scontro.
+  private registraEsito(result: any) {
+    this.ultimoTiro = result?.tiroDado ?? null;
+    this.ultimoCritico = !!result?.critico;
+    this.ultimoColpoDebole = !!result?.colpoDebole;
+    this.dannoContrattacco = result?.dannoContrattacco ?? null;
   }
 
   chiudi() {
@@ -101,6 +176,7 @@ export class CombatModalComponent implements OnInit, OnDestroy {
         this.ultimoDanno = vitaPrima - result.difensore.punti_Vita;
         this.attaccato = result.difensore;
         this.attaccante = result.personaggio;
+        this.registraEsito(result);
       },
       error: (err) => {
         this.attaccoInCorso = false;

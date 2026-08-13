@@ -132,3 +132,51 @@
   cursor: not-allowed;
   transform: none;
 }
+
+/* Schieramenti: due colonne di combattenti invece del duello a due ritratti. */
+.schieramento {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  min-width: 120px;
+}
+
+.schieramento__titolo {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  opacity: 0.8;
+}
+
+/* Un nemico sconfitto resta visibile ma spento: e' l'informazione "questo l'abbiamo battuto". */
+.combatant--ko {
+  opacity: 0.4;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+.combatant--bersagliabile {
+  cursor: pointer;
+}
+
+/* Il bersaglio corrente: senza un segno chiaro, con piu' nemici non si sa chi si sta colpendo. */
+.combatant--bersaglio .combatant__name {
+  color: var(--color-gold-light);
+  font-weight: 700;
+}
+
+.combat-modal__log {
+  margin-top: var(--space-3);
+  max-height: 140px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.combat-modal__log-riga + .combat-modal__log-riga {
+  margin-top: 2px;
+}

@@ -1,39 +1,64 @@
 <div class="combat-overlay" *ngIf="target">
   <div class="combat-modal">
     <button class="combat-modal__close" (click)="chiudi()" title="Chiudi">✕</button>
-    <h2 class="combat-modal__title">Combattimento</h2>
+    <h2 class="combat-modal__title">{{ combattimento?.nome || 'Combattimento' }}</h2>
 
+    <!-- Due schieramenti invece di un duello: le liste vengono dal Combattimento vero, che il
+         backend teneva da sempre e che nessuno leggeva. Cliccando un nemico si cambia bersaglio. -->
     <div class="combat-modal__arena">
-      <div class="combatant">
-        <app-card-frame [selected]="true" class="combatant__portrait">
-          <img [src]="resolveImage(attaccante)" [alt]="attaccante?.nome">
-        </app-card-frame>
-        <span class="combatant__name">{{ attaccante?.nome }}</span>
-        <span class="combatant__hp">
-          <mat-icon>favorite</mat-icon>
-          {{ attaccante?.punti_Vita ?? '—' }}
-        </span>
+      <div class="schieramento">
+        <div class="schieramento__titolo">Alleati</div>
+        <div class="combatant" *ngFor="let alleato of alleati" [class.combatant--ko]="alleato.punti_Vita <= 0">
+          <app-card-frame [selected]="alleato.id === attaccante?.id" class="combatant__portrait">
+            <img [src]="resolveImage(alleato)" [alt]="alleato.nome">
+          </app-card-frame>
+          <span class="combatant__name">{{ alleato.nome }}</span>
+          <span class="combatant__hp">
+            <mat-icon>favorite</mat-icon>
+            {{ alleato.punti_Vita }}
+          </span>
+        </div>
       </div>
 
       <img src="assets/images/vs.png" alt="VS" class="combat-modal__vs">
 
-      <div class="combatant">
-        <app-card-frame class="combatant__portrait">
-          <img [src]="resolveImage(attaccato)" [alt]="attaccato?.nome">
-        </app-card-frame>
-        <span class="combatant__name">{{ attaccato?.nome }}</span>
-        <span class="combatant__hp">
-          <mat-icon>favorite</mat-icon>
-          {{ attaccato?.punti_Vita ?? '—' }}
-        </span>
+      <div class="schieramento">
+        <div class="schieramento__titolo">Nemici</div>
+        <div class="combatant combatant--bersagliabile"
+             *ngFor="let nemico of nemici"
+             [class.combatant--ko]="nemico.punti_Vita <= 0"
+             [class.combatant--bersaglio]="nemico.id === attaccato?.id"
+             [attr.title]="nemico.punti_Vita > 0 ? 'Prendi di mira ' + nemico.nome : nemico.nome + ' è sconfitto'"
+             (click)="selezionaBersaglio(nemico)">
+          <app-card-frame [selected]="nemico.id === attaccato?.id" class="combatant__portrait">
+            <img [src]="resolveImage(nemico)" [alt]="nemico.nome">
+          </app-card-frame>
+          <span class="combatant__name">{{ nemico.nome }}</span>
+          <span class="combatant__hp">
+            <mat-icon>favorite</mat-icon>
+            {{ nemico.punti_Vita }}
+          </span>
+        </div>
       </div>
     </div>
 
-    <div class="combat-modal__result" *ngIf="ultimoDanno !== null && attaccato && attaccato.punti_Vita > 0">
-      {{ attaccante?.nome }} infligge {{ ultimoDanno }} danni a {{ attaccato.nome }}!
+    <div class="combat-modal__result" *ngIf="ultimoTiro !== null && attaccato && attaccato.punti_Vita > 0">
+      {{ attaccante?.nome }} tira <strong>{{ ultimoTiro }}</strong>
+      <span *ngIf="ultimoCritico"> — CRITICO!</span>
+      <span *ngIf="ultimoColpoDebole"> — colpo debole</span>
+      e infligge {{ ultimoDanno }} danni a {{ attaccato.nome }}!
     </div>
     <div class="combat-modal__result combat-modal__result--defeated" *ngIf="attaccato && attaccato.punti_Vita <= 0">
       {{ attaccato.nome }} è sconfitto!
+    </div>
+    <div class="combat-modal__result combat-modal__result--defeated" *ngIf="dannoContrattacco">
+      {{ attaccato?.nome }} contrattacca e ti infligge {{ dannoContrattacco }} danni!
+    </div>
+
+    <!-- Cronaca dello scontro: da quando il turno dei nemici si risolve lato server è l'unico
+         modo di sapere cosa è successo mentre non toccava a te. -->
+    <div class="combat-modal__log" *ngIf="logScontro.length">
+      <div class="combat-modal__log-riga" *ngFor="let riga of logScontro.slice(-8)">{{ riga }}</div>
     </div>
 
     <div *ngIf="attaccoErrore" class="combat-modal__error">{{ attaccoErrore }}</div>
