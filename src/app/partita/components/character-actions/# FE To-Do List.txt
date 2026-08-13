@@ -1,66 +1,35 @@
 # FE To-Do List
 
-## **Turn System**
-- [ ] Display the **turn order panel** with:  
-  - [ ] A square showing the **current player's information**  
-  - [ ] A stack of circles representing upcoming turns  
-  - [ ] Animated movement of circles as turns progress  
-- [ ] Ensure the **active player’s turn is highlighted**  
-- [ ] Add an option to **end the turn**  
+Ripulita il 13-08-2026. Fonte di verita' dell'arretrato: la nota del vault
+`Lavoro/OPG/OPG - TODO Completamento Gioco.md`. Quasi tutto quello che c'era qui e'
+stato costruito tra il Round 4 e il Round 10: resta solo la rifinitura visiva.
 
-## **Player Actions**
-### **Attack System**
-- [ ] Implement **enemy selection** when clicking on a unit  
-- [ ] Zoom in on the **battle area** when an attack is initiated  
-- [ ] Display a **popup menu** with available attack actions  
-- [ ] Implement the **combat resolution panel**, including:  
-  - [ ] Dice roll mechanics  
-  - [ ] Damage calculation and health bar reduction  
-  - [ ] Defense mechanics and status effects  
+## Aperti
 
-### **Movement System**
-- [ ] Allow **clicking on points on the map** to select movement locations  
-- [ ] Enlarge and highlight available **movement points**  
-- [ ] Show an **action menu** when clicking a point (e.g., "Move Here")  
-- [ ] Animate **character movement** to the selected point  
+### Turn System
+- [ ] Pila di cerchi che rappresenta i turni in arrivo, con animazione al passaggio
+      del turno (oggi il turno corrente si vede, l'ordine dei prossimi no)
 
-## **General UI & Interaction**
-- [ ] Improve **zoom and visibility** for attacks and movement  
-- [ ] Ensure **smooth UI animations** for turn progression and actions  
-- [ ] Maintain **a consistent and intuitive user experience**  
+### Attack System
+- [ ] Zoom sull'area della battaglia quando parte un attacco
+- [ ] Tiro di dado nel pannello di risoluzione del combattimento (oggi il danno e'
+      calcolato lato server senza alcuna componente casuale mostrata)
+- [ ] Effetti di stato
 
+### Movement System
+- [ ] Animare lo spostamento del personaggio verso il punto scelto (oggi la pedina
+      appare direttamente sulla destinazione al polling successivo)
+- [ ] Menu contestuale "Muovi qui" al click su un punto (oggi c'e' un confirm())
 
+## Fatti
 
-
-
-
-# To-Do List
-
-sviluppare un componente modale rettangolare con piu schede azionate da bottoni. Al suo interno deve avere queste informazioni:
-  - foto del personaggio
-  - Nome del personaggio
-  - livello del personaggio
-  - Azioni residue (2 azioni per turno)
-  - Mostrare graficamente i prossimi giocatori concatenati
-
-## Player Info Panel
-  - Barra della vita con numero e possibilità di comprare 
-  - Barra della difesa con numero e possibilità di comprare 
-  - Barra della attacco con numero e possibilità di comprare 
-  - Stato del giocatore con icone (es. rallentato, avvelenato)
-
-
-## Inventario Component
-- [ ] Strutturare l'inventario con 10 caselle per oggetti raccolti
-- [ ] Aggiungere una sezione per gli equipaggiamenti indossati
-- [ ] deve esserci l'informazione su quanti soldi ha il personaggio
-- [ ] Fornire pulsanti per vendere, donare ad un altro personaggio, usare .. l'oggetto selezionato
-
-## meccanica delle azioni
-- [ ] aggiungere animazioni di zoom (+1 zoom in) quando si clicca su una tezzera esagonale.
-- [ ] una volta che siamo in zoom (+1 zoom in) deve esserci la possibilità di cliccare su personaggi e punti
-
-## componente azioni
-- questo componente è un modale e deve poter gestire piu tipologie di azioni (spostamento / attacco)
-- [ ] se si clicca su un punto si suppone che il personaggio si voglia spostare in quel punto. esce un pop up che chiede la conferma di movimento.
-- [ ] se si clicca su un personaggio esce un pop up che fa vedere lo scontro con le info principali di 
+- [x] Pannello dell'ordine di turno con le info del personaggio corrente — Round 4
+- [x] Turno attivo evidenziato — Round 4
+- [x] Bottone di fine turno — Round 3
+- [x] Selezione del nemico cliccando la sua pedina — Round 4/5
+- [x] Popup con le azioni disponibili — `character-actions` in modale, Round 4/7
+- [x] Pannello di risoluzione del combattimento con danno e barra dei PV — Round 4
+- [x] Meccanica di difesa — applicata al danno dal Round 1
+- [x] Click sui punti della mappa per scegliere dove muoversi — Round 8
+- [x] Punti di movimento ingranditi ed evidenziati — Round 8 (hit-area allargate)
+- [x] Zoom e visibilita' generale della mappa — Round 9

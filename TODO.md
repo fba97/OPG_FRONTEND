@@ -1,20 +1,23 @@
 # TODO
 
-| Fatto | Descrizione | Tempistiche | Note |
-|-------|------------|-------------|------|
-| ✅    | ...        | ...         | ...  |
-| ❌    | gestisci meglio gli update. piu capillari.| ...         | ...  |
-| ❌    | sistema lo zoom della mappa. puo essere agganciato e zoommare solo sulle aree dove cliccki oppure sganciato e andare dove vuoi ma sistemalo. adesso ogni volta che zoommi lo fa rispetto al punto 0| ...         | ...  |
-| ❌    | finisci di importare, adattare e rendere interattivo a livello almeno di click il file svg che ti permette di cambiare turno e aprire i menu del tuo personaggio. | ...         | ...  |
-| ❌    | crea un modo per muoverti intuitivo | ...         | ...  |
-| ❌    | crea un insieme di pultanti che ti fanno cominciare a giocare. anche semplici. perchè altrimenti non arriverà mai il reward. fai una barre acon vari pulsanti in bootstrap | ...         | ...  |
+> Ripulito il 13-08-2026. La fonte di verità dell'arretrato è la nota del vault
+> `Lavoro/OPG/OPG - TODO Completamento Gioco.md`. Qui resta solo quello che riguarda
+> davvero il frontend e che non è ancora stato fatto.
 
+| Fatto | Descrizione | Note |
+|-------|------------|------|
+| ❌ | Schermata eroi: un eroe alla volta in grande con qualche info, freccia grande a destra per scorrere, transizione animata in CSS | era in `appunti.txt`, mai fatta |
+| ❌ | Modale informativo al click su oggetti/eventi/personaggi/punti/tessere | vedi `WEB APP/TODO.md` |
+| ❌ | Aggiornamenti più capillari (oggi il polling ricarica tutto lo stato) | idea originale di questo file, ancora valida |
 
+## Fatti (storico, non ricancellarli)
 
-
-
-| Fatto | Descrizione | Tempistiche | Note |
-|-------|------------|-------------|------|
-| ❌    | turni | ...         | ...  |
-| ❌    | movimentazione | ...         | ...  |
-| ❌    | attacco/combattimenti | ...         | ...  |
+| Fatto | Descrizione | Round |
+|-------|------------|-------|
+| ✅ | Zoom della mappa: non zooma più rispetto al punto 0 | Round 9 — riscritto da zero, camera a due stati con animazione del `viewBox` |
+| ✅ | SVG del cambio turno e menu personaggio interattivi | Round 4 (`turn.component`, `character-actions`) |
+| ✅ | Modo intuitivo per muoversi | Round 8 (hit-area allargate) + Round 10 (movimento a costo, ingaggio) |
+| ✅ | Barra di pulsanti per iniziare a giocare | Round 3/4 (crea/carica partita, fine turno, salva, torna alla home) |
+| ✅ | Turni | Round 4 |
+| ✅ | Movimentazione | Round 8/10 |
+| ✅ | Attacco / combattimenti | Round 4 (`combat-modal`) |

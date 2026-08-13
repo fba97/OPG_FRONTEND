@@ -1,3 +1,3 @@
-modificare la schermata eroi in modao tale da mostrare ogni eroe in grande con magari qualche info, una 
-frecca grande sulla detra che oermette di scorrere
- tra gli eroi (implemnetare qulche effetto di transizione alla powerpoint con il css (CSS ANIMATE))
+Le idee che erano qui sono confluite in TODO.md (stessa cartella), cosi' l'arretrato
+del frontend sta in un posto solo. Fonte di verita' generale: la nota del vault
+Lavoro/OPG/OPG - TODO Completamento Gioco.md
