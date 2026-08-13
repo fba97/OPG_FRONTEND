@@ -134,6 +134,15 @@ export interface Inventario {
 
 
 
+// Specchio di ComportamentoNemico lato backend: come si comporta un nemico nel proprio turno.
+// Valorizzato solo sui nemici — il turno degli eroi lo gioca l'utente.
+export enum ComportamentoNemico {
+    Dormiente = 1,
+    Ronda = 2,
+    AllErta = 3,
+    Boss = 4
+}
+
 export enum StatoCombattimento {
     InCorso = 1,
     Concluso = 2,

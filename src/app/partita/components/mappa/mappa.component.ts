@@ -6,7 +6,7 @@ import { firstValueFrom } from 'rxjs';
 import { MapManagerService } from '../../services/map-manager.service';
 import { GameStateService } from '../../services/game-state.service';
 import { AzioniService } from '../../services/azioni.service';
-import { Area, Punto, TipoPersonaggio, StatoMissione, Missione, TipoInventario, OggettoInventario, EventoMappa, TipoOggetto } from '../../../dto/game';
+import { Area, Punto, TipoPersonaggio, StatoMissione, Missione, TipoInventario, OggettoInventario, EventoMappa, TipoOggetto, Combattimento, StatoCombattimento, ComportamentoNemico } from '../../../dto/game';
 import { Personaggio } from '../../../dto/personaggio';
 import { resolvePersonaggioImage } from '../../../shared/character-portrait';
 import { resolveOggettoImage } from '../../../shared/item-art';
@@ -84,6 +84,10 @@ export class MappaComponent implements OnInit {
   characters: Personaggio[] = [];
   svgContent: SafeHtml | null = null;
   private punti: Punto[] = [];
+
+  // Scontri aperti: servono a marcare sulla mappa dove si sta combattendo, invece di
+  // costringere ad aprire un pannello per scoprirlo.
+  private combattimenti: Combattimento[] = [];
   private aree: Area[] = [];
   private characterInTurno: Personaggio | null = null;
   private itemsMappa: OggettoInventario[] = [];
@@ -704,6 +708,7 @@ export class MappaComponent implements OnInit {
         this.aree = state.aree ?? [];
         this.itemsMappa = state.inventari?.find(i => i.tipo === TipoInventario.Mappa)?.oggetti ?? [];
         this.eventiMappa = state.eventiMappa ?? [];
+        this.combattimenti = (state.combattimenti ?? []).filter(c => c.stato === StatoCombattimento.InCorso);
         this.drawOggettiMappa();
         this.drawEventiMappa();
       }
@@ -758,6 +763,24 @@ export class MappaComponent implements OnInit {
   // Disegna un ritratto (resolvePersonaggioImage) per ciascun personaggio nell'Area di
   // dettaglio attiva, con bordo verde/rosso alleato/nemico e disposizione a ventaglio se
   // piu' personaggi condividono un punto.
+  // Un personaggio e' "in combattimento" se compare in uno scontro ancora aperto.
+  private inCombattimento(char: Personaggio): boolean {
+    return this.combattimenti.some(c => c.listaEroi.includes(char.id) || c.listaNPCs.includes(char.id));
+  }
+
+  // Icona dello stato di un nemico. Solo per i nemici: il comportamento degli eroi lo decide
+  // il giocatore, non il codice.
+  private badgeComportamento(char: Personaggio): string | null {
+    if (!this.isNemico(char) || char.punti_Vita <= 0) return null;
+
+    switch (char.comportamento) {
+      case ComportamentoNemico.Dormiente: return '💤';
+      case ComportamentoNemico.Ronda: return '👁️';
+      case ComportamentoNemico.AllErta: return '❗';
+      default: return null;   // il boss non ha bisogno di essere segnalato: si vede
+    }
+  }
+
   private drawCharacters() {
     document.querySelectorAll('.character-piece').forEach(el => el.remove());
 
@@ -804,6 +827,18 @@ export class MappaComponent implements OnInit {
         sfondo.setAttribute('fill', this.isNemico(char) ? '#b33a3a' : '#2f8f5b');
         g.appendChild(sfondo);
 
+        // Anello attorno a chi sta combattendo: la mappa diventa la lista degli scontri, cosi'
+        // non serve nessuna schermata separata per sapere chi le sta prendendo e dove.
+        if (this.inCombattimento(char)) {
+          const anello = document.createElementNS(SVG_NS, 'circle');
+          anello.setAttribute('r', (dimensione / 2 + 3).toString());
+          anello.setAttribute('fill', 'none');
+          anello.setAttribute('stroke', '#f2c14e');
+          anello.setAttribute('stroke-width', '2');
+          anello.setAttribute('stroke-dasharray', '4 3');
+          g.appendChild(anello);
+        }
+
         const img = document.createElementNS(SVG_NS, 'image');
         img.setAttribute('href', resolvePersonaggioImage(char));
         img.setAttribute('x', (-dimensione / 2).toString());
@@ -812,6 +847,19 @@ export class MappaComponent implements OnInit {
         img.setAttribute('height', dimensione.toString());
         img.setAttribute('preserveAspectRatio', 'xMidYMid slice');
         g.appendChild(img);
+
+        const badge = this.badgeComportamento(char);
+        if (badge) {
+          // Senza questo la macchina a stati dei nemici resta invisibile: non si puo' decidere
+          // se aggirare una sentinella o tenersene alla larga se non si vede che sta dormendo.
+          const testo = document.createElementNS(SVG_NS, 'text');
+          testo.setAttribute('x', '0');
+          testo.setAttribute('y', (-dimensione / 2 - 3).toString());
+          testo.setAttribute('text-anchor', 'middle');
+          testo.setAttribute('font-size', Math.max(dimensione * 0.55, 9).toString());
+          testo.textContent = badge;
+          g.appendChild(testo);
+        }
 
         if (this.isNemico(char)) {
           g.style.cursor = 'crosshair';

@@ -14,7 +14,8 @@ export interface Personaggio {
     esperienza: number;
     gittataAttacco: number;
     gittataOggetti: number;
-    movimento: number;  // Salti punto-punto consentiti da UNA azione di Spostamento (vedi Personaggio.Movimento lato backend)
+    movimento: number;          // Salti punto-punto consentiti da UNA azione di Spostamento (vedi Personaggio.Movimento lato backend)
+    comportamento: number;      // ComportamentoNemico lato backend: 1 dormiente, 2 ronda, 3 all'erta, 4 boss. Valorizzato solo per i nemici.
     soldi: number;
     skillSbloccate: number[];
     inventario: Inventario;
