@@ -114,6 +114,7 @@
           <div class="inventory-empty">Nessun oggetto</div>
         </ng-template>
 
+        <div *ngIf="raccogliOggettoErrore" class="text-danger">{{ raccogliOggettoErrore }}</div>
         <div *ngIf="usaOggettoErrore" class="text-danger">{{ usaOggettoErrore }}</div>
         <div *ngIf="vendiOggettoErrore" class="text-danger">{{ vendiOggettoErrore }}</div>
         <div *ngIf="scambiaOggettoErrore" class="text-danger">{{ scambiaOggettoErrore }}</div>
@@ -127,6 +128,14 @@
         </div>
 
         <div class="inventory-actions">
+          <button
+            class="action-button pickup"
+            [disabled]="!oggettoDaRaccogliere"
+            [attr.title]="oggettoDaRaccogliere ? 'Raccogli ' + oggettoDaRaccogliere.oggetto.nome : 'Nessun oggetto su questa casella'"
+            (click)="raccogliOggetto()">
+            <mat-icon>front_hand</mat-icon>
+            <span>Raccogli</span>
+          </button>
           <button class="action-button trade" [disabled]="!filteredItems.length || !compagni.length" (click)="scambiaOggettoSelezionato()">
             <mat-icon>swap_horiz</mat-icon>
             <span>Scambia</span>

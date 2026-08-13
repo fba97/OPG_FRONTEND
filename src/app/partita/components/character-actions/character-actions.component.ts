@@ -3,7 +3,7 @@ import { Inventario, Personaggio } from '../../../dto/personaggio';
 import { GameStateService } from '../../services/game-state.service';
 import { AzioniService } from '../../services/azioni.service';
 import { Subscription } from 'rxjs';
-import { Turno, OggettoInventario, Skill } from '../../../dto/game';
+import { Turno, OggettoInventario, Skill, TipoInventario } from '../../../dto/game';
 import { resolvePersonaggioImage } from '../../../shared/character-portrait';
 import { personaggioBaseDaNome } from '../../../shared/personaggio-base';
 
@@ -32,6 +32,10 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
   // niente piu' placeholder finto (il vecchio selectedCharacter$ non veniva mai popolato).
   characterInTurn: Personaggio | null = null;
   inventory: Inventario | undefined;
+
+  // Oggetto presente sulla casella dove si trova il personaggio in turno, null se non c'e'
+  // niente da raccogliere. Abilita il bottone "Raccogli" (vedi aggiornaOggettoDaRaccogliere).
+  oggettoDaRaccogliere: OggettoInventario | null = null;
 
   sections: Section[] = [
     { id: 'stats', label: 'Stats', icon: 'bar_chart' },
@@ -74,6 +78,14 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
       }
       this.characterInTurn = nuovoCharacterInTurn;
       this.inventory = state?.inventari?.find(inv => inv.personaggioId === nuovoCharacterInTurn?.id);
+
+      // Gli oggetti sparsi sulla mappa stanno tutti nell'unico inventario Tipo=Mappa, con la
+      // casella su cui giacciono in oggetto.id_Posizione (stesso dato letto da mappa.component
+      // in drawOggettiMappa: attenzione, il backend serializza "id_Posizione", non "idPosizione").
+      const oggettiMappa = state?.inventari?.find(inv => inv.tipo === TipoInventario.Mappa)?.oggetti ?? [];
+      this.oggettoDaRaccogliere = nuovoCharacterInTurn
+        ? oggettiMappa.find(voce => voce.oggetto.id_Posizione === nuovoCharacterInTurn.posizione) ?? null
+        : null;
 
       this.compagni = tutti.filter(p =>
         (p.tipoPersonaggio === 1 || p.tipoPersonaggio === 2) && p.id !== nuovoCharacterInTurn?.id
@@ -151,6 +163,7 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
   destinatarioId: number | null = null;
 
   usaOggettoErrore = '';
+  raccogliOggettoErrore = '';
   vendiOggettoErrore = '';
   scambiaOggettoErrore = '';
   equipaggiaOggettoErrore = '';
@@ -173,6 +186,21 @@ export class CharacterActionsComponent implements OnInit, OnDestroy {
     this.azioniService.usaOggetto(voce.oggetto.id).subscribe({
       next: () => this.avanzaDopoConsumo(),
       error: (err) => this.usaOggettoErrore = 'Errore nell\'uso dell\'oggetto: ' + (err?.error ?? err?.message ?? err)
+    });
+  }
+
+  // Raccoglie l'oggetto che si trova sulla casella del personaggio in turno e lo sposta nel
+  // suo inventario. L'endpoint non vuole parametri (il backend ricava personaggio e oggetto
+  // da solo); il polling di GameStateService ricarica poi mappa e inventario, come per le
+  // altre azioni. E' un'azione di turno vera e propria (AzioniController.Raccogli).
+  raccogliOggetto() {
+    if (!this.oggettoDaRaccogliere) {
+      return;
+    }
+    this.raccogliOggettoErrore = '';
+    this.azioniService.raccogli().subscribe({
+      next: () => {},
+      error: (err) => this.raccogliOggettoErrore = 'Errore nella raccolta: ' + (err?.error ?? err?.message ?? err)
     });
   }
 

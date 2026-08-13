@@ -76,6 +76,14 @@ export class AzioniService {
     });
   }
 
+  // Raccoglie l'oggetto che si trova sulla posizione del personaggio in turno e lo sposta
+  // nel suo inventario. Nessun parametro: il backend ricava sia il personaggio (dal turno)
+  // sia l'oggetto (cercandolo nell'inventario Mappa a quella posizione). E' un'azione di
+  // turno vera e propria (ActionManager, TipoAzione.Raccogli).
+  raccogli(): Observable<Object> {
+    return this.http.post(`${this.BASE_URL}/Raccogli`, null);
+  }
+
   // Catalogo skill (statico lato backend, nessuna tabella DB).
   getSkillCatalog(): Observable<Skill[]> {
     return this.http.get<Skill[]>(`${this.BASE_URL}/Skill`);
