@@ -635,13 +635,54 @@ export class MappaComponent implements OnInit {
     this.azioniService.muoviVersoPunto(pointId).subscribe({
       next: (missione: Missione) => {
         if (missione?.stato === StatoMissione.Interrotta) {
-          alert('Un nemico ti sbarra la strada: ti sei fermato prima di entrare nella sua zona. Clicca sul suo pezzo sulla mappa per attaccarlo o prova a muoverti altrove per evitarlo.');
+          alert(this.messaggioMovimentoInterrotto(missione, pointId));
           return;
         }
         this.triggerEventoSeArrivato(pointId);
       },
-      error: (error) => console.error('Errore durante il movimento verso il punto', pointId, error)
+      // Il backend ora risponde con il motivo reale del rifiuto (ingaggiato da un nemico,
+      // nessun percorso, gia' su quella casella): mostrarlo invece di seppellirlo in
+      // console — altrimenti il giocatore vede solo il personaggio che non si muove e non
+      // sa se ha sbagliato bersaglio o se il gioco lo sta bloccando apposta.
+      error: (error) => {
+        console.error('Errore durante il movimento verso il punto', pointId, error);
+        alert(error?.error?.message ?? 'Non e\' stato possibile spostarsi su questa casella.');
+      }
     });
+  }
+
+  // Un movimento interrotto ha due cause diverse e il giocatore deve poterle distinguere:
+  // o si e' entrati nella tessera di un nemico (per regolamento ci si entra e ci si ferma
+  // li', non si viene respinti), oppure sono finiti i punti movimento prima di arrivare.
+  private messaggioMovimentoInterrotto(missione: Missione, destinazione: number): string {
+    const posizioneFinale = missione?.personaggio?.posizione ?? this.characterInTurno?.posizione;
+
+    if (posizioneFinale !== undefined && this.nemicoVivoNellaTesseraDi(posizioneFinale)) {
+      return 'Sei entrato nel raggio d\'azione di un nemico e ti sei fermato li\'. Finche\' e\' vivo non puoi piu\' muoverti: puoi attaccarlo, usare un oggetto o tentare la fuga.';
+    }
+
+    if (posizioneFinale !== destinazione) {
+      return 'Punti movimento esauriti: ti sei fermato lungo il percorso. Usa un\'altra azione per proseguire.';
+    }
+
+    return 'Movimento interrotto.';
+  }
+
+  // L'ingaggio vale per l'intera Tessera, non per la singola casella (stessa regola del
+  // backend, MissionHandler.NemiciNellaTessera): un nemico gia' sconfitto non ingaggia.
+  private nemicoVivoNellaTesseraDi(posizione: number): boolean {
+    const tesseraId = this.punti.find(p => p.id === posizione)?.id_Tessera;
+    if (tesseraId === undefined) return false;
+
+    const puntiDellaTessera = new Set(
+      this.punti.filter(p => p.id_Tessera === tesseraId).map(p => p.id)
+    );
+
+    return this.characters.some(c =>
+      (c.tipoPersonaggio === TipoPersonaggio.NemicoPersonaggio || c.tipoPersonaggio === TipoPersonaggio.NemicoNPC)
+      && c.punti_Vita > 0
+      && puntiDellaTessera.has(c.posizione)
+    );
   }
 
   // Se il punto appena raggiunto e' un trigger Probabilita'/Imprevisto (EventoMappa), apre

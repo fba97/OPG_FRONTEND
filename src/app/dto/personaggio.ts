@@ -14,6 +14,7 @@ export interface Personaggio {
     esperienza: number;
     gittataAttacco: number;
     gittataOggetti: number;
+    movimento: number;  // Salti punto-punto consentiti da UNA azione di Spostamento (vedi Personaggio.Movimento lato backend)
     soldi: number;
     skillSbloccate: number[];
     inventario: Inventario;

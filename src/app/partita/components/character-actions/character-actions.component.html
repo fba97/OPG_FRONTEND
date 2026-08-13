@@ -52,6 +52,16 @@
           <span class="stat-value">{{ characterInTurn?.gittataAttacco ?? '—' }}</span>
         </div>
 
+        <!-- Quanto lontano porta UNA azione di Spostamento: prima il movimento era illimitato
+             (si attraversava mezza mappa con una sola delle due azioni del turno). -->
+        <div class="stat-row">
+          <span class="stat-label">
+            <mat-icon>directions_walk</mat-icon>
+            MOVIMENTO
+          </span>
+          <span class="stat-value">{{ characterInTurn?.movimento ?? '—' }}</span>
+        </div>
+
         <div class="stat-row">
           <span class="stat-label">
             <mat-icon>paid</mat-icon>
