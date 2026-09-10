@@ -2,11 +2,11 @@
 .left-sidebar {
   width: 250px;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 58, 112, 0.95) 0%, rgba(20, 12, 6, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(14, 90, 115, 0.95) 0%, rgba(8, 43, 57, 0.95) 100%);
   position: relative;
   transition: all 0.3s ease;
-  border-right: 2px solid var(--color-crimson);
-  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+  border-right: 2px solid var(--color-gold);
+  box-shadow: 4px 0 15px rgba(6, 32, 42, 0.3);
   flex-shrink: 0;
 }
 
@@ -20,21 +20,21 @@
   top: 20px;
   width: 40px;
   height: 40px;
-  background: var(--color-crimson);
+  background: var(--color-gold);
   border: none;
   border-radius: 50%;
-  color: var(--color-parchment);
+  color: var(--color-ink);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 8px rgba(6, 32, 42, 0.3);
   z-index: 100;
 }
 
 .sidebar-toggle:hover {
   transform: scale(1.1);
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 12px rgba(6, 32, 42, 0.4);
 }
 
 .sidebar-content {
@@ -59,7 +59,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--color-gold-light);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 6px rgba(6, 32, 42, 0.5);
 }
 
 .navigation-list {
@@ -78,13 +78,13 @@
 }
 
 .nav-item:hover {
-  background: rgba(212, 32, 38, 0.2);
-  border-left: 4px solid var(--color-crimson);
+  background: var(--tint-gold);
+  border-left: 4px solid var(--color-gold);
 }
 
 .nav-item.active {
-  background: rgba(212, 32, 38, 0.3);
-  border-left: 4px solid var(--color-crimson);
+  background: rgba(242, 180, 65, 0.26);
+  border-left: 4px solid var(--color-gold);
 }
 
 .nav-label {

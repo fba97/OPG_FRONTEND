@@ -1,11 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: var(--font-body); background: var(--color-ink); }
+/*
+ * Scrollbar del browser: mai stilata prima, quindi ovunque scorra qualcosa
+ * (la lista eroi in homepage, i pannelli di inventario/skill, le griglie di
+ * carte) Chrome disegna la sua traccia chiara di default — bianca o grigio
+ * chiaro — sopra uno sfondo scuro. Su Windows con "mostra sempre le
+ * scrollbar" quel gutter e' riservato anche prima che serva davvero, quindi
+ * si vede una riga chiara lungo il bordo anche a occhio nudo. Non e' un bug
+ * di layout: e' solo una scrollbar non tinta. La coloriamo, non la
+ * nascondiamo — nascondere lo scroll toglierebbe l'accesso a contenuto reale
+ * su pagine come Eroi/Oggetti quando le carte superano la finestra.
+ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-wood) var(--color-page-bg);
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--color-page-bg);
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-wood);
+  border-radius: 6px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-wood-dark);
+}
 
-h1, h2, h3, .display {
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--gradient-page);
+  background-attachment: fixed;
+}
+
+/*
+ * Il tema Material prebuilt (indigo-pink) applica alle intestazioni la shorthand
+ * `font:` con Roboto tramite `.mat-typography h1`, che ha specificita' (0,1,1) e
+ * batteva la nostra regola su `h1` (0,0,1): il font display non arrivava a
+ * nessun titolo. Ripetiamo il selettore alla stessa specificita' — vinciamo
+ * perche' styles.css e' caricato dopo il tema in angular.json.
+ */
+h1, h2, h3, h4, h5, h6, .display,
+.mat-typography h1, .mat-typography h2, .mat-typography h3,
+.mat-typography h4, .mat-typography h5, .mat-typography h6 {
   font-family: var(--font-display);
   letter-spacing: 0.02em;
+}
+
+/*
+ * Due residui fuori palette che non stanno in nessun component.css.
+ *
+ * 1. I radio/checkbox della homepage sono <input> NATIVI, non componenti
+ *    Material: il pallino selezionato prendeva l'accent blu del browser.
+ * 2. Il tema Material prebiult caricato in angular.json (indigo-pink) colora di
+ *    rosa lo spinner. E' l'unico componente Material a colore visibile oltre al
+ *    mini-fab della mappa, che mappa.component.css forza gia' a mano.
+ */
+:root {
+  accent-color: var(--color-navy);
+}
+
+.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: var(--color-gold);
+}
+
+/* Login e register sono min-height:100vh CON padding: in content-box la pagina
+   supera di 48px l'altezza della finestra e compare una barra di scorrimento
+   che non serve a niente. */
+.auth-page,
+.mainpage {
+  box-sizing: border-box;
 }
 
 /* Pulsanti condivisi dalle schermate d'ingresso (mainpage/login/register/homepage) */
@@ -37,14 +106,14 @@ h1, h2, h3, .display {
   color: var(--color-ink);
   box-shadow: var(--shadow-card);
 }
-.btn--gold:hover { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); }
+.btn--gold:hover { box-shadow: 0 6px 18px rgba(20, 48, 40, 0.28); }
 
 .btn--outline {
   background: transparent;
   color: var(--color-parchment);
   border-color: var(--color-gold);
 }
-.btn--outline:hover { background: rgba(201, 162, 39, 0.15); }
+.btn--outline:hover { background: var(--tint-gold); }
 
 /* Variante leggibile su sfondi chiari (es. pannelli pergamena/card-frame-panel) */
 .btn--outline-dark {
@@ -52,7 +121,7 @@ h1, h2, h3, .display {
   color: var(--color-wood-dark);
   border-color: var(--color-wood);
 }
-.btn--outline-dark:hover { background: rgba(92, 58, 33, 0.12); }
+.btn--outline-dark:hover { background: var(--tint-wood); }
 
 .btn--danger {
   background: linear-gradient(180deg, var(--color-crimson-light), var(--color-crimson));
@@ -104,7 +173,7 @@ h1, h2, h3, .display {
 .card-grid-page {
   min-height: 100vh;
   display: flex;
-  background: var(--color-ink);
+  background: var(--gradient-page);
 }
 
 .card-grid-page__content {
@@ -139,7 +208,7 @@ h1, h2, h3, .display {
 }
 
 .filter-chip:hover {
-  background: rgba(201, 162, 39, 0.15);
+  background: var(--tint-gold);
 }
 
 .filter-chip.active {

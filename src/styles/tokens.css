@@ -1,30 +1,41 @@
 /*
- * Design tokens — tema pirata/One Piece (Dressrosa).
+ * Design tokens — tema isola tropicale (Coral Island) su ambientazione One Piece.
  * Solo custom properties, nessuna regola. Consumato da ogni component.css
  * dell'app tramite var(--nome-token).
+ *
+ * I NOMI dei token sono quelli del vecchio tema pirata e NON vanno cambiati:
+ * 18 CSS di componente li consumano. Qui cambiano solo i valori. Dove il nome
+ * suona "pirata" (--color-wood, --color-parchment) va letto come ruolo, non
+ * come materiale: cornice/legno chiaro e superficie chiara dei pannelli.
  */
 :root {
-  /* Colore */
-  --color-crimson: #D42026;
-  --color-crimson-light: #f43a40;
-  --color-gold: #C9A227;
-  --color-gold-light: #E4C463;
-  --color-navy: #003A70;
-  --color-navy-light: #004d94;
-  --color-parchment: #EFE1BF;
-  --color-parchment-dark: #DCC896;
-  --color-wood: #5C3A21;
-  --color-wood-dark: #3A2314;
-  --color-ink: #2A1B10;
-  --color-ink-soft: #5a4736;
+  /* Colore — palette tropicale satura, alta luminosita' */
+  --color-crimson: #E8555F;        /* corallo: fazione nemica, pericolo */
+  --color-crimson-light: #F5808A;
+  --color-gold: #F2B441;           /* oro solare: accento primario */
+  --color-gold-light: #FFD37A;
+  --color-navy: #0E5A73;           /* laguna profonda */
+  --color-navy-light: #1E86A6;
+  --color-parchment: #FBEFD4;      /* sabbia chiara: superficie dei pannelli */
+  --color-parchment-dark: #EBD9AE;
+  --color-wood: #B07A46;           /* legno chiaro caldo: cornici e bordi */
+  --color-wood-dark: #8A5C33;
+  --color-ink: #2C3A2E;            /* bruno-verde: testo sulle superfici chiare */
+  --color-ink-soft: #5C6B58;
+
+  /* Sfondo di pagina — oceano, non piu' quasi-nero.
+     Volutamente scuro: tiene la leggibilita' del testo chiaro (pergamena/oro)
+     gia' usato dalle schermate, senza invertire tutto il sistema di contrasto. */
+  --color-page-bg: #0B4257;
+  --gradient-page: linear-gradient(160deg, #0B4257 0%, #12708A 60%, #1B8FA6 100%);
 
   /* Stato */
   --color-danger: var(--color-crimson);
-  --color-success: #3E7A3E;
-  --color-disabled: #9c9184;
+  --color-success: #4CA65E;
+  --color-disabled: #A7B0A4;
 
   /* Tipografia */
-  --font-display: 'Cinzel', 'Roboto', serif;
+  --font-display: 'Baloo 2', 'Fredoka', 'Roboto', sans-serif;
   --font-body: 'Roboto', 'Helvetica Neue', sans-serif;
 
   /* Spaziatura (scala 4px) */
@@ -37,11 +48,48 @@
   --space-7: 28px;
   --space-8: 32px;
 
-  /* Forma / profondità */
-  --radius-card: 12px;
-  --radius-control: 8px;
-  --shadow-panel: 0 8px 24px rgba(0, 0, 0, 0.45);
-  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.35);
+  /* Forma / profondita' — raggi piu' generosi, ombre CALDE e non nere:
+     e' la firma visiva che separa "cozy" da "dark fantasy". */
+  --radius-card: 18px;
+  --radius-control: 12px;
+  --shadow-panel: 0 10px 28px rgba(20, 48, 40, 0.28);
+  --shadow-card: 0 4px 14px rgba(20, 48, 40, 0.20);
   --border-wood: 3px solid var(--color-wood);
   --border-gold-hairline: 1px solid var(--color-gold);
+
+  /* Velature riusabili (prima erano rgba() hardcoded nei fogli) */
+  --tint-gold: rgba(242, 180, 65, 0.18);
+  --tint-wood: rgba(176, 122, 70, 0.14);
+
+  /*
+   * ---- Mappa ----
+   * Un bioma per Area: il colore di un esagono dipende dall'Area, non dal
+   * terreno (Tessera.Tipo oggi non arriva al frontend). I gradienti veri
+   * vivono nei <defs> di map.svg; questi token servono al CSS che sta fuori
+   * dall'SVG (fondale, stati di hover, pedine).
+   */
+  --map-ocean-deep: #0B4257;
+  --map-ocean: #1E6F8C;
+  --map-ocean-light: #3FB0C4;
+
+  --area-1: #2E8FAF;   /* mare aperto / perimetro */
+  --area-2: #B5743C;   /* terra battuta */
+  --area-3: #5FD3D0;   /* acqua bassa */
+  --area-4: #F2B441;   /* sabbia dorata */
+  --area-5: #F5DFA8;   /* spiaggia chiara */
+  --area-6: #7FC24E;   /* prateria */
+  --area-7: #E8909B;   /* corallo */
+  --area-8: #2F7A44;   /* giungla fitta */
+  --area-9: #9B6FC7;   /* terra vulcanica */
+
+  /* Stati interattivi sulla mappa. Verde/rosso alleato-nemico e anello dorato
+     sono INFORMAZIONE DI GIOCO: cambia la tonalita', mai il significato. */
+  --map-hover-glow: #FFD37A;
+  --map-point-available: #6FE3A0;
+  --map-piece-ally: #2F8F5B;
+  --map-piece-enemy: #C4515B;
+  --map-piece-ring: #FFC94E;
+  --map-piece-stroke: #FFF6E2;
+  --map-evento-probabilita: #2E86A8;
+  --map-evento-imprevisto: #C77B3A;
 }

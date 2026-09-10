@@ -1,6 +1,6 @@
 /* src/app/partita/components/game-status/game-status.component.css */
 .game-status-container {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(6, 32, 42, 0.25);
   border-radius: var(--radius-card);
   padding: var(--space-5);
   color: var(--color-parchment);
@@ -12,11 +12,11 @@
   font-size: 1.3rem;
   margin: 0 0 var(--space-5);
   color: var(--color-crimson-light);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(6, 32, 42, 0.5);
 }
 
 .status-card {
-  background: rgba(0, 58, 112, 0.3);
+  background: rgba(14, 90, 115, 0.3);
   border-radius: var(--radius-control);
   padding: var(--space-4);
   margin-bottom: var(--space-4);

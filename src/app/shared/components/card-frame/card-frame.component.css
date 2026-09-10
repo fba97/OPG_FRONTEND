@@ -41,7 +41,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-parchment);
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(6, 32, 42, 0.55);
   border-radius: 50%;
   width: 32px;
   height: 32px;

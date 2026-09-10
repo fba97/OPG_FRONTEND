@@ -28,13 +28,13 @@ app-character-actions {
   flex-shrink: 0;
   width: clamp(320px, 28vw, 480px);
   overflow-y: auto;
-  border-left: 2px solid var(--color-crimson);
+  border-left: 2px solid var(--color-gold);
 }
 
 .victory-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(6, 32, 42, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@ app-character-actions {
 .victory-panel {
   text-align: center;
   padding: var(--space-8);
-  background: linear-gradient(160deg, #241608, #150c04);
+  background: linear-gradient(160deg, #0E4257, #072935);
   border: var(--border-wood);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-panel);
@@ -54,7 +54,7 @@ app-character-actions {
   margin: 0;
   font-size: 3.5rem;
   color: var(--color-gold-light);
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 3px 12px rgba(6, 32, 42, 0.6);
 }
 
 .victory-panel__text {

@@ -91,6 +91,10 @@ export class MappaComponent implements OnInit {
   private aree: Area[] = [];
   private characterInTurno: Personaggio | null = null;
   private itemsMappa: OggettoInventario[] = [];
+
+  // Nasconde tutte le pedine per vedere la sola mappa: serve quando troppi personaggi
+  // affollati in poco spazio si sovrappongono e coprono i punti cliccabili.
+  pedineNascoste = false;
   private eventiMappa: EventoMappa[] = [];
 
   // Gruppo SVG unico, appeso come ultimo figlio della root <svg> in uso (overview o file di
@@ -239,7 +243,7 @@ export class MappaComponent implements OnInit {
     tesseraIds.forEach(id => {
       const el = this.svgRootElement?.querySelector(`#Tessera_${id}`) as SVGElement | null;
       if (el) {
-        el.style.filter = attivo ? 'brightness(1.3) drop-shadow(0 0 8px #f4c542)' : '';
+        el.classList.toggle('tessera-evidenziata', attivo);
       }
     });
   }
@@ -558,13 +562,13 @@ export class MappaComponent implements OnInit {
       // Evidenzia il punto al passaggio del mouse, solo se non e' bloccato
       hitArea.addEventListener('mouseenter', () => {
         if (!this.isPuntoBloccato(pointId)) {
-          (point as HTMLElement).style.filter = 'brightness(1.6) drop-shadow(0 0 4px #00ff88)';
-          hitArea.setAttribute('fill', 'rgba(0, 255, 136, 0.12)');
+          point.classList.add('punto-hover');
+          hitArea.classList.add('is-hover');
         }
       });
       hitArea.addEventListener('mouseleave', () => {
-        (point as HTMLElement).style.filter = '';
-        hitArea.setAttribute('fill', 'transparent');
+        point.classList.remove('punto-hover');
+        hitArea.classList.remove('is-hover');
       });
 
       hitArea.addEventListener('click', (event: Event) => {
@@ -608,16 +612,12 @@ export class MappaComponent implements OnInit {
 
   // Applica cursore/opacita' a tutti i punti registrati in base a Blocco: distingue
   // visivamente i punti raggiungibili da quelli bloccati, invece di scoprirlo solo dopo
-  // aver cliccato. Stili inline (non classi CSS) perche' l'SVG e' iniettato via innerHTML.
+  // aver cliccato. Le classi sono definite in src/styles/map-theme.css, che e' un
+  // foglio GLOBALE: il CSS scoped del componente non raggiunge l'SVG iniettato via
+  // innerHTML, perche' quei nodi non ricevono l'attributo _ngcontent di Angular.
   private updatePointsHighlighting() {
     this.mapManager.svgPointsMap.forEach((element, pointId) => {
-      if (this.isPuntoBloccato(pointId)) {
-        element.style.cursor = 'not-allowed';
-        element.style.opacity = '0.35';
-      } else {
-        element.style.cursor = 'pointer';
-        element.style.opacity = '1';
-      }
+      element.classList.toggle('punto-bloccato', this.isPuntoBloccato(pointId));
     });
   }
 
@@ -816,15 +816,23 @@ export class MappaComponent implements OnInit {
 
       occupanti.forEach((char, index) => {
         const offset = this.calcolaOffsetVentaglio(index, occupanti.length, dimensione);
+        const nemico = this.isNemico(char);
 
         const g = document.createElementNS(SVG_NS, 'g');
         g.classList.add('character-piece');
-        g.setAttribute('style', 'pointer-events: all;');
+        if (this.pedineNascoste) {
+          g.classList.add('is-nascosta');
+        }
+        // Solo le pedine nemiche hanno un click (apre il combattimento): quelle alleate,
+        // senza pointer-events, lasciano passare il click fino al punto mappa sottostante
+        // invece di assorbirlo senza fare nulla — era il motivo per cui non si riusciva
+        // piu' a muoversi cliccando un punto affollato di alleati.
+        g.setAttribute('style', nemico ? 'pointer-events: all;' : 'pointer-events: none;');
         g.setAttribute('transform', `translate(${cx + offset.dx}, ${cy + offset.dy})`);
 
         const sfondo = document.createElementNS(SVG_NS, 'circle');
         sfondo.setAttribute('r', (dimensione / 2 + 1).toString());
-        sfondo.setAttribute('fill', this.isNemico(char) ? '#b33a3a' : '#2f8f5b');
+        sfondo.classList.add('piece-bg', this.isNemico(char) ? 'is-nemico' : 'is-alleato');
         g.appendChild(sfondo);
 
         // Anello attorno a chi sta combattendo: la mappa diventa la lista degli scontri, cosi'
@@ -832,10 +840,7 @@ export class MappaComponent implements OnInit {
         if (this.inCombattimento(char)) {
           const anello = document.createElementNS(SVG_NS, 'circle');
           anello.setAttribute('r', (dimensione / 2 + 3).toString());
-          anello.setAttribute('fill', 'none');
-          anello.setAttribute('stroke', '#f2c14e');
-          anello.setAttribute('stroke-width', '2');
-          anello.setAttribute('stroke-dasharray', '4 3');
+          anello.classList.add('piece-ring');
           g.appendChild(anello);
         }
 
@@ -861,7 +866,7 @@ export class MappaComponent implements OnInit {
           g.appendChild(testo);
         }
 
-        if (this.isNemico(char)) {
+        if (nemico) {
           g.style.cursor = 'crosshair';
           g.addEventListener('click', (event: Event) => {
             event.stopPropagation();
@@ -970,9 +975,7 @@ export class MappaComponent implements OnInit {
 
       const cerchio = document.createElementNS(SVG_NS, 'circle');
       cerchio.setAttribute('r', (dimensione / 2).toString());
-      cerchio.setAttribute('fill', eProbabilita ? '#2f6f8f' : '#8f5a2f');
-      cerchio.setAttribute('stroke', '#f4e4c1');
-      cerchio.setAttribute('stroke-width', '1');
+      cerchio.classList.add('evento-bg', eProbabilita ? 'is-probabilita' : 'is-imprevisto');
       g.appendChild(cerchio);
 
       const testo = document.createElementNS(SVG_NS, 'text');
@@ -981,7 +984,7 @@ export class MappaComponent implements OnInit {
       testo.setAttribute('dominant-baseline', 'central');
       testo.setAttribute('font-size', (dimensione * 0.6).toString());
       testo.setAttribute('font-weight', 'bold');
-      testo.setAttribute('fill', '#f4e4c1');
+      testo.classList.add('evento-label');
       g.appendChild(testo);
 
       overlay.appendChild(g);
@@ -997,18 +1000,13 @@ export class MappaComponent implements OnInit {
   // MissionHandler ferma deliberatamente il movimento PRIMA di entrare nella tessera di un
   // nemico, quindi in gioco normale il personaggio non condivide mai la stessa posizione
   // esatta di un nemico — e AttaccoHandler lato server non valida gittata/distanza.
+  togglePedine() {
+    this.pedineNascoste = !this.pedineNascoste;
+    this.drawCharacters();
+  }
+
   private onCharacterPieceClick(nemico: Personaggio) {
     if (!this.characterInTurno) {
-      return;
-    }
-
-    const combattimentiCoinvolti = this.gameState.getCombattimentiAttivi().filter(c =>
-      c.listaEroi.includes(this.characterInTurno!.id) || c.listaNPCs.includes(this.characterInTurno!.id) ||
-      c.listaEroi.includes(nemico.id) || c.listaNPCs.includes(nemico.id)
-    );
-    const combattimentoMultiplo = combattimentiCoinvolti.some(c => c.listaEroi.length > 1 || c.listaNPCs.length > 1);
-    if (combattimentoMultiplo) {
-      alert('Combattimento multiplo non ancora supportato in questa schermata.');
       return;
     }
 

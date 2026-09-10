@@ -1,7 +1,7 @@
 .combat-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(6, 32, 42, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
   position: relative;
   width: min(560px, 90vw);
   padding: var(--space-6);
-  background: linear-gradient(160deg, #241608, #150c04);
+  background: linear-gradient(160deg, #0E4257, #072935);
   border: var(--border-wood);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-panel);

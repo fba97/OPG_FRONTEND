@@ -1,0 +1,125 @@
+/*
+ * map-theme.css — stile di tutto cio' che vive DENTRO l'SVG della mappa.
+ *
+ * PERCHE' E' UN FOGLIO GLOBALE E NON mappa.component.css:
+ * la mappa e' iniettata con [innerHTML] (mappa.component.html:5), quindi i suoi
+ * nodi non ricevono l'attributo _ngcontent-* di Angular e il CSS scoped del
+ * componente non li raggiunge MAI. Se una regola sulla mappa "non si applica",
+ * il primo sospetto e' che sia finita nel file sbagliato.
+ *
+ * SECONDA REGOLA, altrettanto facile da sbagliare: lo `style` inline vince
+ * sempre sul CSS. I fill delle tessere stanno nell'attributo style dentro
+ * map.svg, quindi NON si cambiano da qui: si cambiano rilanciando
+ * script/map-theme/theme-map.js.
+ *
+ * TERZA REGOLA: mai filtri, transform, opacity o will-change sulla root <svg>.
+ * Creerebbero un layer GPU rasterizzato e la mappa tornerebbe sgranata sullo
+ * zoom — bug gia' pagato una volta, risolto animando il viewBox nativo.
+ */
+
+/* ------------------------------------------------------------- tessere --- */
+
+/* Hover sulla Tessera puntata e sulle ~6 limitrofe interagibili. */
+.svg-content [id^="Tessera_"] {
+  transition: filter 0.15s ease;
+}
+
+.svg-content [id^="Tessera_"].tessera-evidenziata {
+  filter: brightness(1.12) saturate(1.15)
+          drop-shadow(0 0 6px var(--map-hover-glow));
+}
+
+/* --------------------------------------------------------------- punti --- */
+/*
+ * I Punti sono i nodi cliccabili dentro l'esagono. Il loro fill sta inline
+ * nell'SVG (lo scrive theme-map.js): qui si tocca solo cio' che inline non c'e',
+ * cioe' opacita', cursore e glow.
+ */
+.svg-content [id^="Punto_"] {
+  cursor: pointer;
+  transition: filter 0.12s ease, opacity 0.12s ease;
+}
+
+.svg-content [id^="Punto_"].punto-hover {
+  filter: brightness(1.5) drop-shadow(0 0 3px var(--map-point-available));
+}
+
+.svg-content [id^="Punto_"].punto-bloccato {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+/* Cerchio invisibile e sovradimensionato che rende cliccabile un punto di
+   raggio 1.5 su un viewBox di 1565. Il fill arriva da setAttribute, che e' una
+   presentation attribute: il CSS la sovrascrive senza bisogno di !important. */
+.punto-hit-area {
+  fill: transparent;
+  transition: fill 0.12s ease;
+}
+
+.punto-hit-area.is-hover {
+  fill: rgba(111, 227, 160, 0.14);
+}
+
+/* ------------------------------------------------------ pedine e overlay --- */
+/*
+ * Verde alleato / rosso nemico e anello dorato sono INFORMAZIONE DI GIOCO:
+ * qui cambia la tonalita', mai il significato.
+ *
+ * L'ombra sta sul cerchio di sfondo e non sul gruppo: cosi' il ritratto (che e'
+ * un <image> di un SVG anche da 4 MB) non finisce dentro un filtro e non viene
+ * rasterizzato a ogni fotogramma dello zoom.
+ */
+.piece-bg {
+  filter: url(#opgOmbraPedina);
+}
+
+.piece-bg.is-alleato { fill: var(--map-piece-ally); }
+.piece-bg.is-nemico  { fill: var(--map-piece-enemy); }
+
+.piece-ring {
+  fill: none;
+  stroke: var(--map-piece-ring);
+  stroke-width: 2;
+  stroke-dasharray: 4 3;
+}
+
+.evento-bg {
+  stroke: var(--map-piece-stroke);
+  stroke-width: 1;
+  filter: url(#opgOmbraPedina);
+}
+
+.evento-bg.is-probabilita { fill: var(--map-evento-probabilita); }
+.evento-bg.is-imprevisto  { fill: var(--map-evento-imprevisto); }
+
+.evento-label {
+  fill: var(--map-piece-stroke);
+  paint-order: stroke fill;
+}
+
+.character-piece,
+.evento-piece,
+.item-piece {
+  transition: opacity 0.2s ease;
+}
+
+/* Toggle "nascondi personaggi": display:none toglie anche l'hit-test, cosi' una pedina
+   nascosta non blocca piu' il click sul punto mappa sottostante. */
+.character-piece.is-nascosta {
+  display: none;
+}
+
+/* ---------------------------------------------------------------- grana --- */
+/*
+ * Il filtro #opgGrana esiste nei <defs> di map.svg ma NON e' applicato, di
+ * proposito. Una feTurbulence stesa sui 9 gruppi Area coprirebbe ~2,7 milioni
+ * di pixel e verrebbe ricalcolata a ogni fotogramma del tween di 600 ms sul
+ * viewBox: la texture si paga con uno scatto proprio nel momento in cui la
+ * mappa si muove.
+ *
+ * Per provarla dal vivo basta togliere il commento qui sotto e guardare lo zoom.
+ */
+/*
+.svg-content [id^="Area_"] { filter: url(#opgGrana); }
+*/

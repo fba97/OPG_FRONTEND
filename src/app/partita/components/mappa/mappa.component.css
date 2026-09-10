@@ -9,7 +9,7 @@
   flex: 1;
   display: flex;
   margin: var(--space-4);
-  border: var(--border-wood);
+  border: 3px solid var(--color-parchment-dark);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-panel);
   overflow: hidden;
@@ -19,7 +19,7 @@
   flex: 1;
   position: relative;
   overflow: hidden;
-  background: #0b1622;
+  background: var(--gradient-page);
 }
 
 .map-container {
@@ -36,12 +36,8 @@
   height: 100%;
 }
 
-.character-piece {
-  fill: blue;
-  stroke: white;
-  stroke-width: 2;
-  z-index: 999;
-}
+/* Le pedine si stilano in src/styles/map-theme.css: il CSS scoped di questo
+   componente non raggiunge l'SVG iniettato via [innerHTML]. */
 
 /* Controlli mappa */
 .map-controls {
@@ -51,31 +47,33 @@
   display: flex;
   gap: 8px;
   padding: 12px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
+  background: var(--color-parchment);
+  border: 1px solid var(--color-parchment-dark);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
 }
 
 .map-control-btn {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  --mdc-fab-small-container-color: var(--color-wood);
-  --mat-mdc-fab-color: var(--color-gold-light);
-  background-color: var(--color-wood) !important;
-  color: var(--color-gold-light) !important;
+  --mdc-fab-small-container-color: var(--color-gold);
+  --mat-mdc-fab-color: var(--color-ink);
+  background-color: var(--color-gold) !important;
+  color: var(--color-ink) !important;
   border: 1px solid var(--color-gold);
   box-shadow: none !important;
 }
 
 .map-control-btn:hover {
-  --mdc-fab-small-container-color: var(--color-wood-dark);
-  background-color: var(--color-wood-dark) !important;
+  --mdc-fab-small-container-color: var(--color-gold-light);
+  background-color: var(--color-gold-light) !important;
 }
 
 .map-control-btn .mat-icon,
 .map-control-btn .mdc-button__label,
 .map-control-btn .mat-mdc-fab-touch-target {
-  color: var(--color-gold-light) !important;
+  color: var(--color-ink) !important;
 }
 
 /* Loading state */

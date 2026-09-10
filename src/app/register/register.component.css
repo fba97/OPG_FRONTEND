@@ -5,7 +5,7 @@
   justify-content: center;
   padding: var(--space-6);
   background-image:
-    linear-gradient(rgba(20, 12, 6, 0.65), rgba(20, 12, 6, 0.75)),
+    linear-gradient(rgba(8, 43, 57, 0.65), rgba(8, 43, 57, 0.75)),
     url('/assets/images/registerbackground.jpg');
   background-size: cover;
   background-position: center;
@@ -15,7 +15,7 @@
   width: 100%;
   max-width: 420px;
   padding: var(--space-6) var(--space-7);
-  background: rgba(42, 27, 16, 0.7);
+  background: rgba(14, 66, 87, 0.7);
   border: var(--border-wood);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-panel);

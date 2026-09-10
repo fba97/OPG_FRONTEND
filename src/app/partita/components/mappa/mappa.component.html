@@ -12,6 +12,10 @@
       <button mat-mini-fab (click)="tornaAOverview()" class="map-control-btn" title="Torna alla mappa">
         <mat-icon>arrow_back</mat-icon>
       </button>
+      <button mat-mini-fab (click)="togglePedine()" class="map-control-btn"
+              [title]="pedineNascoste ? 'Mostra personaggi' : 'Nascondi personaggi'">
+        <mat-icon>{{ pedineNascoste ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   background-image:
-    linear-gradient(rgba(20, 12, 6, 0.55), rgba(20, 12, 6, 0.7)),
+    linear-gradient(rgba(8, 43, 57, 0.55), rgba(8, 43, 57, 0.7)),
     url('/assets/images/homepagebackground.jpg');
   background-size: cover;
   background-position: center;
